@@ -1,7 +1,10 @@
 for (i = 0; i < 4; i++)
     {
-        if global.Player[i] !=noone
-            {global.Player[i] = -1;}
+        if global.Player[i,0] !=noone
+            {global.Player[i,0] = -1;}
     }
     room_goto(argument0);
     
+/* Change notes:
+Updated global.Player reference to correct array index pointer (as 2D array)
+*/

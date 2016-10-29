@@ -100,7 +100,7 @@ console_array[i] = "";
             <kind>1</kind>
             <string>if (console_open == true) 
     {
-    draw_rectangle(50,50,100, 100, 1)
+    draw_rectangle(0,0,100,100,1)
     }
 </string>
           </argument>
