@@ -71,6 +71,7 @@
   <scripts name="scripts">
     <scripts name="Console Scripts">
       <script>scripts\scr_Console_Input.gml</script>
+      <script>scripts\scr_console_pref_update.gml</script>
     </scripts>
     <scripts name="Tool Scripts">
       <scripts name="Weapons">
@@ -144,6 +145,9 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_console_12</font>
+  </fonts>
   <objects name="objects">
     <objects name="Players">
       <object>objects\obj_Player</object>

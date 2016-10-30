@@ -2,7 +2,7 @@
 <object>
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,15 +25,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>console_open = false; //console open on screen
-console_focused = false; //console being typed into
+            <string>//NOTE TO IMPLEMENT; var to chold console line start that is more accurate (and will allow for line entry)
 
+/* CAN change - Initial console settings */
+console_open = false; //console open on screen
+console_focused = false; //console being typed into
 console_lines = 5; //number of console lines to show + track
+console_pos = 'bottom'; //position of console
+console_font = 'fnt_console'; //the console font
+console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)
+console_text_buffer = 3; //space between lines (in pixels)
+console_alpha = 0.75; // the console's alpha (opacity)
+
+/* DO NOT change - system settings and init */
+//generate height and position variables
+console_line_size = 0;
+console_height = 0;
+console_xloc = 0;
+console_yloc = view_hport[0];
+console_dfont = '' + string(console_font) + '_' + string(console_text_size);
+scr_console_pref_update();
 
 /* Create the array of console lines */
 for (var i = 0; i &lt; console_lines; i++) {
-console_array[i] = "";
+console_array[i] = "Test";
 }
+
+show_debug_message("Console obj initialized.");
 </string>
           </argument>
         </arguments>
@@ -98,10 +116,49 @@ console_array[i] = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (console_open == true) 
-    {
-    draw_rectangle(0,0,100,100,1)
+            <string>if (console_open = true) {
+    draw_set_alpha(console_alpha);
+    
+    /* draw the console background */
+    draw_set_colour(c_green);
+    draw_rectangle(console_xloc, console_yloc + console_height, console_xloc + view_wport[0]-1,console_yloc,false);
+    draw_set_colour(c_lime);
+    draw_rectangle(console_xloc, console_yloc + console_height, console_xloc + view_wport[0]-1,console_yloc,true);
+    draw_set_colour(c_black);
+    
+    /* draw the console text */
+    draw_set_color(c_white);
+    draw_set_font(console_dfont);
+    
+    for (var i = 0; i &lt; console_lines; i++) {
+        draw_text(console_xloc + console_text_buffer, console_yloc + (i+1) * (console_height/console_lines), console_array[i]); //needs to updated to improve position 
     }
+    
+    draw_set_alpha(1); //reset draw alpha
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//do not draw sprite.
 </string>
           </argument>
         </arguments>
