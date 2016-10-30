@@ -28,10 +28,10 @@
             <string>//NOTE TO IMPLEMENT; var to chold console line start that is more accurate (and will allow for line entry)
 
 /* CAN change - Initial console settings */
-console_open = false; //console open on screen
-console_focused = false; //console being typed into
+console_open = true; //console open on screen
+console_focused = true; //console being typed into
 console_lines = 5; //number of console lines to show + track
-console_pos = 'bottom'; //position of console
+console_pos = 'top'; //position of console
 console_font = 'fnt_console'; //the console font
 console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)
 console_text_buffer = 3; //space between lines (in pixels)
@@ -43,12 +43,15 @@ console_line_size = 0;
 console_height = 0;
 console_xloc = 0;
 console_yloc = view_hport[0];
+console_outlog_y = 0;
+console_outdir_y = 1;
+console_offset = 0;
 console_dfont = '' + string(console_font) + '_' + string(console_text_size);
 scr_console_pref_update();
 
 /* Create the array of console lines */
 for (var i = 0; i &lt; console_lines; i++) {
-console_array[i] = "Test";
+console_array[i] = "" + string(i) + ": Test";
 }
 
 show_debug_message("Console obj initialized.");
@@ -121,9 +124,9 @@ show_debug_message("Console obj initialized.");
     
     /* draw the console background */
     draw_set_colour(c_green);
-    draw_rectangle(console_xloc, console_yloc + console_height, console_xloc + view_wport[0]-1,console_yloc,false);
+    draw_rectangle(console_xloc, console_yloc + console_outlog_dir * console_height + (console_outlog_dir * console_offset), console_xloc + view_wport[0]-1,console_yloc,false);
     draw_set_colour(c_lime);
-    draw_rectangle(console_xloc, console_yloc + console_height, console_xloc + view_wport[0]-1,console_yloc,true);
+    draw_rectangle(console_xloc, console_yloc + console_outlog_dir * console_height + (console_outlog_dir * console_offset), console_xloc + view_wport[0]-1,console_yloc,true);
     draw_set_colour(c_black);
     
     /* draw the console text */
@@ -131,7 +134,7 @@ show_debug_message("Console obj initialized.");
     draw_set_font(console_dfont);
     
     for (var i = 0; i &lt; console_lines; i++) {
-        draw_text(console_xloc + console_text_buffer, console_yloc + (i+1) * (console_height/console_lines), console_array[i]); //needs to updated to improve position 
+        draw_text(console_xloc + console_text_buffer, console_outlog_y + console_outlog_dir * (i * (console_height/console_lines)), console_array[i]); //needs to updated to improve position 
     }
     
     draw_set_alpha(1); //reset draw alpha
