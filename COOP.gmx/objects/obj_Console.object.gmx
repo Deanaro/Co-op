@@ -29,7 +29,7 @@
 /* CAN change - Initial console settings */
 console_open = false; //console open on screen
 console_focused = false; //console being typed into
-console_lines = 5; //number of console lines to show + track
+console_lines = 4; //number of console lines to show + track
 console_pos = 'top'; //position of console (top/bottom)
 console_font = 'fnt_console'; //the console font
 console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)
@@ -43,14 +43,17 @@ console_height = 0;
 console_xloc = 0;
 console_yloc = view_hport[0];
 console_outlog_y = 0;
+console_inlog_y = 0;
 console_outdir_y = 1;
 console_offset = 0;
 console_dfont = '' + string(console_font) + '_' + string(console_text_size);
-scr_console_pref_update();
+console_inlog = "";
+scr_Console_Pref_Update();
 
 /* Create the array of console lines */
 for (var i = 0; i &lt; console_lines; i++) {
-console_array[i] = "" + string(i) + ": Test";
+console_array[i,0] = "" + string(i) + ": Test";
+console_array[i,1] = "reg";
 }
 
 show_debug_message("Console obj initialized.");
@@ -121,7 +124,7 @@ show_debug_message("Console obj initialized.");
             <string>///Draw console
 //TODO: Shift all console calculations to pref update script
 
-if (console_open = true) {
+if (console_open == true) {
     draw_set_alpha(console_alpha);
     
     /* draw the console background */
@@ -132,13 +135,38 @@ if (console_open = true) {
     draw_set_colour(c_black);
     
     /* draw the console text */
-    draw_set_color(c_white);
     draw_set_font(console_dfont);
     
     for (var i = 0; i &lt; console_lines; i++) {
-        draw_text(console_xloc + console_text_buffer, console_outlog_y + console_outlog_dir * (i * (console_height/console_lines)), console_array[i]); //needs to updated to improve position 
+        //get/set console text line colour
+        switch(console_array[i,1]) {
+            case "reg":
+            draw_set_colour(c_silver);
+            break;
+            case "command":
+            draw_set_colour(c_fuchsia);
+            break;
+            case "error":
+            draw_set_colour(c_red);
+            break;
+            case "ai":
+            draw_set_colour(c_blue);
+            break;
+            default:
+            draw_set_colour(c_yellow);
+            break;
+        }
+        //draw the line text
+        draw_text(console_xloc + console_text_buffer, console_outlog_y + console_outlog_dir * (i * (console_height/console_lines)), console_array[i,0]); //needs to updated to improve position 
     }
     
+    /*draw the console data entry line if focused */
+    if (console_focused) {
+        draw_set_colour(c_white);
+        draw_text(console_xloc + console_text_buffer, console_inlog_y, console_inlog); //needs to updated to improve position 
+    }
+    
+    draw_set_colour(c_black); //reset draw color
     draw_set_alpha(1); //reset draw alpha
 }
 </string>

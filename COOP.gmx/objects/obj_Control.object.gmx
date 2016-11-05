@@ -78,16 +78,16 @@ scr_PlayerJoin();
 // for testing
 if mouse_check_button_pressed(mb_left) = 1
 {scr_SpawnPU(0, mouse_x, mouse_y);}
-// for testing ************
+/* for testing ************ USE CONSOLE
 if keyboard_check_pressed(vk_space)
 {
     scr_moveroom(rm_Test2)
-}
+} 
 if keyboard_check_pressed(ord('P'))
 {
     game_restart();
 }
-//testing ***************
+//testing *************** */
 
 scr_View();//View mover
 </string>

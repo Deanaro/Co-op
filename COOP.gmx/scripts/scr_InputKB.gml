@@ -35,5 +35,3 @@ if v_move > 0.5 and v_move < 1
 // the aim vector , these should equal 1 together
 Aim[0] = -sin(angle*(pi/180)); // vertical
 Aim[1] = cos(angle*(pi/180));   // horizontal
-
-

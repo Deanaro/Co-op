@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>script_execute(scr_PlayerCreate);
+
+last_sec_update = current_second;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(asset_get_index(string(InputType)));
+            <string>///Execute every step
+script_execute(asset_get_index(string(InputType)));
 script_execute(scr_Movement); // movement, collision and animation
 script_execute(scr_GUI);
 script_execute(scr_PUpickup);
@@ -58,6 +61,30 @@ script_execute(scr_Drop);
 if asset_get_index(string(Weapon)) != -1 // if the script exists
 {
 script_execute(asset_get_index(string(Weapon)));    // run script
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Execute every second
+if (last_sec_update != current_second) {
+    script_execute(scr_PlayerUpdate_Second);
 }
 </string>
           </argument>
