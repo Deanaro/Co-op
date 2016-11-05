@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* this object is placed in every room */
+            <string>///Initialize Game Controller
+/* this object is placed in every room */
 randomize() // without this gamemaker uses a defualt seed which grants the same results every time
 instance_create(x,y,obj_Console); //initializes the the game console manager
 instance_create(x,y,obj_bgdraw); 
@@ -69,7 +70,8 @@ animated_tile_add(til_Firelevel,0.02,
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>animated_tile_update();
+            <string>///Update Controller Game Logic
+animated_tile_update();
 
 scr_PlayerJoin();
 
@@ -110,12 +112,11 @@ scr_View();//View mover
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// this event triggers on connection and disconnection of gamepads and creates
-// new player instances or deletes them when their corresponding controller has
-// been removed / diabled. 
+            <string>///Handle Controller
+/* this event triggers on connection and disconnection of gamepads and creates
+ new player instances or deletes them when their corresponding controller has
+ been removed / diabled. */
 
-
-//THIS IS A TEST - COMMIT HARRY AGAIN 2
 
 show_debug_message("Event = " + async_load[? "event_type"]);        // Debug cocde so you can see which event has been
 show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
@@ -194,7 +195,7 @@ case "gamepad lost":                           // Gamepad has been removed or  d
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//debug
+            <string>///Draw GUI
 
 var h_move = gamepad_axis_value(0 , gp_axislh);
 var v_move = gamepad_axis_value(0 , gp_axislv);

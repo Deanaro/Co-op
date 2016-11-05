@@ -25,13 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//NOTE TO IMPLEMENT; var to chold console line start that is more accurate (and will allow for line entry)
-
+            <string>///Initialize Console Settings
 /* CAN change - Initial console settings */
-console_open = true; //console open on screen
-console_focused = true; //console being typed into
+console_open = false; //console open on screen
+console_focused = false; //console being typed into
 console_lines = 5; //number of console lines to show + track
-console_pos = 'top'; //position of console
+console_pos = 'top'; //position of console (top/bottom)
 console_font = 'fnt_console'; //the console font
 console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)
 console_text_buffer = 3; //space between lines (in pixels)
@@ -119,7 +118,10 @@ show_debug_message("Console obj initialized.");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (console_open = true) {
+            <string>///Draw console
+//TODO: Shift all console calculations to pref update script
+
+if (console_open = true) {
     draw_set_alpha(console_alpha);
     
     /* draw the console background */
@@ -161,7 +163,7 @@ show_debug_message("Console obj initialized.");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//do not draw sprite.
+            <string>///Do not draw sprite
 </string>
           </argument>
         </arguments>

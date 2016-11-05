@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* this object is placed on the first room */
+            <string>///Initialize object
+/* this object is placed on the first room */
 global.view_height = 768;
 global.view_width = 1366;
 
