@@ -1,5 +1,11 @@
-/* If console is focused checks for legal console input and updates accordingly */
+//Keys ALWAYS tracked
+if (ButtonTilde == 0) 
+ButtonTilde = keyboard_check_pressed(192); // ~ / Tilde Key
+if (ButtonEnter == 0) 
+ButtonEnter = keyboard_check_pressed(vk_enter); // ENTER / Enter Key
 
+/* If console is focused checks for legal console input and updates accordingly */
+//Keys ONLY tracked when console focused for typing
 if (console_focused) {
     if (keyboard_lastkey != -1)
     {
@@ -15,3 +21,4 @@ if (console_focused) {
         keyboard_lastkey = -1;
     }
 }
+

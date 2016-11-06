@@ -84,6 +84,7 @@ script_execute(asset_get_index(string(Weapon)));    // run script
             <kind>1</kind>
             <string>///Execute every second
 if (last_sec_update != current_second) {
+    last_sec_update = current_second;
     script_execute(scr_PlayerUpdate_Second);
 }
 </string>
