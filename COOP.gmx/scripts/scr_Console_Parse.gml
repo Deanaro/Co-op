@@ -35,6 +35,27 @@ if (string_pos("info", console_text) != 0) {
     break;
     }
 }
+
+/* Parse and process 'set' commands*/
+if (string_pos("set", console_text) != 0) {
+    console_text = string_replace(console_text, "set", "");
+    /* START room command*/
+    if (string_pos("room", console_text) != 0) {
+        //get the typed name without lowercase changes etc.
+        console_text = string_replace(console_inlog, "set ", "");
+        console_text = string_replace(console_text, "room ", "");
+        //check if room exists
+        if (room_exists(asset_get_index(console_text))) {
+            console_to_write = "Moving to room: " + console_text;
+            console_to_write_col = "command";
+            scr_moveroom(console_text);
+        } else {
+            console_to_write = "Room '" + console_text + "' not found... ";
+            console_to_write_col = "error";
+        }
+    }
+    /* END room command */
+}
     
 /* Parse and process all other commands */         
 switch(console_text) {
@@ -48,7 +69,13 @@ switch(console_text) {
     game_end();
     break;
     
-    /* Information Output Commands */
+    case("restart"):
+        console_to_write = "Restarting the program..";
+        console_to_write_col = "command";
+    game_restart();
+    break;
+    
+    /* Basic Information Output Commands */
 
     case("help"): // help | show console help
         console_to_write = "Pink = Valid command | Red = Error | Grey = Standard output | Blue = Special | Yellow = Other";

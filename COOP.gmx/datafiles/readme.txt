@@ -11,6 +11,12 @@ Helpful commands
 ---------------------------------
 	Help			| Gives breakdown of output colours
 	Exit			| Ends the game
+	Restart			| Restarts the game
+
+Set commands (proceed commands with 'set ')
+---------------------------------
+	room [roomname]		| Uses the scr_moveroom script to change the room to [roomname]
+
 
 Info commands (proceed commands with 'info ')
 ---------------------------------
@@ -45,8 +51,6 @@ scr_Console_Log_Write("No object found with ID: " + str_obj_ID, "error"); //Outp
 =================================
 
 /* TO DO -Feel free to add to this list	*/
--Implement console input flashing cursor
--Implement backspace of user input
 -Implement the following commands:
 
 

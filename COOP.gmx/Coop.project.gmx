@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>readme.txt</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>readme.txt</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -71,7 +90,12 @@
   <scripts name="scripts">
     <scripts name="Console Scripts">
       <script>scripts\scr_Console_Input.gml</script>
-      <script>scripts\scr_console_pref_update.gml</script>
+      <script>scripts\scr_Console_Parse.gml</script>
+      <script>scripts\scr_Console_Execute.gml</script>
+      <script>scripts\scr_Console_Log_Write.gml</script>
+      <script>scripts\scr_Console_Pref_Update.gml</script>
+      <script>scripts\scr_ConsoleUpdate_Second.gml</script>
+      <script>scripts\scr_Console_Tick.gml</script>
     </scripts>
     <scripts name="Tool Scripts">
       <scripts name="Weapons">
@@ -117,6 +141,7 @@
       <script>scripts\scr_Drop.gml</script>
       <script>scripts\scr_SpawnPlayer.gml</script>
       <script>scripts\scr_PlayerJoin.gml</script>
+      <script>scripts\scr_PlayerUpdate_Second.gml</script>
     </scripts>
     <scripts name="GUI">
       <script>scripts\scr_GUI.gml</script>
@@ -168,8 +193,8 @@
     <object>objects\obj_Smoke</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Test</room>
-    <room>rooms\rm_Test2</room>
+    <room>rooms\rmTest</room>
+    <room>rooms\rmTest2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
