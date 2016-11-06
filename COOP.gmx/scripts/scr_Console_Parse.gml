@@ -28,7 +28,7 @@ if (string_pos("info", console_text) != 0) {
         case("players"): // Prints every player of the global.Player array and their ID's
         for (var i = 0; i < array_height_2d(global.Player)-1; i++;) {
             if (global.Player[i,0] != noone) {
-                console_to_write += "Player " + string(i) + ": ID\#" + string(global.Player[i,0]) + " Num: " + string(global.Player[i,1]) + " | ";
+                console_to_write += "Player " + string(i) + ": ID\#" + string(global.Player[i,0]) + " Controler ID: " + string(global.Player[i,1]) + " | ";
             }
         }
         console_to_write_col = "command";
