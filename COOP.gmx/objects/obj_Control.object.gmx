@@ -28,8 +28,10 @@
             <string>///Initialize Game Controller
 /* this object is placed in every room */
 randomize() // without this gamemaker uses a defualt seed which grants the same results every time
-instance_create(x,y,obj_Console); //initializes the the game console manager
+instance_create(x,y,obj_Console); //initializes the game console manager
+instance_create(x,y,obj_Parley);    //initializes the game dialogue manager
 instance_create(x,y,obj_bgdraw); 
+
 
 /*
 for (var i = 0; i &lt; 4; i++;)    // for when moving rooms!!!!

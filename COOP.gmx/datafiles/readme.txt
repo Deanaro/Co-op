@@ -50,7 +50,16 @@ scr_Console_Log_Write("Hello World", "ai"); //Outputs 'Hello World' in blue as i
 scr_Console_Log_Write("No object found with ID: " + str_obj_ID, "error"); //Outputs 'No object found with ID:######' in red as it is type 'error'
 =================================
 
-/* TO DO -Feel free to add to this list	*/
+/* TO DO (console)-Feel free to add to this list	*/
 -Implement the following commands:
+
+
++++++++++++++++++++++++++++++++++
+|    Parley System		|
++++++++++++++++++++++++++++++++++
+
+
+/* TO DO (parley)-Feel free to add to this list	*/
+-Implement one-by-one letter appearance
 
 

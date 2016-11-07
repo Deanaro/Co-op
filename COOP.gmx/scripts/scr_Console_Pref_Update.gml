@@ -22,4 +22,5 @@ if (console_pos = 'bottom') {
 
 console_rec_y1 = console_yloc + console_outlog_dir * console_height + (console_outlog_dir * console_offset);
 console_rec_x1 = console_xloc + view_wport[0]-1;
+console_xloc_pbuffer = console_xloc + console_text_buffer;
 //console_yloc + console_outlog_dir * console_height + (console_outlog_dir * console_offset)
