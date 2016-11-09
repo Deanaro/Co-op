@@ -29,7 +29,7 @@
 /* this object is placed in every room */
 randomize() // without this gamemaker uses a defualt seed which grants the same results every time
 instance_create(x,y,obj_Console); //initializes the game console manager
-instance_create(x,y,obj_Parley);    //initializes the game dialogue manager
+instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
 instance_create(x,y,obj_bgdraw); 
 
 

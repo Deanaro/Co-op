@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/* Parley System Preferences */
-parley_file_delimiter = ":";       //sets the delimiter for the parley files
-parley_file_columns = 4;
+chatter_file_delimiter = ":";       //sets the delimiter for the chatter files
+chatter_file_columns = 4;
 
 /* DO NOT edit this code */
-parley_file_opened = false;
-parley_active = false;
+chatter_file_opened = false;
+chatter_active = false;
 
-parley_room = -1;
+chatter_room = -1;
 </string>
           </argument>
         </arguments>
@@ -56,7 +56,7 @@ parley_room = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_Parley_RoomFile_Open(room_get_name(room));  //passes the room name in order to open the appropriate dialogue file
+            <string>scr_Chatter_RoomFile_Open(room_get_name(room));  //passes the room name in order to open the appropriate dialogue file
 </string>
           </argument>
         </arguments>
