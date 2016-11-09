@@ -27,11 +27,16 @@
             <kind>1</kind>
             <string>/* Parley System Preferences */
 chatter_file_delimiter = ":";       //sets the delimiter for the chatter files
+chatter_dialogue_indicator = "%Dial%";
 chatter_file_columns = 4;
 
 /* DO NOT edit this code */
 chatter_file_opened = false;
 chatter_active = false;
+chatter_focused_dialogue_num = -1;
+chatter_focussed_passage_array[0,0] = -1;
+
+//chatter_dialogue_array[0,0] = array[0,0];
 
 chatter_room = -1;
 </string>
