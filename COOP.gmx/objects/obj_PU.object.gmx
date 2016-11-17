@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.1;
+            <string>image_xscale = 2;
+image_yscale = 2;
+image_speed = 0.1;
 alarm[0] = 90 * room_speed; //set alarm to 90 seconds to destroy itselft
 
 </string>

@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 2;
+            <string>image_xscale = 2;
+image_yscale = 2;
+alarm[0] = 2;
+depth = -(y + sprite_height +10)
 </string>
           </argument>
         </arguments>
@@ -51,6 +54,7 @@
             <string>var randx = - 8 + random(16);
 var randy = - 8 + random(16);
 instance_create(x + randx, y + randy, obj_Smoke);
+alarm[0] = 4
 </string>
           </argument>
         </arguments>
@@ -81,14 +85,54 @@ or y &gt; view_yview + 16 + global.view_height
 
 if position_meeting(x,y,obj_solid)
 {instance_destroy();}
+if position_meeting(x,y,obj_Enemy)
+{
+    
+    var Target = instance_place(x,y,obj_Enemy);
+    if instance_exists(Target)
+    {
+    var angle = point_direction(x,y,Target.x,Target.y+66);
+    Target.v_move = y_move;
+    Target.h_move = x_move;
+    with Target
+    {
+    alarm[1] = 2;
+    Life -=1;
+    Knockback = 2;
+    if Life = 0
+    {instance_destroy();}
+    }
+    instance_destroy();
+    }
+}
 
-if alarm[0] = 0
-{alarm[0] = 2;}
+x += (x_move*10);
+y += (y_move*10);
 
-x += x_move*10;
-y += y_move*10;
-
-depth = room_height + 16
+depth = -(y + sprite_height +10)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>

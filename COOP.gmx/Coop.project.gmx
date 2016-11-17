@@ -6,6 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="walls">
+      <sprite>sprites\spr_DOOR</sprite>
+      <sprite>sprites\spr_Wall2</sprite>
+      <sprite>sprites\spr_Wall</sprite>
+    </sprites>
     <sprites name="Players">
       <sprites name="P1">
         <sprite>sprites\spr_P1_0</sprite>
@@ -18,10 +23,14 @@
         <sprite>sprites\spr_P1_3W</sprite>
       </sprites>
       <sprites name="P2">
-        <sprite>sprites\spr_P2_0W</sprite>
         <sprite>sprites\spr_P2_0</sprite>
+        <sprite>sprites\spr_P2_0W</sprite>
         <sprite>sprites\spr_P2_1</sprite>
         <sprite>sprites\spr_P2_1W</sprite>
+        <sprite>sprites\spr_P2_2</sprite>
+        <sprite>sprites\spr_P2_2W</sprite>
+        <sprite>sprites\spr_P2_3</sprite>
+        <sprite>sprites\spr_P2_3W</sprite>
       </sprites>
       <sprites name="P3">
         <sprite>sprites\spr_P3_0</sprite>
@@ -44,8 +53,6 @@
       <sprite>sprites\spr_PU9</sprite>
       <sprite>sprites\spr_PU10</sprite>
     </sprites>
-    <sprite>sprites\spr_Wall</sprite>
-    <sprite>sprites\spr_Wall2</sprite>
     <sprites name="GUI">
       <sprite>sprites\spr_GUI_1</sprite>
       <sprite>sprites\spr_GUI_2</sprite>
@@ -53,10 +60,26 @@
       <sprite>sprites\spr_GUI_4</sprite>
       <sprite>sprites\spr_PU</sprite>
       <sprite>sprites\spr_Wicon</sprite>
+      <sprite>sprites\spr_GUI</sprite>
+      <sprite>sprites\spr_GUIFocus</sprite>
+      <sprite>sprites\spr_Life</sprite>
+    </sprites>
+    <sprites name="Enemies">
+      <sprites name="Salamander">
+        <sprite>sprites\spr_Salamander</sprite>
+        <sprite>sprites\spr_SalamanderW</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\cntrl</sprite>
     <sprite>sprites\spr_Fireball</sprite>
     <sprite>sprites\spr_Smoke</sprite>
+    <sprite>sprites\spr_Shadow</sprite>
+    <sprites name="Crosshairs">
+      <sprite>sprites\spr_Crosshair_0</sprite>
+      <sprite>sprites\spr_Crosshair_1</sprite>
+      <sprite>sprites\spr_Crosshair_2</sprite>
+      <sprite>sprites\spr_Crosshair_3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\til_Firelevel</background>
@@ -66,6 +89,7 @@
     <background>background\til_Firelevel_4</background>
     <background>background\til_Firelevel_5</background>
     <background>background\til_FIRE</background>
+    <background>background\temptext</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -121,7 +145,6 @@
       <script>scripts\scr_GUI.gml</script>
     </scripts>
     <script>scripts\scr_SpawnPU.gml</script>
-    <script>scripts\scr_moveroom.gml</script>
     <script>scripts\scr_ToolUpdate.gml</script>
     <script>scripts\scr_View.gml</script>
     <script>scripts\scr_face.gml</script>
@@ -143,7 +166,12 @@
         <script>scripts\animated_tile_update.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_EnemyMove.gml</script>
+    <script>scripts\scr_EnemyMove2.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Players">
       <object>objects\obj_Player</object>
@@ -152,20 +180,30 @@
       <object>objects\obj_Wall</object>
       <object>objects\obj_Nonsolid</object>
       <object>objects\obj_solid</object>
+      <object>objects\obj_Door</object>
     </objects>
     <objects name="Controls">
       <object>objects\obj_Control</object>
       <object>objects\obj_GameStart</object>
       <object>objects\obj_Console</object>
+      <object>objects\obj_MainMenu</object>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\obj_Salamander</object>
+      <object>objects\obj_Enemy</object>
     </objects>
     <object>objects\obj_PU</object>
-    <object>objects\obj_bgdraw</object>
     <object>objects\obj_Fireball</object>
     <object>objects\obj_Smoke</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_MainMenu</room>
+    <room>rooms\rm_Start</room>
     <room>rooms\rm_Test</room>
-    <room>rooms\rm_Test2</room>
+    <room>rooms\room_1</room>
+    <room>rooms\room_2</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

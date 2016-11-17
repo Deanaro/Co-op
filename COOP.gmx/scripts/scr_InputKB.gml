@@ -1,3 +1,4 @@
+
 //input for keyboard
 
 ButtonA = keyboard_check_pressed(ord('Q')); // A / Cross
@@ -8,8 +9,8 @@ h_move = keyboard_check(ord('D')) - keyboard_check(ord('A'));    // left analog 
 v_move = keyboard_check(ord('S')) - keyboard_check(ord('W'));    // left analog Vertical
 h_face = 0;
 v_face = 0;
-var angle = point_direction(x,y,mouse_x,mouse_y)
-if mouse_check_button(mb_right) // when pressing right mouse button, the player aims and faces towards the cursor
+var angle = point_direction(x,y+48,mouse_x,mouse_y)
+if mouse_check_button(mb_right) or mouse_check_button(mb_left) // when pressing right or left mouse button, the player aims and faces towards the cursor
 {
 if angle < 45 or angle >= 315
 {h_face = 1;}
@@ -26,11 +27,14 @@ Rtrigger = mouse_check_button(mb_left); // left shoulder
 dleft  = mouse_wheel_down();// dpad left
 dright  = mouse_wheel_up(); // dpad right
 
-// makes movement smoother
-if h_move > 0.5 and h_move < 1
-{hmove = 1;}
-if v_move > 0.5 and v_move < 1
-{vmove = 1;}
+// makes movement roughly the same speed when moving diagnoly
+
+if abs(h_move) + abs(v_move) = 2
+{
+h_move *= 1/1.3;
+v_move *= 1/1.3;
+}
+
 
 // the aim vector , these should equal 1 together
 Aim[0] = -sin(angle*(pi/180)); // vertical
