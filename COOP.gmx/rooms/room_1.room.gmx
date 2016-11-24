@@ -28,7 +28,7 @@ y2 = 9*96;
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>992</w>
+    <w>1000</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -38,9 +38,9 @@ y2 = 9*96;
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>612</xoffset>
-    <yoffset>-175</yoffset>
+    <page>0</page>
+    <xoffset>-183</xoffset>
+    <yoffset>-152</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -63,7 +63,7 @@ y2 = 9*96;
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_Control" x="0" y="0" name="inst_95841AC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Control" x="0" y="0" name="inst_619C9DBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="til_FIRE" x="1248" y="192" w="96" h="96" xo="384" yo="384" id="10001455" name="inst_BFFFC666" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

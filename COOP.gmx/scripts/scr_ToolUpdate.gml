@@ -1,3 +1,7 @@
+// when a power up is placed into a slot, update that slot value
+// and update the weapon and utility scripts
+
+
 var S1 = global.Slot[0 + (4*Player_num)];  // gets he value of the power up in slots.
 var S2 = global.Slot[1 + (4*Player_num)];
 var S3 = global.Slot[2 + (4*Player_num)];

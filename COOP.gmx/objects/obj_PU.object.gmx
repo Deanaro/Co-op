@@ -29,6 +29,7 @@
 image_yscale = 2;
 image_speed = 0.1;
 alarm[0] = 90 * room_speed; //set alarm to 90 seconds to destroy itselft
+moving = false;
 
 </string>
           </argument>
@@ -76,6 +77,30 @@ alarm[0] = 90 * room_speed; //set alarm to 90 seconds to destroy itselft
           <argument>
             <kind>1</kind>
             <string>depth = -(y+sprite_height/2); // depths changes depending on y value
+
+if place_meeting(x,y,obj_solid) and moving = false
+    {
+    moving = true;
+    x1 = 0;
+    y1 = 0;
+        if !place_meeting(x+64,y,obj_solid)
+        {x1 = 1;}
+        else if !place_meeting(x-64,y,obj_solid)
+        {x1 = -1;}
+        else if !place_meeting(x,y+64,obj_solid)
+        {y1 = 1;}
+        else if !place_meeting(x,y-64,obj_solid)
+        {y1 = -1;}
+    }
+if moving = true
+{
+if place_meeting(x,y,obj_solid)
+{
+    x += 3*x1;
+    y += 3*y1;
+}
+else {moving = false;}
+}
 </string>
           </argument>
         </arguments>

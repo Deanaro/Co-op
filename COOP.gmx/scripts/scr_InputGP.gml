@@ -11,6 +11,7 @@ h_face= gamepad_axis_value(global.Player[Player_num,1] , gp_axisrh);    // right
 v_face = gamepad_axis_value(global.Player[Player_num,1] , gp_axisrv);    // right analog Vertical
 Lshoulder = gamepad_button_check(global.Player[Player_num,1], gp_shoulderl); // left shoulder
 Rtrigger = gamepad_button_check(global.Player[Player_num,1], gp_shoulderrb); // left shoulder
+Ltrigger = gamepad_button_check(global.Player[Player_num,1], gp_shoulderlb);
 dleft  = gamepad_button_check_pressed(global.Player[Player_num,1], gp_padl); // dpad left
 dright  = gamepad_button_check_pressed(global.Player[Player_num,1], gp_padr); // dpad right
 
@@ -44,15 +45,3 @@ else if h_move !=0 or v_move !=0
     Aim[1] = cos(angle*(pi/180));   // horizontal
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0.3); 
 }
-
-/* makes movement smoother
-if h_move > 0.7
-{h_move = 1;}
-else if h_move < -0.7
-{h_move = -1;}
-if v_move > 0.7
-{v_move = 1;}
-else if v_move < -0.7
-{v_move = -1;}
-*/
-

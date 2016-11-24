@@ -1,3 +1,10 @@
+/*returns the facing direction of the player where:
+0 = down
+1 = up
+2 = right
+3 = left
+*/
+
 if abs(argument0) > abs (argument1)
     {
     

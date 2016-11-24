@@ -1,6 +1,7 @@
-
-
-    if move =1 and abs(v_move) + abs(h_move) > 0.3 
+// TEMPORARY MOVEMENT/ COLLISION AND ANIMATION FOR ENEMY
+    
+        
+                if move =1 and abs(v_move) + abs(h_move) > 0.3 
     {
         
         var movex = round(h_move * spd);
@@ -57,4 +58,3 @@
 
     
     
-

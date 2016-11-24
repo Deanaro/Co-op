@@ -85,7 +85,8 @@ if Knockback &gt; 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if Alert = 0
+            <string>// generates a random verticle and horizontal
+if Alert = 0
 {
 if Knockback = 0
 {h_move = random(2) - 1;

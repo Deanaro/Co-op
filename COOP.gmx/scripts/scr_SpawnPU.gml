@@ -1,4 +1,4 @@
-Unlocked = 1; // temporary
+Unlocked = 2; // temporary
 if argument0 =0// check to see if an index has already been passed in
 {
 var Index = floor(random(Unlocked) + 1); // assign the index a random integer between 1 and the number of unlocked PU

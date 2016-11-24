@@ -3,10 +3,10 @@
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>spr_P1_0</maskName>
+  <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -25,13 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* this object is placed in every room */ 
-animated_tile_init();
-animated_tile_add(til_Firelevel,0.02,
-                    til_Firelevel_2,
-                    til_Firelevel_3,
-                    til_Firelevel_4,
-                    til_Firelevel_5);
+            <string>/* this object is placed in every room */
+instance_create(x,y,obj_Console); //initializes the the game console manager
+
+/*
+for (var i = 0; i &amp;lt; 4; i++;)    // for when moving rooms!!!!
+{
+    GUI[i] = noone;     // array for GUI objects for Players 
+    Wicon[i] = noone;   // array weapon icons
+    if gamepad_is_connected(i) and global.Player[i, 0] = -1
+    {scr_SpawnPlayer(i,0,0, global.view_width,global.view_height);}
+}
+*/ 
+
+
+
 </string>
           </argument>
         </arguments>
@@ -54,7 +62,7 @@ animated_tile_add(til_Firelevel,0.02,
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>animated_tile_update();
+            <string>
 
 if room = rm_Start // only allows playerrs to join in the Start room
 {
@@ -69,12 +77,10 @@ scr_View();//View mover
 
 
 
-// for testing ************
 if keyboard_check_pressed(ord('P'))
 {
     game_restart();
 }
-//testing ***************
 </string>
           </argument>
         </arguments>
@@ -97,11 +103,9 @@ if keyboard_check_pressed(ord('P'))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// this event triggers on connection and disconnection of gamepads and creates
-// new player instances or deletes them when their corresponding controller has
-// been removed / diabled. 
-
-
+            <string>/* this event triggers on connection and disconnection of gamepads and creates
+ new player instances or deletes them when their corresponding controller has
+ been removed / diabled. */
 
 
 show_debug_message("Event = " + async_load[? "event_type"]);        // Debug cocde so you can see which event has been
@@ -179,15 +183,14 @@ case "gamepad lost":                           // Gamepad has been removed or  d
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_Console); //initializes the the game console manager
-
-// when moving a room recreates the player objects
+            <string>// when moving a room recreates the player objects
 for (i = 0; i &lt;4; i++)
 {
 if global.Player[i,1] != -1
 {scr_SpawnPlayer(-2, global.x1,global.y1,global.x2,global.y2,i)}
 
 }
+scr_Path_Gridset(); // sets grid for pathfinding
 </string>
           </argument>
         </arguments>
@@ -222,6 +225,7 @@ for (var i=0; i &lt; 4; i++)
             draw_sprite_stretched(spr_Life,global.Player[i,2], xpos + 128, bottom - 64,16*2,16*2);
             draw_sprite_stretched(spr_PU,global.Player[i,0].hold, xpos + 128, bottom - 32,16*2,16*2);
             draw_sprite_stretched(spr_Wicon, global.Player[i,0].Wep_index, xpos, bottom - 64,32*2,16*2)
+            draw_sprite_stretched(spr_Uicon, global.Player[i,0].Utility_index, xpos+64, bottom - 64,32*2,16*2)
             draw_sprite_stretched(spr_GUIFocus,0,xpos + global.Player[i, 0].GUIslot*32, bottom-32,16*2,16*2);
             for (var i2= 0; i2 &lt; 4; i2++)
             {
@@ -229,42 +233,6 @@ for (var i=0; i &lt; 4; i++)
             }
         }
     }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//debug
-
-var h_move = gamepad_axis_value(0 , gp_axislh);
-var v_move = gamepad_axis_value(0 , gp_axislv);
-
-
-
-var dirx = h_move * 5;
-var diry = v_move * 5;
-var speedo = abs(dirx) + abs(diry)
-draw_text(10,40,"speed: " + string(speedo));
-
-
-
 </string>
           </argument>
         </arguments>

@@ -1,3 +1,5 @@
+// movement collision and animation handler
+
 var movex = round(h_move * spd);
 var movey = round(v_move * spd);
 
@@ -63,4 +65,3 @@ else
 sprite_index = asset_get_index("spr_P" + string(Player_num + 1) + "_" + string(dir) + string(anim)); // choses correct sprite
 
 depth = -(y+sprite_height); // depths changes depending on y value
-

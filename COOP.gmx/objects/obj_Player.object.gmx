@@ -52,9 +52,9 @@ draw = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.Player[Player_num,1] = 4
+            <string>if global.Player[Player_num,1] = 4 // if input is keyboard
 {cursor_sprite = asset_get_index("spr_Crosshair_" + string(Player_num));}//sets cursor
-else 
+else // if using gamepad
 {draw = 1;}
 </string>
           </argument>
@@ -102,16 +102,17 @@ image_blend = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(asset_get_index(string(InputType)));
-script_execute(scr_Movement); // movement, collision and animation
-script_execute(scr_GUI);
-script_execute(scr_PUpickup);
-script_execute(scr_Drop);
-
-// runs the script of the correct weapon/ utility.
+            <string>script_execute (asset_get_index(InputType));
+scr_Movement();
+scr_PUpickup();
+scr_GUI();
 if asset_get_index(string(Weapon)) != -1 // if the script exists
 {
 script_execute(asset_get_index(string(Weapon)));    // run script
+}
+if asset_get_index(string(Utility)) != -1 // if the script exists
+{
+script_execute(asset_get_index(string(Utility)));    // run script
 }
 
 //temp
@@ -164,7 +165,9 @@ image_blend = c_red;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if draw = 1
+            <string>//draws crosshair
+
+if draw = 1
 {
 draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[1]*192, y + Aim[0]*192+48);
 }

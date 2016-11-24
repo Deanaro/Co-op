@@ -1,7 +1,6 @@
-
 //input for keyboard
 
-ButtonA = keyboard_check_pressed(ord('Q')); // A / Cross
+ButtonA = keyboard_check_pressed(vk_space); // A / Cross
 ButtonB = keyboard_check_pressed(ord('F')); // B / Circle
 ButtonX = keyboard_check_pressed(ord('E')); // X / square
 ButtonY = keyboard_check_pressed(ord('R')); // Y / Triangle
@@ -10,7 +9,10 @@ v_move = keyboard_check(ord('S')) - keyboard_check(ord('W'));    // left analog 
 h_face = 0;
 v_face = 0;
 var angle = point_direction(x,y+48,mouse_x,mouse_y)
-if mouse_check_button(mb_right) or mouse_check_button(mb_left) // when pressing right or left mouse button, the player aims and faces towards the cursor
+ // when pressing right or left mouse button,
+ // the player aims and faces towards the cursor
+ // 
+if mouse_check_button(mb_right) or mouse_check_button(mb_left)
 {
 if angle < 45 or angle >= 315
 {h_face = 1;}
@@ -39,5 +41,6 @@ v_move *= 1/1.3;
 // the aim vector , these should equal 1 together
 Aim[0] = -sin(angle*(pi/180)); // vertical
 Aim[1] = cos(angle*(pi/180));   // horizontal
+
 
 

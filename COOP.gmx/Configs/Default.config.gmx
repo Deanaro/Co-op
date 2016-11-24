@@ -221,8 +221,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>False</option_fullscreen>
-    <option_gameguid>{23807496-661A-4EB6-9DF3-7FDAA163ADE5}</option_gameguid>
-    <option_gameid>456684452</option_gameid>
+    <option_gameguid>{F773E46B-C9B5-47A5-BF82-464D4BEFA585}</option_gameguid>
+    <option_gameid>857964223</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
@@ -347,7 +347,7 @@
     <option_mac_appstore_incoming_allow>0</option_mac_appstore_incoming_allow>
     <option_mac_appstore_outgoing_allow>0</option_mac_appstore_outgoing_allow>
     <option_mac_build_version>0</option_mac_build_version>
-    <option_mac_copyright_info>(c)2012 CompanyName Ltd...</option_mac_copyright_info>
+    <option_mac_copyright_info>(c)2016 CompanyName Ltd...</option_mac_copyright_info>
     <option_mac_create_app_store>-1</option_mac_create_app_store>
     <option_mac_display_name>Coop</option_mac_display_name>
     <option_mac_enable_retina>0</option_mac_enable_retina>
@@ -373,16 +373,12 @@
     <option_noscreensaver>true</option_noscreensaver>
     <option_ouya_packaging>0</option_ouya_packaging>
     <option_priority>0</option_priority>
-    <option_ps3_build_version>0</option_ps3_build_version>
     <option_ps3_interpolate>-1</option_ps3_interpolate>
-    <option_ps3_major_version>1</option_ps3_major_version>
-    <option_ps3_minor_version>0</option_ps3_minor_version>
     <option_ps3_nptitleid></option_ps3_nptitleid>
     <option_ps3_nptitlepassphrase>Memo1</option_ps3_nptitlepassphrase>
     <option_ps3_nptitlesecret>Memo1</option_ps3_nptitlesecret>
     <option_ps3_package_id></option_ps3_package_id>
     <option_ps3_passcode></option_ps3_passcode>
-    <option_ps3_revision_version>0</option_ps3_revision_version>
     <option_ps3_scale>0</option_ps3_scale>
     <option_ps3_texture_page>2048</option_ps3_texture_page>
     <option_ps3_version>1.00</option_ps3_version>
@@ -418,7 +414,7 @@
     <option_scale>-1</option_scale>
     <option_scaleprogress>true</option_scaleprogress>
     <option_sci_UseSCI>-1</option_sci_UseSCI>
-    <option_sci_serverLocation>https://github.com/Deanaro/Co-op</option_sci_serverLocation>
+    <option_sci_serverLocation>https://github.com/Deanaro/Co-op.git</option_sci_serverLocation>
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
     <option_shortcircuit>True</option_shortcircuit>
@@ -467,7 +463,7 @@
     <option_tvos_splash_time>0</option_tvos_splash_time>
     <option_tvos_texture_page>2048</option_tvos_texture_page>
     <option_use_fast_collision>False</option_use_fast_collision>
-    <option_use_new_audio>True</option_use_new_audio>
+    <option_use_new_audio>False</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
     <option_version>100</option_version>
     <option_version_build>0</option_version_build>
@@ -489,7 +485,7 @@
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
     <option_win8_display_name>Coop</option_win8_display_name>
     <option_win8_internet_capable>0</option_win8_internet_capable>
-    <option_win8_interpolate>0</option_win8_interpolate>
+    <option_win8_interpolate>-1</option_win8_interpolate>
     <option_win8_landscape_allowed>-1</option_win8_landscape_allowed>
     <option_win8_landscape_flipped_allowed>-1</option_win8_landscape_flipped_allowed>
     <option_win8_logo>Configs\Default\Windows8\logos\logo150.png</option_win8_logo>
@@ -512,13 +508,13 @@
     <option_win8_splash_background_colour>#000000</option_win8_splash_background_colour>
     <option_win8_splash_png>Configs\Default\Windows8\splashscreen.png</option_win8_splash_png>
     <option_win8_store_logo>Configs\Default\Windows8\logos\logo50.png</option_win8_store_logo>
-    <option_win8_texture_page>2048</option_win8_texture_page>
+    <option_win8_texture_page>1024</option_win8_texture_page>
     <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
     <option_winUAP_build_version>0</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
     <option_winUAP_display_name>Coop</option_winUAP_display_name>
     <option_winUAP_internet_capable>0</option_winUAP_internet_capable>
-    <option_winUAP_interpolate>0</option_winUAP_interpolate>
+    <option_winUAP_interpolate>-1</option_winUAP_interpolate>
     <option_winUAP_landscape_allowed>-1</option_winUAP_landscape_allowed>
     <option_winUAP_landscape_flipped_allowed>-1</option_winUAP_landscape_flipped_allowed>
     <option_winUAP_large_logo>Configs\Default\WindowsUAP\logos\LargeLogo.scale-100.png</option_winUAP_large_logo>
@@ -568,7 +564,7 @@
     <option_windows_steam_app_id>0</option_windows_steam_app_id>
     <option_windows_texture_page>2048</option_windows_texture_page>
     <option_windows_use_splash>-1</option_windows_use_splash>
-    <option_windows_vertex_buffer_method2>0</option_windows_vertex_buffer_method2>
+    <option_windows_vertex_buffer_method2>1</option_windows_vertex_buffer_method2>
     <option_winphone_480_splash_image>Configs\Default\WinPhone\SplashScreenImage480.jpg</option_winphone_480_splash_image>
     <option_winphone_720_splash_image>Configs\Default\WinPhone\SplashScreenImage720.jpg</option_winphone_720_splash_image>
     <option_winphone_768_splash_image>Configs\Default\WinPhone\SplashScreenImage.jpg</option_winphone_768_splash_image>

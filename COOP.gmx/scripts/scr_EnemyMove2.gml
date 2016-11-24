@@ -1,7 +1,4 @@
-
-
-
-        
+// TEMPORARY MOVEMENT/ COLLISION AND ANIMATION FOR ENEMY     
         var movex = h_move * spd*6;
         var movey = v_move * spd*6;
         if !place_meeting(x + movex, y, obj_solid) and !place_meeting(x + movex, y, obj_Enemy) and (x + movex <= room_width) and (x+ movex >= 0)
@@ -45,4 +42,3 @@
     
     
     
-

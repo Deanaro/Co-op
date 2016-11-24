@@ -16,7 +16,7 @@ else if dleft = 1
 // GUI navigation ************
 
 // assign a PU to a slot
-if ButtonA = 1 //A, CROSS
+if ButtonY = 1 //A, CROSS
 {
    var Slot_index = GUIslot + Player_num*4
    

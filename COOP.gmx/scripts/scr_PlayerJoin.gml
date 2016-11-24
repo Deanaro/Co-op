@@ -1,4 +1,3 @@
-
 if instance_number(obj_Player) < 4 
 {
 //gamepad join
@@ -30,4 +29,3 @@ if keyboard_check_pressed(ord('E'))
     }
 }
 }
-

@@ -1,6 +1,6 @@
-if ButtonY = 1 and hold !=0
+if hold !=0 // if player is holding an item
 {
-switch (dir)
+switch (dir)    // selects spawn coordinates depending on facing direction
         {
         case 0:
         {
@@ -33,6 +33,6 @@ switch (dir)
         }
 
 
-    scr_SpawnPU(hold, spawnx,spawny);
-    hold = 0;
+    scr_SpawnPU(hold, spawnx,spawny); //script for spawning power up
+    hold = 0; // sets hold to 0 (empty);
 }

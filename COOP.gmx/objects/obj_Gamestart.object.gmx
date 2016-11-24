@@ -2,7 +2,7 @@
 <object>
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/* this object is placed on the first room */
+
 
 /* this object is placed on the first room ONLY (rm_Start)*/
 
@@ -46,20 +47,19 @@ global.Player[i, 1] = -1; // pad_index number (-1 = noone)
 global.Player[i, 2] = 10; // sets health to 10!!
 }
 
-for (var i = 0; i &lt; 16; i++;)
-{
-global.Slot[i] = 0;        // array for slots index values
-}
 
+for (var i = 0; i &lt; 16; i++;)
+{global.Slot[i] = 0;}        // array for slots index values
+
+
+/* sets initial slot locks
 /* initial locks
-for (var i = 1; i &lt; 16; i +=2;)
+for (var i = 1; i &amp;lt; 16; i +=2;)
 {
+Slot[i] = 11;
 global.Slot[i] = 11;
 }
 */
-
-
-
 </string>
           </argument>
         </arguments>
@@ -116,8 +116,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-draw_text(10, 20, "Players join here, press ENTER to start");
+            <string>draw_text(10, 20, "Players join here, press ENTER to start");
 </string>
           </argument>
         </arguments>
