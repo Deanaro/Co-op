@@ -1,4 +1,4 @@
-//adds a Cell to the open list then sorts the list where the lowest F cost Cell is at OpenList[0]
+///adds a Cell to the open list then sorts the list where the lowest F cost Cell is at OpenList[0]
 
 if argument0 !=noone and obj_Control.Path_Cell[argument0] = 0 and Closed_List[argument0] = noone and Calculated_List[argument0,0]=noone
 {
