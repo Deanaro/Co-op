@@ -25,21 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* this object is placed in every room */
-instance_create(x,y,obj_Console); //initializes the the game console manager
-
-/*
-for (var i = 0; i &amp;lt; 4; i++;)    // for when moving rooms!!!!
-{
-    GUI[i] = noone;     // array for GUI objects for Players 
-    Wicon[i] = noone;   // array weapon icons
-    if gamepad_is_connected(i) and global.Player[i, 0] = -1
-    {scr_SpawnPlayer(i,0,0, global.view_width,global.view_height);}
-}
-*/ 
-
-
-
+            <string>///Initialize Game Controller
+/* this object is placed in every room */
+randomize() // without this gamemaker uses a defualt seed which grants the same results every time
+instance_create(x,y,obj_Console); //initializes the game console manager
+instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
+//instance_create(x,y,obj_bgdraw);  ! Obj doest exist
 </string>
           </argument>
         </arguments>
@@ -103,7 +94,8 @@ if keyboard_check_pressed(ord('P'))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* this event triggers on connection and disconnection of gamepads and creates
+            <string>///Handle Controller
+/* this event triggers on connection and disconnection of gamepads and creates
  new player instances or deletes them when their corresponding controller has
  been removed / diabled. */
 

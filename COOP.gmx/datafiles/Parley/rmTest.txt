@@ -1,2 +1,0 @@
-obj_test:hello:world:ding dong:
-obj_item2:itworks:hoorah!thiserror:

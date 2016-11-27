@@ -30,6 +30,7 @@ image_xscale = 3;
 image_yscale = 3;
 alarm[1] = 1;
 draw = 0;
+last_sec_update = current_second;
 </string>
           </argument>
         </arguments>
@@ -106,6 +107,7 @@ image_blend = -1;
 scr_Movement();
 scr_PUpickup();
 scr_GUI();
+
 if asset_get_index(string(Weapon)) != -1 // if the script exists
 {
 script_execute(asset_get_index(string(Weapon)));    // run script
@@ -119,6 +121,31 @@ script_execute(asset_get_index(string(Utility)));    // run script
 if Hurt = 1
 {
 image_blend = c_red;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Execute every second
+if (last_sec_update != current_second) {
+    last_sec_update = current_second;
+    script_execute(scr_PlayerUpdate_Second);
 }
 </string>
           </argument>

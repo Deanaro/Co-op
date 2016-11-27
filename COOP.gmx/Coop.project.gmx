@@ -3,7 +3,42 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="9" name="datafiles"/>
+  <datafiles number="11" name="datafiles">
+    <datafile>
+      <name>readme.txt</name>
+      <exists>-1</exists>
+      <size>2326</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>readme.txt</filename>
+    </datafile>
+    <datafile>
+      <name>rmTest.txt</name>
+      <exists>-1</exists>
+      <size>68</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>rmTest.txt</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -119,14 +154,15 @@
       <script>scripts\scr_PUpickup.gml</script>
       <script>scripts\scr_PlayerCreate.gml</script>
       <script>scripts\scr_ToolUpdate.gml</script>
+      <script>scripts\scr_PlayerUpdate_Second.gml</script>
     </scripts>
     <scripts name="Chatter">
       <script>scripts\scr_Clear_Temp_Arrays.gml</script>
       <script>scripts\scr_Chatter_Dialogue_Set.gml</script>
+      <script>scripts\scr_Chatter_Passage_Item_Set.gml</script>
       <script>scripts\scr_Chatter_Passage_Commit.gml</script>
       <script>scripts\scr_Chatter_Passage_Get.gml</script>
       <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
-      <script>scripts\scr_Chatter_Passage_Item_Set.gml</script>
     </scripts>
     <scripts name="Tools">
       <scripts name="Weapon">
@@ -231,7 +267,6 @@
     </objects>
     <objects name="Controls">
       <object>objects\obj_Wall</object>
-      <object>objects\obj_Console</object>
       <object>objects\obj_Gamestart</object>
       <object>objects\obj_Control</object>
       <object>objects\obj_Enemy</object>
@@ -239,6 +274,12 @@
       <object>objects\obj_solid</object>
       <object>objects\obj_Nonsolid</object>
       <object>objects\obj_MainMenu</object>
+      <object>objects\obj_Console</object>
+      <object>objects\obj_Chatter</object>
+      <object>objects\obj_Debug</object>
+      <object>objects\obj_GUI</object>
+      <object>objects\obj_GUIicon</object>
+      <object>objects\obj_SpawnCollider</object>
     </objects>
     <objects name="Drops">
       <object>objects\obj_PU</object>
@@ -257,6 +298,9 @@
     <room>rooms\rm_Start</room>
     <room>rooms\rm_Test</room>
     <room>rooms\room_1</room>
+    <room>rooms\rmTest2</room>
+    <room>rooms\room3</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

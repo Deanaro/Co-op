@@ -7,7 +7,282 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialize Console Settings
+/* CAN change - Initial console settings */
+console_open = false; //console open on screen
+console_focused = false; //console being typed into
+console_lines = 15; //number of console lines to show + track
+console_pos = 'top'; //position of console (top/bottom)
+console_font = 'fnt_console'; //the console font
+console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)
+console_text_buffer = 3; //space between lines (in pixels)
+console_alpha = 0.75; // the console's alpha (opacity)
+console_cursor = "_";
+
+/* DO NOT change - system settings and init */
+//generate height and position variables
+console_line_size = 0;
+console_height = 0;
+console_xloc = 0;
+console_yloc = view_hport[0];
+console_outlog_y = 0;
+console_inlog_y = 0;
+console_outdir_y = 1;
+console_xloc_pbuffer = 0;
+console_rec_y1 = 0;
+console_rec_x1 = 0;
+console_offset = 0;
+console_dfont = '' + string(console_font) + '_' + string(console_text_size);
+console_inlog = "";
+console_inlog_disp = "";
+last_sec_update = current_second;
+c_sec_tick = false;
+console_cursor_disp = "";
+scr_Console_Pref_Update();
+
+//Keyboard Button Tracking
+ButtonTilde = 0;
+ButtonEnter = 0;
+
+/* Create the array of console lines */
+for (var i = 0; i &lt; console_lines; i++) {
+console_array[i,0] = "" + string(i) + ": Test";
+console_array[i,1] = "reg";
+}
+
+show_debug_message("Console obj initialized.");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Console_Tick</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Console_Input</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Execute every second
+if (last_sec_update != current_second) {
+    last_sec_update = current_second;
+    script_execute(scr_ConsoleUpdate_Second);
+    c_sec_tick = !c_sec_tick;
+    
+    //Update console cursor
+    if (c_sec_tick == true) {
+        console_cursor_disp = console_cursor;
+    } else {
+        console_cursor_disp = "";
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="75">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw console
+
+if (console_open == true) {
+    draw_set_alpha(console_alpha);
+    
+    /* draw the console background */
+    draw_set_colour(c_green);
+    draw_rectangle(console_xloc, console_rec_y1, console_rec_x1, console_yloc, false);
+    draw_set_colour(c_lime);
+    draw_rectangle(console_xloc, console_rec_y1, console_rec_x1, console_yloc, true);
+    draw_set_colour(c_black);
+    
+    /* draw the console text */
+    draw_set_font(console_dfont);
+    
+    for (var i = 0; i &lt; console_lines; i++) {
+        //get/set console text line colour
+        switch(console_array[i,1]) {
+            case "reg":
+            case "regular":
+            draw_set_colour(c_silver);
+            break;
+            case "command":
+            draw_set_colour(c_fuchsia);
+            break;
+            case "error":
+            draw_set_colour(c_red);
+            break;
+            case "ai":
+            draw_set_colour(c_blue);
+            break;
+            default:
+            draw_set_colour(c_yellow);
+            break;
+        }
+        //draw the line text
+        draw_text(console_xloc_pbuffer, console_outlog_y + console_outlog_dir * (i * (console_height/console_lines)), console_array[i,0]); //needs to updated to improve position 
+    }
+    
+    /*draw the console data entry line if focused */
+    if (console_focused) {
+        draw_set_colour(c_white);
+        draw_text(console_xloc_pbuffer, console_inlog_y, console_inlog_disp);
+    }
+    
+    draw_set_colour(c_black); //reset draw color
+    draw_set_alpha(1); //reset draw alpha
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Do not draw sprite
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

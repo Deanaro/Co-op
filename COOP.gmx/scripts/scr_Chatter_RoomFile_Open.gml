@@ -56,3 +56,4 @@ if (chatter_room_file != -1) {
     chatter_file_opened = false;
 }
 
+
