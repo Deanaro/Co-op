@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* Parley System Preferences */
+            <string>/* Chatter System Preferences */
 chatter_file_delimiter = ":";       //sets the delimiter for the chatter files
 chatter_dialogue_indicator = "%Dial%";
 chatter_file_columns = 4;

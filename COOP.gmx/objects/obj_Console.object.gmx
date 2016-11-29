@@ -253,6 +253,7 @@ if (console_open == true) {
     
     draw_set_colour(c_black); //reset draw color
     draw_set_alpha(1); //reset draw alpha
+    draw_set_font(font0);
 }
 </string>
           </argument>
