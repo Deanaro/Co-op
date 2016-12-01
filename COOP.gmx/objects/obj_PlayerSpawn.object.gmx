@@ -2,46 +2,12 @@
 <object>
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Initialize Game Controller
-/* this object is placed in every room */
-if room = rm_Start
-{instance_create(x,y,obj_GameStart);}
-if room = rm_StartMenu
-{instance_create(x,y,obj_StartMenu);}
-if room != rm_StartMenu
-{instance_create(x,y,obj_GUI);
-instance_create(x,y,obj_PlayerSpawn)
-instance_create(x,y,obj_ViewHandler)}
-instance_create(x,y,obj_Console); //initializes the game console manager
-instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -59,12 +25,88 @@ instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Debugging TEMPORARY!!
-if mouse_check_button_pressed(mb_left) = 1
-{scr_SpawnPU(0, mouse_x, mouse_y);}
-if keyboard_check_pressed(ord('P'))
+            <string>if room = rm_Start
 {
-    game_restart();
+ scr_PlayerJoin();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="75">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+/* at the moment this script does nothing. when its finished this code will pause the game when a controller disconnects*/
+
+
+show_debug_message("Event = " + async_load[? "event_type"]);        // Debug cocde so you can see which event has been
+show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
+
+switch(async_load[? "event_type"])             // Parse the async_load map to see which event has been triggered
+{
+case "gamepad discovered":                     // A game pad has been discovered
+    var pad = async_load[? "pad_index"];       // Get the pad index value from the async_load map
+    if pad &lt; 4
+    {
+    var padSlot = scr_CheckForPad(pad); //check if pad exists, or next available player slot
+    }
+   
+        
+        
+           
+        
+        
+    break;
+case "gamepad lost":                           // Gamepad has been removed or  disabled
+    var pad = async_load[? "pad_index"];     // Get the pad index
+    if pad &lt; 4     
+    {       
+    var PlayerSlot = scr_CheckForPad(pad)
+    if PlayerSlot &lt;= 0 and PlayerSlot &gt;= -5
+    {
+    PlayerSlot = abs(PlayerSlot + 1)
+    //destroy all assets of that player
+    with global.Player[PlayerSlot,0]
+    {instance_destroy();}
+    global.Player[PlayerSlot,0] = noone;
+    global.Player[PlayerSlot,1] = -1;
+    }
+    }
+    /* Old destructor!
+    if (instance_exists(global.Player[pad]))          // Check for a player instance and other instanses associated with the pad and remove it
+        {
+        with (global.Player[pad])
+            {
+            instance_destroy();
+            }
+        with (GUI[pad])
+            {
+            instance_destroy();
+            }
+        with (Wicon[pad])
+            {
+            instance_destroy();
+            }
+        global.Player[pad] = noone;                   // Set the controller array to "noone" so it detects a new pad being connected
+        }
+    break;
+    */
 }
 </string>
           </argument>
@@ -88,7 +130,13 @@ if keyboard_check_pressed(ord('P'))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_Pathfinder);
+            <string>// when moving a room recreates the player objects
+for (i = 0; i &lt;4; i++)
+{
+if global.Player[i,1] != -1
+{scr_SpawnPlayer(-2, global.x1,global.y1,global.x2,global.y2,i)}
+
+}
 </string>
           </argument>
         </arguments>

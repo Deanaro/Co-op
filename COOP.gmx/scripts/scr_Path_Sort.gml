@@ -1,13 +1,13 @@
 ///adds a Cell to the open list then sorts the list where the lowest F cost Cell is at OpenList[0]
 
-if argument0 !=noone and obj_Control.Path_Cell[argument0] = 0 and Closed_List[argument0] = noone and Calculated_List[argument0,0]=noone
+if argument0 !=noone and obj_Pathfinder.Path_Cell[argument0] = 0 and Closed_List[argument0] = noone and Calculated_List[argument0,0]=noone
 {
 //sorts the open list from lowest F score to highest
-if argument0 < obj_Control.Hcells
+if argument0 < obj_Pathfinder.Hcells
 {var Celly = 0;}
 else
-{ var Celly = floor(argument0/obj_Control.Hcells);}// the row number of the cell
-var Cellx = argument0 - (Celly * obj_Control.Hcells);
+{ var Celly = floor(argument0/obj_Pathfinder.Hcells);}// the row number of the cell
+var Cellx = argument0 - (Celly * obj_Pathfinder.Hcells);
 
 Calculated_List[argument0,0] = argument1 + Calculated_List[argument2,0]; //G
 Calculated_List[argument0,1] = 10*(abs(Cellx-Goalx) + abs(Celly-Goaly)); //H
@@ -86,11 +86,11 @@ else if argument0 !=noone and Calculated_List[argument0,0] !=noone and Calculate
     var TEMP2;
     var Sortloop = 0;
     var Done =0;
-    if argument0 < obj_Control.Hcells
+    if argument0 < obj_Pathfinder.Hcells
 {var Celly = 0;}
 else
-{ var Celly = floor(argument0/obj_Control.Hcells);}// the row number of the cell
-var Cellx = argument0 - (Celly * obj_Control.Hcells);
+{ var Celly = floor(argument0/obj_Pathfinder.Hcells);}// the row number of the cell
+var Cellx = argument0 - (Celly * obj_Pathfinder.Hcells);
 
 Calculated_List[argument0,0] = argument1 + Calculated_List[argument2,0]; //G
 Calculated_List[argument0,1] = 10*(abs(Cellx-Goalx) + abs(Celly-Goaly)); //H

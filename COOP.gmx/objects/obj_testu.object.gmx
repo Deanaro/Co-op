@@ -139,16 +139,16 @@ if NodeCount !=0
 {
 for(i = NodeCount; i &gt; 0; i--)
 {
-if Node[i] &lt; obj_Control.Hcells
+if Node[i] &lt; obj_Pathfinder.Hcells
 {var y1 = 0;}
 else
-{ var y1 = floor(Node[i]/obj_Control.Hcells);}// the row number of the cell
-var x1 = Node[i] - (y1 * obj_Control.Hcells);
-if Node[i-1] &lt; obj_Control.Hcells
+{ var y1 = floor(Node[i]/obj_Pathfinder.Hcells);}// the row number of the cell
+var x1 = Node[i] - (y1 * obj_Pathfinder.Hcells);
+if Node[i-1] &lt; obj_Pathfinder.Hcells
 {var y2 = 0;}
 else
-{ var y2 = floor(Node[i-1]/obj_Control.Hcells);}// the row number of the cell
-var x2 = Node[i-1] - (y2 * obj_Control.Hcells);
+{ var y2 = floor(Node[i-1]/obj_Pathfinder.Hcells);}// the row number of the cell
+var x2 = Node[i-1] - (y2 * obj_Pathfinder.Hcells);
 draw_set_colour(c_red)
 draw_line_width(x1*64+32,y1*64+32,x2*64+32,y2*64+32,3);
 draw_set_colour(c_black)

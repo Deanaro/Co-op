@@ -8,7 +8,7 @@ h_move = keyboard_check(ord('D')) - keyboard_check(ord('A'));    // left analog 
 v_move = keyboard_check(ord('S')) - keyboard_check(ord('W'));    // left analog Vertical
 h_face = 0;
 v_face = 0;
-var angle = point_direction(x,y+48,mouse_x,mouse_y)
+var angle = point_direction(x,y+sprite_height/2,mouse_x,mouse_y)
  // when pressing right or left mouse button,
  // the player aims and faces towards the cursor
  // 

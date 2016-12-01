@@ -1,15 +1,15 @@
- Currentx = floor(x/obj_Control.Cellsize)
- Currenty = floor(y/obj_Control.Cellsize)
- CurrentCell = Currentx + (obj_Control.Hcells*(Currenty)) // gets the current cell's number
- Goalx = floor(argument0/obj_Control.Cellsize)
- Goaly = floor(argument1/obj_Control.Cellsize)
- GoalCell = Goalx + (obj_Control.Hcells*(Goaly))  // gets the goal cell's number
-if obj_Control.Path_Cell[CurrentCell] = 0 and obj_Control.Path_Cell[GoalCell] = 0
+ Currentx = floor(x/obj_Pathfinder.Cellsize)
+ Currenty = floor(y/obj_Pathfinder.Cellsize)
+ CurrentCell = Currentx + (obj_Pathfinder.Hcells*(Currenty)) // gets the current cell's number
+ Goalx = floor(argument0/obj_Pathfinder.Cellsize)
+ Goaly = floor(argument1/obj_Pathfinder.Cellsize)
+ GoalCell = Goalx + (obj_Pathfinder.Hcells*(Goaly))  // gets the goal cell's number
+if obj_Pathfinder.Path_Cell[CurrentCell] = 0 and obj_Pathfinder.Path_Cell[GoalCell] = 0
 {
 var Cellnum = 0;
-for(var i = 0;i<obj_Control.Vcells;i++)         
+for(var i = 0;i<obj_Pathfinder.Vcells;i++)         
 {
-    for(var i2 = 0; i2<obj_Control.Hcells;i2++)
+    for(var i2 = 0; i2<obj_Pathfinder.Hcells;i2++)
     {
         // if a solid object is withing this cell its value is 1, otherwise it is 0
         Closed_List[Cellnum] = noone;

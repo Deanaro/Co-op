@@ -3,19 +3,19 @@
 and adds them to the open list if they are legal
 argument0 = cellnumber */
 var temp = Open_List[0];
-if Open_List[0] < obj_Control.Hcells
+if Open_List[0] < obj_Pathfinder.Hcells
 {var Celly = 0;}
 else
-{ var Celly = floor(Open_List[0]/obj_Control.Hcells);}// the row number of the cell
-var Cellx = Open_List[0] - (Celly * obj_Control.Hcells);
+{ var Celly = floor(Open_List[0]/obj_Pathfinder.Hcells);}// the row number of the cell
+var Cellx = Open_List[0] - (Celly * obj_Pathfinder.Hcells);
 
 
 
 // below checks to see which adjecent cells are valid
 var left = Open_List[0] -1;
-var up = Open_List[0] -obj_Control.Hcells;
+var up = Open_List[0] -obj_Pathfinder.Hcells;
 var right = Open_List[0] + 1;
-var down = Open_List[0]+obj_Control.Hcells;
+var down = Open_List[0]+obj_Pathfinder.Hcells;
 var upleft = up - 1;
 var upright = up + 1;
 var downleft = down - 1;
@@ -26,7 +26,7 @@ upleft = noone;
 downleft = noone;
 left = noone;
 }
-else if Cellx = obj_Control.Hcells-1
+else if Cellx = obj_Pathfinder.Hcells-1
 {
 upright = noone;
 downright = noone;
@@ -38,7 +38,7 @@ upleft = noone;
 upright = noone;
 up = noone;
 }
-else if Celly = obj_Control.Vcells-1
+else if Celly = obj_Pathfinder.Vcells-1
 {
 downleft = noone;
 downright = noone;

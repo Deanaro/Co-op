@@ -21,31 +21,70 @@
       </ConfigOptions>
       <filename>readme.txt</filename>
     </datafile>
-    <datafile>
-      <name>rmTest.txt</name>
-      <exists>-1</exists>
-      <size>68</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>rmTest.txt</filename>
-    </datafile>
+    <datafiles number="11" name="Chatter_Files">
+      <datafile>
+        <name>rm_Test.txt</name>
+        <exists>-1</exists>
+        <size>68</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>rm_Test.txt</filename>
+      </datafile>
+    </datafiles>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="Enemies">
-      <sprites name="Salamander">
-        <sprite>sprites\spr_SalamanderW</sprite>
-        <sprite>sprites\spr_Salamander</sprite>
+    <sprites name="GUI">
+      <sprite>sprites\spr_GUI</sprite>
+      <sprite>sprites\spr_GUI_1</sprite>
+      <sprite>sprites\spr_GUI_2</sprite>
+      <sprite>sprites\spr_GUI_3</sprite>
+      <sprite>sprites\spr_GUI_4</sprite>
+      <sprite>sprites\spr_PU</sprite>
+      <sprite>sprites\spr_GUIFocus</sprite>
+      <sprite>sprites\spr_Life</sprite>
+      <sprite>sprites\spr_Uicon</sprite>
+      <sprite>sprites\spr_Wicon</sprite>
+    </sprites>
+    <sprites name="Systems">
+      <sprites name="Control">
+        <sprite>sprites\cntrl</sprite>
+        <sprite>sprites\spr_Wall2</sprite>
+        <sprite>sprites\spr_Wall</sprite>
+        <sprite>sprites\spr_DOOR</sprite>
+      </sprites>
+      <sprites name="Crosshair">
+        <sprite>sprites\spr_Crosshair_0</sprite>
+        <sprite>sprites\spr_Crosshair_1</sprite>
+        <sprite>sprites\spr_Crosshair_2</sprite>
+        <sprite>sprites\spr_Crosshair_3</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Tools">
+      <sprites name="Utility">
+        <sprites name="metal">
+          <sprite>sprites\spr_MetalWall_0</sprite>
+          <sprite>sprites\spr_MetalWall_1</sprite>
+          <sprite>sprites\spr_MetalWall_2</sprite>
+          <sprite>sprites\spr_MetalWall_3</sprite>
+          <sprite>sprites\spr_MetalWall_S</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Weapons">
+        <sprites name="Fire">
+          <sprite>sprites\spr_Fireball</sprite>
+          <sprite>sprites\spr_Smoke</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Player">
@@ -78,69 +117,50 @@
         <sprite>sprites\spr_P4_1</sprite>
       </sprites>
     </sprites>
-    <sprites name="GUI">
-      <sprite>sprites\spr_GUI</sprite>
-      <sprite>sprites\spr_GUI_1</sprite>
-      <sprite>sprites\spr_GUI_2</sprite>
-      <sprite>sprites\spr_GUI_3</sprite>
-      <sprite>sprites\spr_GUI_4</sprite>
-      <sprite>sprites\spr_PU</sprite>
-      <sprite>sprites\spr_GUIFocus</sprite>
-      <sprite>sprites\spr_Life</sprite>
-      <sprite>sprites\spr_Uicon</sprite>
-      <sprite>sprites\spr_Wicon</sprite>
-    </sprites>
-    <sprites name="Crosshair">
-      <sprite>sprites\spr_Crosshair_0</sprite>
-      <sprite>sprites\spr_Crosshair_1</sprite>
-      <sprite>sprites\spr_Crosshair_2</sprite>
-      <sprite>sprites\spr_Crosshair_3</sprite>
-    </sprites>
-    <sprites name="PickUps">
-      <sprite>sprites\spr_PU0</sprite>
-      <sprite>sprites\spr_PU1</sprite>
-      <sprite>sprites\spr_PU2</sprite>
-      <sprite>sprites\spr_PU3</sprite>
-      <sprite>sprites\spr_PU4</sprite>
-      <sprite>sprites\spr_PU5</sprite>
-      <sprite>sprites\spr_PU6</sprite>
-      <sprite>sprites\spr_PU7</sprite>
-      <sprite>sprites\spr_PU8</sprite>
-      <sprite>sprites\spr_PU9</sprite>
-      <sprite>sprites\spr_PU10</sprite>
-    </sprites>
-    <sprites name="Controls">
-      <sprite>sprites\spr_DOOR</sprite>
-      <sprite>sprites\spr_Wall</sprite>
-      <sprite>sprites\spr_Wall2</sprite>
-      <sprite>sprites\cntrl</sprite>
-    </sprites>
-    <sprites name="group">
-      <sprite>sprites\spr_Fireball</sprite>
-      <sprite>sprites\spr_Smoke</sprite>
-    </sprites>
-    <sprites name="Tools">
-      <sprites name="Utility">
-        <sprites name="metal">
-          <sprite>sprites\spr_MetalWall_0</sprite>
-          <sprite>sprites\spr_MetalWall_1</sprite>
-          <sprite>sprites\spr_MetalWall_2</sprite>
-          <sprite>sprites\spr_MetalWall_3</sprite>
-          <sprite>sprites\spr_MetalWall_S</sprite>
+    <sprites name="NPC">
+      <sprites name="Enemies">
+        <sprites name="Salamander">
+          <sprite>sprites\spr_SalamanderW</sprite>
+          <sprite>sprites\spr_Salamander</sprite>
         </sprites>
       </sprites>
     </sprites>
+    <sprites name="Mechanics">
+      <sprites name="PickUps">
+        <sprite>sprites\spr_PU0</sprite>
+        <sprite>sprites\spr_PU1</sprite>
+        <sprite>sprites\spr_PU2</sprite>
+        <sprite>sprites\spr_PU3</sprite>
+        <sprite>sprites\spr_PU4</sprite>
+        <sprite>sprites\spr_PU5</sprite>
+        <sprite>sprites\spr_PU6</sprite>
+        <sprite>sprites\spr_PU7</sprite>
+        <sprite>sprites\spr_PU8</sprite>
+        <sprite>sprites\spr_PU9</sprite>
+        <sprite>sprites\spr_PU10</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Prototype">
+      <sprite>sprites\spr_MurkBubble</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\temptext</background>
-    <background>background\til_FIRE</background>
-    <background>background\til_Firelevel</background>
-    <background>background\til_Firelevel_1</background>
-    <background>background\til_Firelevel_2</background>
-    <background>background\til_Firelevel_3</background>
-    <background>background\til_Firelevel_4</background>
-    <background>background\til_Firelevel_5</background>
-    <background>background\til_Firelevel_6</background>
+    <backgrounds name="Fire">
+      <background>background\til_Firelevel_6</background>
+      <background>background\til_Firelevel_3</background>
+      <background>background\til_FIRE</background>
+      <background>background\til_Firelevel_4</background>
+      <background>background\til_Firelevel</background>
+      <background>background\til_Firelevel_1</background>
+      <background>background\til_Firelevel_5</background>
+      <background>background\til_Firelevel_2</background>
+      <background>background\til_FireProps</background>
+      <background>background\background9</background>
+    </backgrounds>
+    <backgrounds name="Menu">
+      <background>background\temptext</background>
+    </backgrounds>
+    <background>background\til_FireLevelv2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -155,101 +175,109 @@
       <script>scripts\scr_PlayerCreate.gml</script>
       <script>scripts\scr_ToolUpdate.gml</script>
       <script>scripts\scr_PlayerUpdate_Second.gml</script>
-    </scripts>
-    <scripts name="Chatter">
-      <script>scripts\scr_Clear_Temp_Arrays.gml</script>
-      <script>scripts\scr_Chatter_Dialogue_Set.gml</script>
-      <script>scripts\scr_Chatter_Passage_Item_Set.gml</script>
-      <script>scripts\scr_Chatter_Passage_Commit.gml</script>
-      <script>scripts\scr_Chatter_Passage_Get.gml</script>
-      <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
-    </scripts>
-    <scripts name="Tools">
-      <scripts name="Weapon">
-        <script>scripts\scr_Weapon0_0.gml</script>
-        <scripts name="1">
-          <script>scripts\scr_Weapon1_0.gml</script>
-          <script>scripts\scr_Weapon1_1.gml</script>
+      <scripts name="Tools">
+        <scripts name="Weapon">
+          <script>scripts\scr_Weapon0_0.gml</script>
+          <scripts name="1">
+            <script>scripts\scr_Weapon1_0.gml</script>
+            <script>scripts\scr_Weapon1_1.gml</script>
+          </scripts>
+          <scripts name="2">
+            <script>scripts\scr_Weapon2_0.gml</script>
+            <script>scripts\scr_Weapon2_1.gml</script>
+            <script>scripts\scr_Weapon2_2.gml</script>
+          </scripts>
+          <scripts name="3">
+            <script>scripts\scr_Weapon3_0.gml</script>
+            <script>scripts\scr_Weapon3_1.gml</script>
+            <script>scripts\scr_Weapon3_2.gml</script>
+            <script>scripts\scr_Weapon3_3.gml</script>
+          </scripts>
+          <scripts name="4">
+            <script>scripts\scr_Weapon4_0.gml</script>
+            <script>scripts\scr_Weapon4_1.gml</script>
+            <script>scripts\scr_Weapon4_2.gml</script>
+            <script>scripts\scr_Weapon4_3.gml</script>
+            <script>scripts\scr_Weapon4_4.gml</script>
+          </scripts>
+          <scripts name="5">
+            <script>scripts\scr_Weapon5_0.gml</script>
+            <script>scripts\scr_Weapon5_1.gml</script>
+            <script>scripts\scr_Weapon5_2.gml</script>
+            <script>scripts\scr_Weapon5_3.gml</script>
+            <script>scripts\scr_Weapon5_4.gml</script>
+            <script>scripts\scr_Weapon5_5.gml</script>
+          </scripts>
         </scripts>
-        <scripts name="2">
-          <script>scripts\scr_Weapon2_0.gml</script>
-          <script>scripts\scr_Weapon2_1.gml</script>
-          <script>scripts\scr_Weapon2_2.gml</script>
-        </scripts>
-        <scripts name="3">
-          <script>scripts\scr_Weapon3_0.gml</script>
-          <script>scripts\scr_Weapon3_1.gml</script>
-          <script>scripts\scr_Weapon3_2.gml</script>
-          <script>scripts\scr_Weapon3_3.gml</script>
-        </scripts>
-        <scripts name="4">
-          <script>scripts\scr_Weapon4_0.gml</script>
-          <script>scripts\scr_Weapon4_1.gml</script>
-          <script>scripts\scr_Weapon4_2.gml</script>
-          <script>scripts\scr_Weapon4_3.gml</script>
-          <script>scripts\scr_Weapon4_4.gml</script>
-        </scripts>
-        <scripts name="5">
-          <script>scripts\scr_Weapon5_0.gml</script>
-          <script>scripts\scr_Weapon5_1.gml</script>
-          <script>scripts\scr_Weapon5_2.gml</script>
-          <script>scripts\scr_Weapon5_3.gml</script>
-          <script>scripts\scr_Weapon5_4.gml</script>
-          <script>scripts\scr_Weapon5_5.gml</script>
+        <scripts name="Utility">
+          <script>scripts\scr_Utility2_0.gml</script>
+          <script>scripts\scr_Utility2_2.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Utility">
-        <script>scripts\scr_Utility2_0.gml</script>
-        <script>scripts\scr_Utility2_2.gml</script>
+    </scripts>
+    <scripts name="Game Logic">
+      <scripts name="Systems">
+        <scripts name="Console">
+          <script>scripts\scr_Console_Input.gml</script>
+          <script>scripts\scr_Console_Log_Write.gml</script>
+          <script>scripts\scr_Console_Execute.gml</script>
+          <script>scripts\scr_Console_Parse.gml</script>
+          <script>scripts\scr_Console_Pref_Update.gml</script>
+          <script>scripts\scr_Console_Tick.gml</script>
+          <script>scripts\scr_ConsoleUpdate_Second.gml</script>
+        </scripts>
+        <scripts name="Tiles">
+          <script>scripts\animated_tile_add.gml</script>
+          <script>scripts\animated_tile_cleanup.gml</script>
+          <script>scripts\animated_tile_disable_all.gml</script>
+          <script>scripts\animated_tile_enable_all.gml</script>
+          <script>scripts\animated_tile_get_animation_speed.gml</script>
+          <script>scripts\animated_tile_get_background.gml</script>
+          <script>scripts\animated_tile_get_current_background.gml</script>
+          <script>scripts\animated_tile_get_current_frame.gml</script>
+          <script>scripts\animated_tile_get_frame_count.gml</script>
+          <script>scripts\animated_tile_get_next_frame.gml</script>
+          <script>scripts\animated_tile_init.gml</script>
+          <script>scripts\animated_tile_is_playing.gml</script>
+          <script>scripts\animated_tile_update.gml</script>
+        </scripts>
       </scripts>
-    </scripts>
-    <scripts name="Tiles">
-      <script>scripts\animated_tile_add.gml</script>
-      <script>scripts\animated_tile_cleanup.gml</script>
-      <script>scripts\animated_tile_disable_all.gml</script>
-      <script>scripts\animated_tile_enable_all.gml</script>
-      <script>scripts\animated_tile_get_animation_speed.gml</script>
-      <script>scripts\animated_tile_get_background.gml</script>
-      <script>scripts\animated_tile_get_current_background.gml</script>
-      <script>scripts\animated_tile_get_current_frame.gml</script>
-      <script>scripts\animated_tile_get_frame_count.gml</script>
-      <script>scripts\animated_tile_get_next_frame.gml</script>
-      <script>scripts\animated_tile_init.gml</script>
-      <script>scripts\animated_tile_is_playing.gml</script>
-      <script>scripts\animated_tile_update.gml</script>
-    </scripts>
-    <scripts name="Console">
-      <script>scripts\scr_Console_Input.gml</script>
-      <script>scripts\scr_Console_Log_Write.gml</script>
-      <script>scripts\scr_Console_Execute.gml</script>
-      <script>scripts\scr_Console_Parse.gml</script>
-      <script>scripts\scr_Console_Pref_Update.gml</script>
-      <script>scripts\scr_Console_Tick.gml</script>
-      <script>scripts\scr_ConsoleUpdate_Second.gml</script>
-    </scripts>
-    <scripts name="System">
-      <scripts name="PlayerJoin">
-        <script>scripts\scr_CheckForPad.gml</script>
-        <script>scripts\scr_PlayerJoin.gml</script>
-        <script>scripts\scr_SpawnPlayer.gml</script>
-      </scripts>
-      <scripts name="general">
+      <scripts name="Core Scripts">
         <script>scripts\scr_View.gml</script>
+        <scripts name="PlayerJoin">
+          <script>scripts\scr_CheckForPad.gml</script>
+          <script>scripts\scr_PlayerJoin.gml</script>
+          <script>scripts\scr_SpawnPlayer.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Mechanics">
         <script>scripts\scr_SpawnPU.gml</script>
       </scripts>
     </scripts>
-    <scripts name="Enemy">
-      <script>scripts\scr_EnemyMove.gml</script>
-      <script>scripts\scr_EnemyMove2.gml</script>
-      <scripts name="Pathfinding">
-        <script>scripts\scr_Path_Gridset.gml</script>
-        <script>scripts\scr_Path_Begin.gml</script>
-        <script>scripts\scr_Path_Find.gml</script>
-        <script>scripts\scr_Path_Sort.gml</script>
-        <script>scripts\scr_Path_Nodes.gml</script>
-        <script>scripts\scr_Path_Shiftlist.gml</script>
-        <script>scripts\scr_Path_AddWall.gml</script>
-        <script>scripts\scr_Path_DropWall.gml</script>
+    <scripts name="NPC">
+      <scripts name="Enemies">
+        <script>scripts\scr_EnemyMove.gml</script>
+        <script>scripts\scr_EnemyMove2.gml</script>
+        <scripts name="Pathfinding">
+          <script>scripts\scr_Path_Gridset.gml</script>
+          <script>scripts\scr_Path_Begin.gml</script>
+          <script>scripts\scr_Path_Find.gml</script>
+          <script>scripts\scr_Path_Sort.gml</script>
+          <script>scripts\scr_Path_Nodes.gml</script>
+          <script>scripts\scr_Path_Shiftlist.gml</script>
+          <script>scripts\scr_Path_AddWall.gml</script>
+          <script>scripts\scr_Path_DropWall.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
+    <scripts name="Prototypes">
+      <scripts name="Chatter">
+        <script>scripts\scr_Clear_Temp_Arrays.gml</script>
+        <script>scripts\scr_Chatter_Dialogue_Set.gml</script>
+        <script>scripts\scr_Chatter_Passage_Item_Set.gml</script>
+        <script>scripts\scr_Chatter_Passage_Commit.gml</script>
+        <script>scripts\scr_Chatter_Passage_Get.gml</script>
+        <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -259,48 +287,84 @@
     <font>fonts\fnt_console</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_Player</object>
-    <objects name="Enemies">
-      <objects name="Salamander">
-        <object>objects\obj_Salamander</object>
+    <objects name="Game Logic">
+      <object>objects\obj_Control</object>
+      <objects name="Control objects">
+        <object>objects\obj_ViewHandler</object>
+        <object>objects\obj_Pathfinder</object>
+        <object>objects\obj_StartMenu</object>
+        <object>objects\obj_PlayerSpawn</object>
+        <object>objects\obj_GameStart</object>
+        <object>objects\obj_GUI</object>
+      </objects>
+      <objects name="Systems">
+        <objects name="Console">
+          <object>objects\obj_Console</object>
+        </objects>
+      </objects>
+      <objects name="Mechanics">
+        <objects name="Drops">
+          <object>objects\obj_PU</object>
+        </objects>
+        <objects name="RoomMovement">
+          <object>objects\obj_Door</object>
+        </objects>
       </objects>
     </objects>
-    <objects name="Controls">
-      <object>objects\obj_Wall</object>
-      <object>objects\obj_Gamestart</object>
-      <object>objects\obj_Control</object>
-      <object>objects\obj_Enemy</object>
-      <object>objects\obj_Door</object>
-      <object>objects\obj_solid</object>
-      <object>objects\obj_Nonsolid</object>
-      <object>objects\obj_MainMenu</object>
-      <object>objects\obj_Console</object>
-      <object>objects\obj_Chatter</object>
-      <object>objects\obj_Debug</object>
-      <object>objects\obj_GUI</object>
-      <object>objects\obj_GUIicon</object>
-      <object>objects\obj_SpawnCollider</object>
+    <objects name="NPC">
+      <objects name="Enemies">
+        <objects name="Salamander">
+          <object>objects\obj_Salamander</object>
+        </objects>
+      </objects>
+      <objects name="Parent Objects Only">
+        <object>objects\obj_Enemy</object>
+      </objects>
     </objects>
-    <objects name="Drops">
-      <object>objects\obj_PU</object>
+    <objects name="Player">
+      <object>objects\obj_Player</object>
     </objects>
-    <object>objects\obj_Smoke</object>
-    <object>objects\obj_Fireball</object>
-    <object>objects\obj_test</object>
-    <object>objects\obj_testu</object>
-    <object>objects\obj_MetalWall</object>
-    <object>objects\obj_MetalWallPlacer</object>
+    <objects name="Props">
+      <objects name="Child Objects">
+        <object>objects\obj_InvisibleWall</object>
+      </objects>
+      <objects name="Parent Objects Only">
+        <object>objects\obj_solid</object>
+      </objects>
+    </objects>
+    <objects name="Tools">
+      <objects name="Utility">
+        <objects name="Metal">
+          <object>objects\obj_MetalWallPlacer</object>
+          <object>objects\obj_MetalWall</object>
+        </objects>
+      </objects>
+    </objects>
+    <objects name="Prototypes">
+      <objects name="Harry">
+        <objects name="Chatter">
+          <object>objects\obj_Chatter</object>
+        </objects>
+      </objects>
+      <objects name="Dean">
+        <object>objects\obj_Smoke</object>
+        <object>objects\obj_test</object>
+        <object>objects\obj_testu</object>
+        <object>objects\obj_Fireball</object>
+        <object>objects\obj_MurkBubble</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_MainMenu</room>
-    <room>rooms\rm_pathfindingtest</room>
-    <room>rooms\room5</room>
-    <room>rooms\rm_Start</room>
-    <room>rooms\rm_Test</room>
-    <room>rooms\room_1</room>
-    <room>rooms\rmTest2</room>
-    <room>rooms\room3</room>
-    <room>rooms\room0</room>
+    <room>rooms\rm_StartMenu</room>
+    <rooms name="Testing Rooms">
+      <room>rooms\rm_pathfindingtest</room>
+      <room>rooms\rm_Start</room>
+      <room>rooms\rm_Test</room>
+      <room>rooms\rm_Test2</room>
+      <room>rooms\rm_Test3</room>
+      <room>rooms\rm_Test4</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
