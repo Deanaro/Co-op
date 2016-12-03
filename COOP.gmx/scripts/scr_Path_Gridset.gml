@@ -9,7 +9,7 @@ for(var i = 0;i<Vcells;i++)
     for(var i2 = 0; i2<Hcells;i2++)
     {
         // if a solid object is withing this cell its value is 1, otherwise it is 0
-        Path_Cell[Cellnum] = place_meeting((i2)*Cellsize,(i)*Cellsize+1,obj_solid);
+        Path_Cell[Cellnum] = place_meeting((i2)*Cellsize,(i)*Cellsize+1,obj_NonUnitSolid);
         Cellnum +=1;
     }
 }

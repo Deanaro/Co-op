@@ -1,5 +1,7 @@
+ //(target.x,targer.y)
+ 
  Currentx = floor(x/obj_Pathfinder.Cellsize)
- Currenty = floor(y/obj_Pathfinder.Cellsize)
+ Currenty = floor(bbox_bottom/obj_Pathfinder.Cellsize)
  CurrentCell = Currentx + (obj_Pathfinder.Hcells*(Currenty)) // gets the current cell's number
  Goalx = floor(argument0/obj_Pathfinder.Cellsize)
  Goaly = floor(argument1/obj_Pathfinder.Cellsize)
@@ -37,10 +39,14 @@ Calculated_List[Cellnum,2] = 0;
     // Adding the starting cell to the open list, which is the list of nodes to be considered
     Open_List[0] = CurrentCell;
     OpenNum +=1;
-    
-    while Closed_List[GoalCell] = noone
+    Loop = 0;
+    while Closed_List[GoalCell] = noone and Loop < 300
     {
+    Loop ++;
     scr_Path_Find(); // adds a cell to the closed list and 
     }
+    if Loop !=300
+    {
     scr_Path_Nodes();
+    }
 }

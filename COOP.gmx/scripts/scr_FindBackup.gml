@@ -1,8 +1,4 @@
-if Open_List[0] = noone
-{
-Loop = 200;
-exit
-}
+
 /* this script looks at the adjecent cells
 and adds them to the open list if they are legal
 argument0 = cellnumber */
@@ -14,6 +10,7 @@ else
 var Cellx = Open_List[0] - (Celly * obj_Pathfinder.Hcells);
 
 
+
 // below checks to see which adjecent cells are valid
 var left = Open_List[0] -1;
 var up = Open_List[0] -obj_Pathfinder.Hcells;
@@ -23,7 +20,6 @@ var upleft = up - 1;
 var upright = up + 1;
 var downleft = down - 1;
 var downright = down +1;
-
 if Cellx = 0
 {
 upleft = noone;
@@ -56,14 +52,14 @@ OpenNum -=1;
 
 check = 0;
 //if the cells are valid they will be added to the open list and the list will be sorted
-    scr_Path_Sort(left,10,temp);
-    scr_Path_Sort(right,10,temp);
-    scr_Path_Sort(up,10,temp);
-    scr_Path_Sort(down,10,temp);
-    scr_Path_Sort(upleft,14,temp);
-    scr_Path_Sort(upright,14,temp);
-    scr_Path_Sort(downleft,14,temp);
-    scr_Path_Sort(downright,14,temp);
+    scr_Path_Sort(left,round(5+random(20)),temp);
+    scr_Path_Sort(right,round(5+random(20)),temp);
+    scr_Path_Sort(up,round(5+random(20)),temp);
+    scr_Path_Sort(down,round(5+random(20)),temp);
+    scr_Path_Sort(upleft,round(10+random(30)),temp);
+    scr_Path_Sort(upright,round(10+random(30)),temp);
+    scr_Path_Sort(downleft,round(10+random(30)),temp);
+    scr_Path_Sort(downright,round(10+random(30)),temp);
   
 
 if check = 0 or Open_List[0] = noone {scr_Path_Shiftlist();}

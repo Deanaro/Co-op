@@ -91,7 +91,7 @@ global.x1 = 100;
 global.y1 = 100;
 global.x2 = 300;
 global.y2 = 300;
-room_goto(rm_Test4) //temp destination
+room_goto(rm_Test5) //temp destination
 instance_destroy();
 }
 </string>

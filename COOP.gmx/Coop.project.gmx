@@ -258,16 +258,6 @@
       <scripts name="Enemies">
         <script>scripts\scr_EnemyMove.gml</script>
         <script>scripts\scr_EnemyMove2.gml</script>
-        <scripts name="Pathfinding">
-          <script>scripts\scr_Path_Gridset.gml</script>
-          <script>scripts\scr_Path_Begin.gml</script>
-          <script>scripts\scr_Path_Find.gml</script>
-          <script>scripts\scr_Path_Sort.gml</script>
-          <script>scripts\scr_Path_Nodes.gml</script>
-          <script>scripts\scr_Path_Shiftlist.gml</script>
-          <script>scripts\scr_Path_AddWall.gml</script>
-          <script>scripts\scr_Path_DropWall.gml</script>
-        </scripts>
       </scripts>
     </scripts>
     <scripts name="Prototypes">
@@ -278,6 +268,25 @@
         <script>scripts\scr_Chatter_Passage_Commit.gml</script>
         <script>scripts\scr_Chatter_Passage_Get.gml</script>
         <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
+      </scripts>
+      <scripts name="AI">
+        <script>scripts\scr_AI_Alert.gml</script>
+        <script>scripts\scr_AI_Action.gml</script>
+        <script>scripts\scr_AI_Action_Alert.gml</script>
+        <script>scripts\scr_AI_Chase.gml</script>
+        <script>scripts\scr_AI_Move.gml</script>
+        <script>scripts\scr_AI_RandomMove.gml</script>
+        <scripts name="Pathfinding">
+          <script>scripts\scr_Path_Gridset.gml</script>
+          <script>scripts\scr_Path_Begin.gml</script>
+          <script>scripts\scr_Path_Find.gml</script>
+          <script>scripts\scr_Path_Sort.gml</script>
+          <script>scripts\scr_Path_Nodes.gml</script>
+          <script>scripts\scr_Path_Shiftlist.gml</script>
+          <script>scripts\scr_Path_AddWall.gml</script>
+          <script>scripts\scr_Path_DropWall.gml</script>
+          <script>scripts\scr_Path_Walk.gml</script>
+        </scripts>
       </scripts>
     </scripts>
   </scripts>
@@ -330,6 +339,8 @@
       </objects>
       <objects name="Parent Objects Only">
         <object>objects\obj_solid</object>
+        <object>objects\obj_UnitSolid</object>
+        <object>objects\obj_NonUnitSolid</object>
       </objects>
     </objects>
     <objects name="Tools">
@@ -352,6 +363,7 @@
         <object>objects\obj_testu</object>
         <object>objects\obj_Fireball</object>
         <object>objects\obj_MurkBubble</object>
+        <object>objects\obj_EnemyAi</object>
       </objects>
     </objects>
   </objects>
@@ -364,6 +376,7 @@
       <room>rooms\rm_Test2</room>
       <room>rooms\rm_Test3</room>
       <room>rooms\rm_Test4</room>
+      <room>rooms\rm_Test5</room>
     </rooms>
   </rooms>
   <help>
