@@ -1,7 +1,7 @@
-spd = 3;
-if move = 0
+spd = 3; //speed when chasing
+if move = 0 //incase another action left move at 0
 {move = 1;}
-/////////// pathfind queing and runs every minimum of 10 steps
+/////////// pathfind queing and runs every minimum of 10 and no more than 5 instances at once use pathfind
 if CanUpdate = 0 and UpdatePath = 0
 {
     CanUpdate = 1;
@@ -20,5 +20,5 @@ scr_Path_Begin(Targetx,Targety);
 /////////\\\\\\\\\\\
 if NodeCount!=0 // if a path exists
 {
-scr_Path_Walk(spd);
+scr_Path_Walk();//walks through the path
 }

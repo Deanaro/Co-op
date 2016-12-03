@@ -1,7 +1,7 @@
-// movement collision and animation handler
+// movement and collision handler
 if move !=0
 {
-
+    //turns the variable dir to vectory movex and movey
     movex = round(cos(dir*pi/180) * spd);
     movey = round(-sin(dir*pi/180) * spd);
     

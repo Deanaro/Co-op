@@ -74,16 +74,14 @@ spd = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Shift ++;
-if Shift &gt; 60
-{Shift = 0;}
-Target = scr_AI_Alert();
+            <string>Target = scr_AI_Alert(); // checks if a player is in range and if so turns alert and returns nearest players ID
 if Alert = 1
-{scr_AI_Action_Alert();}
+{scr_AI_Action_Alert();} //chooses between Alert actions
 else if Alert = 0
-{scr_AI_Action();}
+{scr_AI_Action();} //chooses between Non Alert actions
 if move !=0
-scr_AI_Move();
+scr_AI_Move(); // moves enemy based on speed and direction of variable "dir" (degrees);
+
 /*
 if place_meeting(x,y,obj_Enemy)
 {
@@ -119,7 +117,7 @@ if place_meeting(x,y,obj_Enemy)
 */
 
 
-depth = -bbox_bottom;
+depth = -bbox_bottom; //depth
 </string>
           </argument>
         </arguments>
@@ -142,7 +140,9 @@ depth = -bbox_bottom;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = xstart;
+            <string>//restart location and life on room start
+
+x = xstart;
 y = ystart;
 Life = 10;
 </string>
@@ -167,7 +167,10 @@ Life = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*draw_set_alpha(0.05);
+            <string>// this will draw the path and vision range of the enemy, works better with fiew enemies
+
+
+/*draw_set_alpha(0.05);
 
 if Alert = 0
 {
