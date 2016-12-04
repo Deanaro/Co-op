@@ -74,7 +74,8 @@ spd = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Target = scr_AI_Alert(); // checks if a player is in range and if so turns alert and returns nearest players ID
+            <string>///Movement and Alerts
+Target = scr_AI_Alert(); // checks if a player is in range and if so turns alert and returns nearest players ID
 if Alert = 1
 {scr_AI_Action_Alert();} //chooses between Alert actions
 else if Alert = 0

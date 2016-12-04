@@ -29,7 +29,7 @@
 /* CAN change - Initial console settings */
 console_open = false; //console open on screen
 console_focused = false; //console being typed into
-console_lines = 15; //number of console lines to show + track
+console_lines = 30; //number of console lines to show + track
 console_pos = 'top'; //position of console (top/bottom)
 console_font = 'fnt_console'; //the console font
 console_text_size = 12; //size of the line text (in point value) - to convert to pixels = point * 96 / 72)

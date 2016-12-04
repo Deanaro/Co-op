@@ -16,7 +16,7 @@ if (console_focused) {
             //check current length of input string in characters
             if (string_length(console_inlog) < 65) {
                 //update console input string
-                show_debug_message("lastkey: " + keyboard_lastchar)
+                //show_debug_message("lastkey: " + keyboard_lastchar) !DEBUG Show last key pressed
                 console_inlog += keyboard_lastchar;
             }  
         }

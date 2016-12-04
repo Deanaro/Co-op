@@ -48,6 +48,7 @@ if (string_pos("set", console_text) != 0) {
         if (room_exists(asset_get_index(console_text))) {
             console_to_write = "Moving to room: " + console_text;
             console_to_write_col = "command";
+            room_goto(asset_get_index(console_text));
         } else {
             console_to_write = "Room '" + console_text + "' not found... ";
             console_to_write_col = "error";

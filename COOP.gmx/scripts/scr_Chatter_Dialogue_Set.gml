@@ -10,12 +10,14 @@ if (chatter_dialogue_set_name != "") {
         }
     }
     /* If dialogue already exists in array; focus */
-    if (dialogue_found != -1) {
+    if (dialogue_num != -1) {
         chatter_focused_dialogue_num = dialogue_num;
+        scr_Console_Log_Write("!Chatter: Dialogue already exists in room file","error");
     } else { 
     /* If dialogue does not already exist in array; create and focus */
         chatter_dialogue_array[dialogue_count+1,0] = chatter_dialogue_set_name;
         chatter_focused_dialogue_num = dialogue_count+1;
+        scr_Console_Log_Write("!Chatter: Dialogue Found: " + chatter_dialogue_set_name,"reg")
     }
 } else {
     chatter_focused_dialogue_num = -1;

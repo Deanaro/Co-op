@@ -129,7 +129,7 @@ if Alert = 0
         sprite_index = spr_SalamanderW;
         image_speed = 0.2;
         Alert = 1;
-        antispazz = 0;
+        antispazz = 0; //what is this?
         
     }
 }

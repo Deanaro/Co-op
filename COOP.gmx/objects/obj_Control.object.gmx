@@ -35,6 +35,8 @@ if room != rm_StartMenu
 {instance_create(x,y,obj_GUI);
 instance_create(x,y,obj_PlayerSpawn)
 instance_create(x,y,obj_ViewHandler)}
+
+//Always initialized systems
 instance_create(x,y,obj_Console); //initializes the game console manager
 instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
 </string>
