@@ -14,9 +14,9 @@ if ButtonX = true// X, Square
         case 2: {hreach = 24; vreach = 0; break;}
         case 3: {hreach = -24; vreach = 0; break;}
         }
-
-var near = instance_nearest(x+sign(hreach),y+ 64 +sign(vreach),obj_PU) // returns nearest instance
-if place_meeting(x + hreach,y + vreach ,near)                         // if colliding with it
+var near = instance_nearest(x+sign(hreach),y + 64 -16 + sign(vreach),obj_PU) // returns nearest instance
+//if place_meeting(x + hreach,y + vreach ,near)                         // if colliding with it
+if point_distance(x+sign(hreach),y + 64 -16 + sign(vreach),near.x,near.y) <= 48
 {
         if hold !=0     // if already holding a PU, drop it  
         {scr_SpawnPU(hold, near.x, near.y);}

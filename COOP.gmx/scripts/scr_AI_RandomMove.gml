@@ -6,6 +6,6 @@ if changedir !=0
 if changedir = 0
 {
     changedir = 20 + round(random(40));
-    move = round(random(2)); //if move = 0, instance will be stationary
+    move = round(random(3) - 1); //if move = 0, instance will be stationary
     dir = random(360);
 }

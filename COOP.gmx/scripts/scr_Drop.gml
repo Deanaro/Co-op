@@ -5,30 +5,30 @@ switch (dir)    // selects spawn coordinates depending on facing direction
         case 0:
         {
             var spawnx = x;
-            var spawny = y + 64 + 48;
+            var spawny = y + 32 + 32;
             break;
         }
         case 1:
         {
             var spawnx = x;
-            var spawny = y + 64 - 48;
+            var spawny = y + 32 - 32;
             break;
         }
         case 2:
         {
-            var spawnx = x + 48;
-            var spawny = y + 64;
+            var spawnx = x + 32;
+            var spawny = y + 32;
             break;
         }
         case 3:
         {
-            var spawnx = x - 48;
-            var spawny = y + 64;
+            var spawnx = x - 32;
+            var spawny = y + 32;
             break;
         }
         default :
             var spawnx = x;
-            var spawny = 64 + 48;
+            var spawny = 64 -32;
             break;
         }
 

@@ -22,8 +22,8 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1936</w>
-    <h>1056</h>
+    <w>1016</w>
+    <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -33,8 +33,8 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-134</xoffset>
-    <yoffset>5</yoffset>
+    <xoffset>-174</xoffset>
+    <yoffset>-73</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -173,31 +173,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <instance objName="obj_InvisibleWall" x="960" y="512" name="inst_B4EECFF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_InvisibleWall" x="896" y="512" name="inst_F8984125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_InvisibleWall" x="832" y="512" name="inst_76C4D89F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="320" name="inst_4CD578A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="448" name="inst_4354A472" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="640" name="inst_104E4C9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="704" name="inst_E52C172E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="768" name="inst_97A520F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="384" y="640" name="inst_5161F555" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="384" y="512" name="inst_B28BBEC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_EnemyAi" x="256" y="384" name="inst_DCE15C4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="448" name="inst_0E2A5C3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="64" y="640" name="inst_F2414E7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="256" y="640" name="inst_46801858" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="256" y="576" name="inst_96B6B14F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="256" y="448" name="inst_9C5D8D85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="448" name="inst_FD0CEFCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="384" name="inst_A280221D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="384" name="inst_62656A1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="64" y="448" name="inst_E34BCC9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="512" name="inst_437AE804" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="320" y="448" name="inst_C857EA1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="256" y="256" name="inst_2A483F01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="64" y="192" name="inst_76034641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="64" y="256" name="inst_D6EDD9D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="128" y="192" name="inst_B6DBEE06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="192" y="64" name="inst_8774B068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="384" y="64" name="inst_65FAFB18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="til_FireLevelv2" x="0" y="0" w="64" h="64" xo="0" yo="64" id="10000000" name="tile10000000" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

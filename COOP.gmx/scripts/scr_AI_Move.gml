@@ -4,9 +4,14 @@ if move !=0
     //turns the variable dir to vectory movex and movey
     movex = round(cos(dir*pi/180) * spd);
     movey = round(-sin(dir*pi/180) * spd);
-    
-    //if !place_meeting(x +movex, y, obj_Enemy)                     COLLISION WITH OTHER UNITS!!!!!!!!!!
+    if movex = 0 and movey = 0
     {
+    anim = "";
+    image_speed = 0.1;
+    exit;
+    }
+    else {anim = "W";  image_speed = 0.15;}
+    
     if !place_meeting(x + movex, y, obj_NonUnitSolid) and x + movex < room_width and x+ movex > 0 and !place_meeting(x +movex, y, obj_Player) 
     {
         x += movex;
@@ -22,7 +27,7 @@ if move !=0
         }
         movex = 0;
     }}
-    }
+    
     /*else if !place_meeting(x + movex, y, obj_solid) and x + movex < room_width and x+ movex > 0 and !place_meeting(x +movex, y, obj_Player) 
     {
         var unit = instance_place(x+movex,y,obj_Enemy);
@@ -42,8 +47,7 @@ if move !=0
     }*/
     
     // y movepent
-   //if !place_meeting(x, y + movey, obj_Enemy)                                             COLLISION WITH OTHER UNITS!!!!!!!!!!!!
-    {
+    
     if !place_meeting(x, y + movey, obj_NonUnitSolid)  and y + movey < room_height - 48 and y+ movey > 0 and !place_meeting(x, y + movey, obj_Player) 
     {
         y += movey;
@@ -60,7 +64,13 @@ if move !=0
         movey = 0;
         }
     }
-    }
+}
+else
+{
+anim = "";
+image_speed = 0.1;
+exit;
+}
     /*else if !place_meeting(x, y + movey, obj_solid)  and y + movey < room_height - 48 and y+ movey > 0 and !place_meeting(x, y + movey, obj_Player)
     {
         var unit = instance_place(x,y+movey,obj_Enemy);
@@ -78,4 +88,4 @@ if move !=0
             {y+=sign(movey);}
         }
     }*/
-    }
+

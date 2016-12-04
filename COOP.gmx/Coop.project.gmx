@@ -276,6 +276,7 @@
         <script>scripts\scr_AI_Chase.gml</script>
         <script>scripts\scr_AI_Move.gml</script>
         <script>scripts\scr_AI_RandomMove.gml</script>
+        <script>scripts\scr_AI_Animation.gml</script>
         <scripts name="Pathfinding">
           <script>scripts\scr_Path_Gridset.gml</script>
           <script>scripts\scr_Path_Begin.gml</script>
