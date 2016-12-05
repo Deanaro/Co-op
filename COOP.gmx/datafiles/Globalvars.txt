@@ -1,0 +1,56 @@
+The globals varialbes are accessible from anywhere and are persistent through rooms.
+global vars hold the player variables and variables that is required to stay persistent throughout rooms.
+this variables should also be the ones stored in a save file.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-Global.Player[Player_num (0-3) ,0-2]
+ Global.player is a 2d array holding player information, each player instnace has a unique variable Player_num (0-3)
+ 
+
+	Global.Player[Player_num, 0] = 
+	assosciated player instance ID, used to refer to the instance.
+
+		usage: 
+		with Global.Player[0,0]
+		{instance_destroy();}
+
+		result: 
+		Destroys Player 0
+
+	Global.Player[Player_num, 1] = 
+	the pad index or keyboard defined variable, if this is equal to noone, the player does not exist,
+	otherwise it does (even if there is no player instance).
+
+		usage: 
+		ButtonA = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face1);
+
+		result:
+		if A button (xbox controller) is pressed in the player instances associated gamepad, sets Variable ButtonA to 1
+
+	Global.Player[Player_num, 2] = 
+	the Health of the palyer
+
+	usage:
+	if Global.Player[Player_num, 2] = 0
+	{
+		with Global.Player[Player_num, 0]
+		{
+			instance_destroy();
+		}
+	}
+
+	result:
+	checks if the players health is 0 and if it is destroys it.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-Global.Slot[0-15]
+	
+	stores the index of the elements in the slots 0-15
+	each player has 4 slots, get those slots by multiplaying the Player_num by 4 and adding 0-3
+	eg player 0 slots are 0, 1, 2, 3
+	   player 1 slots are 4, 5, 6, 7
+	
+	this probably should be changed to a 2d array indexed by the player number
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
