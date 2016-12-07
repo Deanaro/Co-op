@@ -16,9 +16,9 @@ var TargetDistance = point_distance(x,y,Targetx,Targety); // distance to targer
 ///////////// ATTACK RANGE //////////////////////
 if TargetDistance < Attack_Range //attack range
 {
-    if RandomAction <= 6 and Cooldown = 0 //70% chance
+    if RandomAction <= 10 and Cooldown = 0 //70% chance
     {
-        scr_AI_RandomMove(); //move randomly, !!!!TO BE REPLACED WITH ATTACK!!!!!!!!!!!!!
+        scr_AI_Attack(); //Attack
     }
     else if RandomAction <=9 //30% chance
     {
@@ -32,7 +32,7 @@ if TargetDistance < Attack_Range //attack range
 ///////////// CLOSE RANGE //////////////////////
 else if TargetDistance < Not_Alert_Range//close range
 {
-    if RandomAction <= 5 //60% chance
+    if RandomAction <= 8 //60% chance
     {
         scr_AI_Chase(); //Chases the player
     }

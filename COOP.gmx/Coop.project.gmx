@@ -179,6 +179,9 @@
       <sprite>sprites\spr_EnemyAI</sprite>
       <sprite>sprites\spr_EnemyAIW</sprite>
     </sprites>
+    <sprite>sprites\spr_PlaceholderEnemy</sprite>
+    <sprite>sprites\spr_PlaceholderEnemyW</sprite>
+    <sprite>sprites\spr_PlaceholderEnemyA</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Fire">
@@ -313,6 +316,7 @@
         <script>scripts\scr_AI_Move.gml</script>
         <script>scripts\scr_AI_RandomMove.gml</script>
         <script>scripts\scr_AI_Animation.gml</script>
+        <script>scripts\scr_AI_Attack.gml</script>
         <scripts name="Pathfinding">
           <script>scripts\scr_Path_Gridset.gml</script>
           <script>scripts\scr_Path_Begin.gml</script>
