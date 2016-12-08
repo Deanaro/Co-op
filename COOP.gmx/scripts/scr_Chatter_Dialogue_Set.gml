@@ -19,6 +19,9 @@ if (chatter_dialogue_set_name != "") {
         scr_Console_Log_Write("!Chatter: Dialogue already exists in room file","error");
     } else { 
     /* If dialogue does not already exist in array; create and focus */
+        if (chatter_dialogue_array[0,0] = "") {
+            last_dialogue_num = -1;
+        }
         chatter_dialogue_array[last_dialogue_num+1,0] = chatter_dialogue_set_name;
         chatter_focused_dialogue_num = last_dialogue_num+1;
         scr_Console_Log_Write("!Chatter: Dialogue Init: " + chatter_dialogue_set_name,"reg")

@@ -37,7 +37,6 @@ if (chatter_room_file != "") {
             chatter_working_line = string_delete(chatter_working_line, 1, string_length(chatter_dialogue_indicator)); //remove the dialogue indicator from the working line
             scr_Chatter_Dialogue_Set(chatter_working_line); //Pass dialogue name to set script
             dialogue_line_num = 0;
-            
         } else if (string_length(chatter_working_line) == 2) {
         //working line is completely empty, so do nothing and skip to next line
         } else {
