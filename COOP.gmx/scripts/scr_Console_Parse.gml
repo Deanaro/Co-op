@@ -2,6 +2,7 @@ var console_text = "";
 var console_num = 0;
 var console_to_write = "";
 var console_to_write_col = "";
+var command_success = 0;
 
 //catch lowercase letters
 console_text = string_letters(string_lower(console_inlog));
@@ -36,6 +37,17 @@ if (string_pos("info", console_text) != 0) {
     }
 }
 
+/* Parse and process 'chatter' commands*/
+if (string_pos("chatter", console_text) != 0) {
+    console_text = string_replace(console_text, "chatter", "");
+    switch(console_text) {        
+        case("nextline"): // Displays and iterates next stored chatter line
+            with (obj_Chatter) {scr_Chatter_Passage_Get();}
+            command_success = 1;
+            break;
+    }
+}
+
 /* Parse and process 'set' commands*/
 if (string_pos("set", console_text) != 0) {
     console_text = string_replace(console_text, "set", "");
@@ -66,33 +78,34 @@ switch(console_text) {
     case("shutdown"):
         console_to_write = "Closing the program.";
         console_to_write_col = "command";
-    game_end();
-    break;
+        game_end();
+        break;
     
     case("restart"):
         console_to_write = "Restarting the program..";
         console_to_write_col = "command";
-    game_restart();
-    break;
+        game_restart();
+        break;
     
     /* Basic Information Output Commands */
 
     case("help"): // help | show console help
         console_to_write = "Pink = Valid command | Red = Error | Grey = Standard output | Blue = Special | Yellow = Other";
         console_to_write_col = "command";
-    break;
+        break;
     
     /* Fun / Fuckery commands */
     
     case("sayhello"): // say hello | Console says hello
         console_to_write = "Why... Hello.";
         console_to_write_col = "ai";
-    break;
+        break;
+    
 }
 
 
             
-if (console_to_write == "") {
+if (console_to_write == "" && command_success == 0){
     console_to_write = "Could not parse: " + console_inlog;
     console_to_write_col = "error";
 }

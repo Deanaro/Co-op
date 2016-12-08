@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/* Chatter System Preferences */
 chatter_file_delimiter = ":";       //sets the delimiter for the chatter files
-chatter_dialogue_indicator = "%Dial%";
+chatter_dialogue_indicator = "%Dial%:";
 chatter_file_columns = 4;
 chatter_null_entry = "null";
 
@@ -35,11 +35,17 @@ chatter_null_entry = "null";
 chatter_file_opened = false;
 chatter_active = false;
 chatter_focused_dialogue_num = 0;
-chatter_focussed_passage_array[0,0] = -1;
+chatter_focussed_passage_array[0,0] = "null";
+chatter_dialogue_array[0,0] = "";
 
 //chatter_dialogue_array[0,0] = array[0,0];
 
 chatter_room = -1;
+
+/* TEMP CODE - to remove */
+dialogue_focusX = 1;
+line_focusX = 0;
+item_focusX = 0;
 </string>
           </argument>
         </arguments>
