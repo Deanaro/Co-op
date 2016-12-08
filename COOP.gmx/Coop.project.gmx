@@ -178,6 +178,7 @@
       <sprite>sprites\spr_MurkBubble</sprite>
       <sprite>sprites\spr_EnemyAI</sprite>
       <sprite>sprites\spr_EnemyAIW</sprite>
+      <sprite>sprites\spr_SpawnLocation</sprite>
     </sprites>
     <sprite>sprites\spr_PlaceholderEnemy</sprite>
     <sprite>sprites\spr_PlaceholderEnemyW</sprite>
@@ -291,6 +292,8 @@
       </scripts>
       <scripts name="Mechanics">
         <script>scripts\scr_SpawnPU.gml</script>
+        <script>scripts\scr_Save.gml</script>
+        <script>scripts\scr_Load.gml</script>
       </scripts>
     </scripts>
     <scripts name="NPC">
@@ -405,6 +408,9 @@
         <object>objects\obj_Fireball</object>
         <object>objects\obj_MurkBubble</object>
         <object>objects\obj_EnemyAi</object>
+      </objects>
+      <objects name="Lachlan">
+        <object>objects\obj_SpawnLocation</object>
       </objects>
     </objects>
   </objects>
