@@ -174,7 +174,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <instance objName="obj_InvisibleWall" x="896" y="512" name="inst_F8984125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_InvisibleWall" x="832" y="512" name="inst_76C4D89F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_EnemyAi" x="256" y="384" name="inst_DCE15C4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_SpawnLocation" x="320" y="64" name="inst_1536A5BC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpawnLocation" x="192" y="320" name="inst_1536A5BC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="til_FireLevelv2" x="0" y="0" w="64" h="64" xo="0" yo="64" id="10000000" name="tile10000000" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

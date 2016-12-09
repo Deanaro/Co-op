@@ -9,10 +9,12 @@ var roomname = room_get_name(room);
 var xpos = id.x;
 var ypos = id.y;
 
-var x1 = xpos - 160;
-var x2 = xpos + 160;
-var y1 = ypos + 160;
-var y2 = ypos - 160;
+var x1 = xpos - 100;
+var x2 = xpos + 100;
+var y1 = ypos + 100;
+var y2 = ypos - 100;
+
+
 
 //check if a save file exists, delete it if there is
 
