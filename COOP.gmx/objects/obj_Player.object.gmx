@@ -57,6 +57,7 @@ last_sec_update = current_second;
 {cursor_sprite = asset_get_index("spr_Crosshair_" + string(Player_num));}//sets cursor
 else // if using gamepad
 {draw = 1;}
+scr_ToolUpdate(Player_num);
 </string>
           </argument>
         </arguments>

@@ -42,7 +42,7 @@ global.view_width = 1366;
 
 for (var i = 0; i &lt; 4; i++;)
 {
-global.Player[i, 0] = noone;  // array for player objects
+global.Player[i, 0] = noone;  // array for player objects index
 global.Player[i, 1] = -1; // pad_index number (-1 = noone)
 global.Player[i, 2] = 10; // sets health to 10!!
 }

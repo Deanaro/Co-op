@@ -6,7 +6,7 @@
 
 var roomname = room_get_name(room);
 //Note: id returns the instance id of the object that ran the code therefore any player can initiate a save.
-var xpos = id.x;
+var xpos = id.x; //there is no need to use id.
 var ypos = id.y;
 
 var x1 = xpos - 100;
@@ -27,22 +27,16 @@ ini_open("save.ini");
 
 //count through global.slot and save the data
 
-for(x = 0 ; x <= 15; x += 1)
+for(var i = 0 ; i <= 15; i += 1)
 {
-ini_write_real('Slot', string(x) , global.Slot[x]);
+ini_write_real('Slot', string(i) , global.Slot[i]);
 }
 
 //count through global.Player and save the data
 
-var counter = 0; 
-
-for(x = 0 ; x <= 3; x += 1)
+for(var i = 0 ; i <= 3; i += 1)
 {
-   for(y = 0 ; y <= 2 ; y += 1)
-   {
-    ini_write_real('Player', string(counter) , global.Player[x,y]);
-    counter += 1;
-   }
+    ini_write_real('Player', string(i) , global.Player[i,1]);
 }
 
 //save room name and spawn location

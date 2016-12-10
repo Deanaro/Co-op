@@ -26,7 +26,7 @@ if ButtonY = 1 //A, CROSS
    {
     global.Slot[Slot_index] = hold;        // assigns hold's value to the highlighted slot
     hold = 0;
-    script_execute(scr_ToolUpdate); // updates a string variable to match the correct tool's script name.
+    scr_ToolUpdate(Player_num); // updates a string variable to match the correct tool's script name.
    }
    else
    {} //play error sound

@@ -294,7 +294,9 @@
         <script>scripts\scr_SpawnPU.gml</script>
         <script>scripts\scr_Save.gml</script>
         <script>scripts\scr_Load.gml</script>
+        <script>scripts\scr_RoomChange.gml</script>
         <script>scripts\scr_Respawn.gml</script>
+        <script>scripts\scr_MovePlayer.gml</script>
       </scripts>
     </scripts>
     <scripts name="NPC">
