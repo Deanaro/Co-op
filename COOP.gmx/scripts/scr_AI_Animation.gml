@@ -1,4 +1,8 @@
-var angle = argument0 - (floor(dir/360)*360); //gets the angle from 0-360
+if point_distance(x,bbox_bottom-16,Targetx,Targety) < 500 and  Alert = 1
+{face = point_direction(x,bbox_bottom-16,Targetx,Targety)
+angle =  face;}
+else
+{angle = argument0 - (floor(argument0/360)*360); }
 if angle > 90 and angle <= 270
 {
 image_xscale = -2;

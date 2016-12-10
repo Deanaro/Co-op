@@ -14,14 +14,14 @@ if NodesVisited = 0 // at start of path
     {gotoy = floor(Node[NodeCount-NodesVisited]/obj_Pathfinder.Hcells);}
     gotox = Node[NodeCount-NodesVisited] - (gotoy * obj_Pathfinder.Hcells);
     //gets direction towards the required point
-    dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32)+ (random(50)-25);
+    dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32+  (random(50)-25));
 }
 
 
 if changedir = 0 //time to change direction slightly
 {
-changedir = 20+round(random(40));//random timer for next direction change (20-60 steps)
-dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32)+ (random(50)-25); //  changes the direction +- 25 degrees
+changedir = 40+round(random(50));//random timer for next direction change (20-60 steps)
+dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32)+  (random(50)-25); //  changes the direction +- 25 degrees
 }
 if x=gotox + 32 and y=gotoy + 32 //if node reached
 {
@@ -33,5 +33,5 @@ if x=gotox + 32 and y=gotoy + 32 //if node reached
     {gotoy = floor(Node[NodeCount-NodesVisited]/obj_Pathfinder.Hcells);}
     gotox = Node[NodeCount-NodesVisited] - (gotoy * obj_Pathfinder.Hcells);
     //gets direction towards the required point
-    dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32)+ (random(50)-25);
+    dir = point_direction(x,bbox_bottom-16,gotox*64 +32,gotoy*64 +32 +  (random(50)-25));
 }
