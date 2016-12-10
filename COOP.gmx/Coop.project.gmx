@@ -179,10 +179,10 @@
       <sprite>sprites\spr_EnemyAI</sprite>
       <sprite>sprites\spr_EnemyAIW</sprite>
       <sprite>sprites\spr_SpawnLocation</sprite>
+      <sprite>sprites\spr_PlaceholderEnemy</sprite>
+      <sprite>sprites\spr_PlaceholderEnemyW</sprite>
+      <sprite>sprites\spr_PlaceholderEnemyA</sprite>
     </sprites>
-    <sprite>sprites\spr_PlaceholderEnemy</sprite>
-    <sprite>sprites\spr_PlaceholderEnemyW</sprite>
-    <sprite>sprites\spr_PlaceholderEnemyA</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Fire">
@@ -291,12 +291,16 @@
         </scripts>
       </scripts>
       <scripts name="Mechanics">
+        <scripts name="Save/load/respawn">
+          <script>scripts\scr_Load.gml</script>
+          <script>scripts\scr_Respawn.gml</script>
+          <script>scripts\scr_Save.gml</script>
+        </scripts>
+        <scripts name="spawn teleporters">
+          <script>scripts\scr_MovePlayer.gml</script>
+          <script>scripts\scr_RoomChange.gml</script>
+        </scripts>
         <script>scripts\scr_SpawnPU.gml</script>
-        <script>scripts\scr_Save.gml</script>
-        <script>scripts\scr_Load.gml</script>
-        <script>scripts\scr_RoomChange.gml</script>
-        <script>scripts\scr_Respawn.gml</script>
-        <script>scripts\scr_MovePlayer.gml</script>
       </scripts>
     </scripts>
     <scripts name="NPC">

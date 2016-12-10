@@ -2,7 +2,11 @@
 // Lachlan I changed your script a little because I made a new room change script
 //load last save
 script_execute(scr_Load);
-
+for (var i = 0; i<4; i++)
+{
+    with global.Player[i,0]
+   { hold = 0;}
+}
 scr_RoomChange(SpawnX1,SpawnY1,SpawnX2,SpawnY2,SpawnRoom);
 
 /*
