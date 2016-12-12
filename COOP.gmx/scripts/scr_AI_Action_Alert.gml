@@ -12,53 +12,65 @@ else {ActionChange --;}
 ///////////////////////////////////////
 
 
-var TargetDistance = point_distance(x,bbox_bottom - 16,Targetx,Targety); // distance to targer
+TargetDistance = point_distance(x,bbox_bottom - 16,Targetx,Targety); // distance to targer
 ///////////// ATTACK RANGE //////////////////////
 if TargetDistance < Attack_Range //attack range
 {
-    if RandomAction <= 6 and Cooldown = 0 or TargetDistance < 30 and Cooldown = 0//70% chance
+    if RandomAction <= 7 and Cooldown = 0 or TargetDistance < 30 and Cooldown = 0//70% chance
     {
         scr_AI_Attack(); //Attack
         exit;
     }
+    else if RandomAction <=8 //30% chance
+    {
+        scr_AI_RandomMove(); //move randomly
+    }
     else if RandomAction <=9 //30% chance
     {
-        scr_AI_RandomMove();//move randomly
+       scr_AI_CircleMove(-1);//move randomly
     }
     else
-    {
-        //scr_AI_Stall(); //CURRENTLY NO 3RD ACTION
+    { 
+        scr_AI_CircleMove(1);//move randomly
     }
 }
 ///////////// CLOSE RANGE //////////////////////
 else if TargetDistance < Not_Alert_Range//close range
 {
-    if RandomAction <= 8 //60% chance
+    if RandomAction <= 6 //60% chance
     {
         scr_AI_Chase(); //Chases the player
     }
-    else if RandomAction <= 9 //40% chance
+    else if RandomAction <= 7 //40% chance
+    {
+        scr_AI_CircleMove(-1); //move randomly
+    }
+    else if RandomAction <= 8 //40% chance
+    {
+        scr_AI_CircleMove(1); //move randomly
+    }
+    else if RandomAction <= 9
     {
         scr_AI_RandomMove(); //move randomly
-    }
-    else
-    {
-        //scr_AI_Stall(); //CURRENTLY NO 3RD ACTION
     }
 }
 ///////////// FAR //////////////////////////////
 else if TargetDistance < Alert_Range // far
 {
-    if RandomAction <= 4 //50% chance
+    if RandomAction <= 7 //50% chance
     {
         scr_AI_Chase(); //Chases the player
     }
+    else if RandomAction <= 8 //50% chance
+    {
+        scr_AI_CircleMove(1); //move randomly
+    }
     else if RandomAction <= 9 //50% chance
     {
-        scr_AI_RandomMove(); //move randomly
+        scr_AI_CircleMove(1); //move randomly
     }
     else
     {
-        //scr_AI_Stall(); //CURRENTLY NO 3RD ACTION
+        scr_AI_RandomMove(); //move randomly
     }
 }

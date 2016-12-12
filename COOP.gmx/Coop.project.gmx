@@ -327,6 +327,7 @@
         <script>scripts\scr_AI_RandomMove.gml</script>
         <script>scripts\scr_AI_Animation.gml</script>
         <script>scripts\scr_AI_Attack.gml</script>
+        <script>scripts\scr_AI_CircleMove.gml</script>
         <scripts name="Pathfinding">
           <script>scripts\scr_Path_Gridset.gml</script>
           <script>scripts\scr_Path_Begin.gml</script>
@@ -413,8 +414,8 @@
         <object>objects\obj_test</object>
         <object>objects\obj_testu</object>
         <object>objects\obj_Fireball</object>
-        <object>objects\obj_MurkBubble</object>
         <object>objects\obj_EnemyAi</object>
+        <object>objects\obj_MurkBubble</object>
       </objects>
       <objects name="Lachlan">
         <object>objects\obj_SpawnLocation</object>

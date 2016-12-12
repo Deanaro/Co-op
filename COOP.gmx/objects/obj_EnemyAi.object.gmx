@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Enemy</parentName>
+  <parentName>self</parentName>
   <maskName>spr_PlaceholderEnemy</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -38,8 +38,8 @@ Alert = 0;
 ActionChange = 0;
 Cooldown = 0;
 Attack_Range = 48;
-Not_Alert_Range = 350;
-Alert_Range = 500
+Not_Alert_Range = 450;
+Alert_Range = 900;
 Busy = 0;
 /////pathfinding !\\
 UpdatePath = 0;
