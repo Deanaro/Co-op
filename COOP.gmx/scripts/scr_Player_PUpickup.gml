@@ -1,4 +1,5 @@
-//picks up
+//picks up closest item infront of player if it is in range
+// NO ARGUMENTS
 
 if ButtonX = true// X, Square
 
@@ -24,7 +25,7 @@ if point_distance(x+sign(hreach),y + 64 -16 + sign(vreach),near.x,near.y) <= 48
         with near   
         {instance_destroy();}       // destroys the PU that was picked up
 }
-else {scr_Drop();}
+else {scr_Player_Drop();}
 }
-else {scr_Drop();}
+else {scr_Player_Drop();}
 }

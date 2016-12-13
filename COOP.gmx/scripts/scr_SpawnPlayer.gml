@@ -28,8 +28,8 @@ var y2 = argument4;
                 scr_ToolUpdate(argument5);
                 //input type
                 if global.Player[argument5,1] = 4
-                {InputType = "scr_InputKB";}
+                {InputType = "scr_Player_InputKB";}
                 else
-                { InputType = "scr_InputGP";}
+                { InputType = "scr_Player_InputGP";}
 
             }

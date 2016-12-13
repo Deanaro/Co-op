@@ -1,5 +1,5 @@
 //input for keyboard
-
+//NO ARGUMENTS
 ButtonA = keyboard_check_pressed(vk_space); // A / Cross
 ButtonB = keyboard_check_pressed(ord('F')); // B / Circle
 ButtonX = keyboard_check_pressed(ord('E')); // X / square
@@ -39,8 +39,9 @@ v_move *= 1/1.3;
 
 
 // the aim vector , these should equal 1 together
-Aim[0] = -sin(angle*(pi/180)); // vertical
-Aim[1] = cos(angle*(pi/180));   // horizontal
+Aim[0] = cos(angle*(pi/180));   // horizontal
+Aim[1] = -sin(angle*(pi/180)); // vertical
+
 
 
 

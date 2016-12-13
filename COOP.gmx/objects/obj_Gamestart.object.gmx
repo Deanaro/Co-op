@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -37,8 +37,6 @@ for (var pad=0; pad &lt;4; pad++)
     gamepad_set_axis_deadzone(pad, 0.3);       // Set the "deadzone" for the axis
     gamepad_set_button_threshold(pad, 0.1);    // Set the "threshold" for the triggers
 }
-global.view_height = 768;
-global.view_width = 1366;
 
 for (var i = 0; i &lt; 4; i++;)
 {
@@ -84,7 +82,7 @@ global.Slot[i] = 11;
             <kind>1</kind>
             <string>// moves room, the x1 y1 x2 y2 is the coordinates of the spawn point
 
-if keyboard_check_pressed(vk_enter)
+if keyboard_check_pressed(vk_f3)
 {
 
 global.x1 = 100;
@@ -92,31 +90,7 @@ global.y1 = 100;
 global.x2 = 300;
 global.y2 = 300;
 room_goto(rm_Test5) //temp destination
-instance_destroy();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_text(10, 20, "Players join here, press ENTER to start");
 </string>
           </argument>
         </arguments>

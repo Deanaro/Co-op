@@ -1,5 +1,5 @@
 // input for gamepads
-
+// NO ARGUMENTS
 
 ButtonA = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face1); // A / Cross
 ButtonB = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face2); // B / Circle
@@ -30,8 +30,8 @@ if h_face !=0 or v_face !=0
     var aimv =  gamepad_axis_value(global.Player[Player_num,1] , gp_axisrv);
     var angle = point_direction(0,0,aimh,aimv);
     // the aim vector , these should equal 1 together
-    Aim[0] = -sin(angle*(pi/180)); // vertical
-    Aim[1] = cos(angle*(pi/180));   // horizontal
+    Aim[0] = cos(angle*(pi/180));   // horizontal
+    Aim[1] = -sin(angle*(pi/180)); // vertical
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0.3); 
 }
 else if h_move !=0 or v_move !=0 
@@ -41,7 +41,7 @@ else if h_move !=0 or v_move !=0
     var aimv =  gamepad_axis_value(global.Player[Player_num,1] , gp_axislv);
     var angle = point_direction(0,0,aimh,aimv);
     // the aim vector , these should equal 1 together
-    Aim[0] = -sin(angle*(pi/180)); // vertical
-    Aim[1] = cos(angle*(pi/180));   // horizontal
+    Aim[0] = cos(angle*(pi/180));   // horizontal
+    Aim[1] = -sin(angle*(pi/180)); // vertical
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0.3); 
 }

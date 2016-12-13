@@ -5,8 +5,8 @@
 //changes action every so often
 if ActionChange = 0
 {
-    ActionChange = 60 + round(random(60)); // EVERY 60-120 FRAMES (1-2 SECONDS)
-    RandomAction = round(random(10)); //Generates a new number form 0-10
+    ActionChange = 60 + irandom(60); // EVERY 60-120 FRAMES (1-2 SECONDS)
+    RandomAction = irandom(10); //Generates a new number form 0-10
 }
 else {ActionChange --;}
 ///////////////////////////////////////

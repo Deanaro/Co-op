@@ -39,6 +39,9 @@ instance_create(x,y,obj_ViewHandler)}
 //Always initialized systems
 instance_create(x,y,obj_Console); //initializes the game console manager
 instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
+
+//DEBUG
+ShowHelp = 0;
 </string>
           </argument>
         </arguments>
@@ -64,9 +67,15 @@ instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
             <string>//Debugging TEMPORARY!!
 if mouse_check_button_pressed(mb_left) = 1
 {scr_SpawnPU(0, mouse_x, mouse_y);}
-if keyboard_check_pressed(ord('P'))
+if keyboard_check_pressed(vk_f1)
 {
     game_restart();
+}
+//HELP MESSAGE
+if keyboard_check_pressed(vk_f10)
+{
+    ShowHelp++
+    ShowHelp = ShowHelp mod 2;
 }
 </string>
           </argument>
@@ -96,7 +105,46 @@ if keyboard_check_pressed(ord('P'))
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="76">
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//HELP MESSAGE
+draw_set_colour(c_red);
+draw_set_font(fnt_Help);
+
+if ShowHelp = 0
+{
+draw_text(view_xview+20,view_yview+20,'Press F10 for keybinding');
+}
+else if ShowHelp = 1
+{
+HelpFile = file_text_open_read(working_directory + "/KEYBINDING.txt")
+for (var i = 1; i&lt; 20; i++)
+{
+    draw_text(view_xview+20,view_yview+20*i,file_text_readln(HelpFile));
+}
+file_text_close(HelpFile);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="113">
       <action>
         <libid>1</libid>
         <id>601</id>

@@ -2,7 +2,7 @@
 // movement and collision handler
 if move !=0
 {
-    dir = dir mod 360;
+    dir = dir mod 361;
     //turns the variable dir to vectory movex and movey
     movex = round(cos(dir*pi/180) * spd);
     movey = round(-sin(dir*pi/180) * spd);
@@ -50,7 +50,7 @@ if move !=0
     
     // y movepent
     
-    if !place_meeting(x, y + movey, obj_NonUnitSolid)  and y + movey < room_height - 48 //and y+ movey > 0 and !place_meeting(x, y + movey, obj_Player) 
+    if !place_meeting(x, y + movey, obj_NonUnitSolid)  and y + movey < room_height + -(sprite_height +16) and y+ movey > -16//and !place_meeting(x, y + movey, obj_Player) 
     {
         y += movey;
     }

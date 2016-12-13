@@ -1,0 +1,20 @@
+PLAYER-CONTROLS:--------Keyboard--------XBOX360
+
+Interact/Pickup---------E---------------X
+Use-Weapon--------------LMouse----------Right Trigger
+Use-Utility-------------Space-----------A
+Cancel------------------F---------------B
+Move--------------------WASD------------Left Analog
+Aim-------------Rmouse/Lmouse-pressed---Right Trigger
+GUI:
+--------navigation-------scroller-------Left-and-Right-D-pad
+--------Place-Item-------R--------------Y
+
+NONE-PLAYER-CONTROLS-(all keyboard)
+
+open-console------------`
+push-command------------ENTER
+restart-game------------f1
+go-to-last-save --------f2
+GOTO-next-room-(only-in-StartMenu-and-rm_Start)---f3
+

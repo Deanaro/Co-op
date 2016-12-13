@@ -1,5 +1,5 @@
 // movement collision and animation handler
-
+//NO ARGUMENTS
 var movex = round(h_move * spd);
 var movey = round(v_move * spd);
 
@@ -10,7 +10,7 @@ else
 {spd = 3;}
 
 
-if !place_meeting(x + movex, y, obj_solid) and x + movex < view_xview+global.view_width and x+ movex > view_xview
+if !place_meeting(x + movex, y, obj_solid) and x + movex < view_xview+view_wview and x+ movex > view_xview
 {
     x += movex;
 }
@@ -26,7 +26,7 @@ else
     movex = 0;
 }}
 // y movepent
-if !place_meeting(x, y + movey, obj_solid)  and y + movey < view_yview+global.view_height - 48 and y+ movey > view_yview -48
+if !place_meeting(x, y + movey, obj_solid)  and y + movey < view_yview+view_hview - 3*(sprite_height/4) and y+ movey > view_yview - 16
 {
     y += movey;
 }
@@ -44,9 +44,9 @@ else
 //Animation handling *****************************
 
 if v_face = 0 and h_face = 0
-{scr_face(v_move,h_move);}
+{scr_Player_Face(v_move,h_move);}
 else
-{scr_face(v_face,h_face);}
+{scr_Player_Face(v_face,h_face);}
 if h_move !=0 or v_move != 0    // while moving
 {
      var anim = 'W';

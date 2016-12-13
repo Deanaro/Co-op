@@ -1,4 +1,4 @@
-if point_distance(x,bbox_bottom-16,Targetx,Targety) < 500 and  Alert = 1
+if instance_exists(obj_Player) and point_distance(x,bbox_bottom-16,Targetx,Targety) < 500 and  Alert = 1
 {face = point_direction(x,bbox_bottom-16,Targetx,Targety)
 angle =  face;}
 else

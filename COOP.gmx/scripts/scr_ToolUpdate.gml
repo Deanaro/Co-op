@@ -1,5 +1,5 @@
 // when a power up is placed into a slot, update that slot value
-// and update the weapon and utility scripts
+// and update the weapon and utility scripts of the current player
 // agrument0 = player num
 
 
@@ -14,11 +14,11 @@ if S4 = 11
 
 // builds the script name, the larger number being on the left (scr_Weapon5_3).
 if S1 > S2
-{Weapon = "scr_Weapon" + string(S1) + "_" + string(S2);}
+{global.Player[argument0,0].Weapon = "scr_Weapon" + string(S1) + "_" + string(S2);}
 else
-{Weapon = "scr_Weapon" + string(S2) + "_" + string(S1);}
+{global.Player[argument0,0].Weapon = "scr_Weapon" + string(S2) + "_" + string(S1);}
 
 if S3 > S4
-{Utility = "scr_Utility" + string(S3) + "_" + string(S4);}
+{global.Player[argument0,0].Utility = "scr_Utility" + string(S3) + "_" + string(S4);}
 else
-{Utility = "scr_Utility" + string(S4) + "_" + string(S3);}
+{global.Player[argument0,0].Utility = "scr_Utility" + string(S4) + "_" + string(S3);}

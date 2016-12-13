@@ -48,6 +48,34 @@ downleft = noone;
 downright = noone;
 down = noone;
 }
+
+//Checks to see if there are 2 walls blocking of a corner
+if up !=noone
+{
+    if left !=noone
+    {
+        if obj_Pathfinder.Path_Cell[up] = 1 and obj_Pathfinder.Path_Cell[left] = 1
+        {upleft = noone;}
+    }
+    if right !=noone
+    {
+    if obj_Pathfinder.Path_Cell[up] = 1 and obj_Pathfinder.Path_Cell[left] = 1
+    {upright = noone;}
+    }
+}
+if down !=noone
+{
+    if left !=noone
+    {
+        if obj_Pathfinder.Path_Cell[down] = 1 and obj_Pathfinder.Path_Cell[left] = 1
+        {downleft = noone;}
+    }
+    if right !=noone
+    {
+        if obj_Pathfinder.Path_Cell[down] = 1 and obj_Pathfinder.Path_Cell[right] = 1
+        {downright = noone;}
+    }
+}
 // moves cell from position 0 in open list (the one with lowest F cost) to the closed list
 Closed_List[Open_List[0]] = 1;
 ClosedNum +=1;

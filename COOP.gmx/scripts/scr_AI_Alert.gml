@@ -1,4 +1,6 @@
 // runs every step to check if this enemy is alert
+if instance_exists(obj_Player)
+{
 var Target = instance_nearest(x,y,obj_Player); // gets nearest player
 Targetx = Target.x;
 Targety = Target.bbox_bottom -16;
@@ -17,4 +19,5 @@ else if Alert = 1 //if alert
     Alert = 0;
     image_blend = -1; //temp
     }
+}
 }

@@ -25,7 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_PlayerCreate();
+            <string>//initial variables:
+hold = 0; //the powerup that the player is holding (that he can place in a slot)
+spd = 6; //movespeed
+image_speed = 0.1;
+dir = 0;
+Slot_num = 1;   // the starting highlighted slot number
+Collision_Center = 4/3*sprite_height;
+GUIslot = 0;
+Wep_index = 0;
+Utility_index = 0;
+WCooldown = 0;
+UCooldown = 0;
+Busy = 0;
+Aim[0] = 1;
+Aim[1] = 0;
+Hurt = 0;
 image_xscale = 2;
 image_yscale = 2;
 alarm[1] = 1;
@@ -105,9 +120,9 @@ image_blend = -1;
           <argument>
             <kind>1</kind>
             <string>script_execute (asset_get_index(InputType));
-scr_Movement();
-scr_PUpickup();
-scr_GUI();
+scr_Player_Move();
+scr_Player_PUpickup();
+scr_Player_GUI();
 
 if asset_get_index(string(Weapon)) != -1 // if the script exists
 {
@@ -239,7 +254,7 @@ if (last_sec_update != current_second) {
 
 if draw = 1
 {
-draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[1]*192, y + Aim[0]*192+48);
+draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*192, y + Aim[1]*192+48);
 }
 </string>
           </argument>

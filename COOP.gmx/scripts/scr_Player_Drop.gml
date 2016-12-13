@@ -1,3 +1,7 @@
+// if the player is holding an item and presses interact button, drops the item
+// NO ARGUMENTS
+// run only from a obj_Player.
+
 if hold !=0 // if player is holding an item
 {
 switch (dir)    // selects spawn coordinates depending on facing direction

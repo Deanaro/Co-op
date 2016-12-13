@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="14" name="datafiles">
+  <datafiles number="15" name="datafiles">
     <datafile>
       <name>Globalvars.txt</name>
       <exists>-1</exists>
@@ -38,7 +38,24 @@
       </ConfigOptions>
       <filename>readme.txt</filename>
     </datafile>
-    <datafiles number="14" name="Chatter_Files">
+    <datafile>
+      <name>KEYBINDING.txt</name>
+      <exists>-1</exists>
+      <size>444</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>KEYBINDING.txt</filename>
+    </datafile>
+    <datafiles number="15" name="Chatter_Files">
       <datafile>
         <name>rm_Test.txt</name>
         <exists>-1</exists>
@@ -175,7 +192,7 @@
       </sprites>
     </sprites>
     <sprites name="Prototype">
-      <sprite>sprites\spr_MurkBubble</sprite>
+      <sprite>sprites\spr_TarBubble</sprite>
       <sprite>sprites\spr_EnemyAI</sprite>
       <sprite>sprites\spr_EnemyAIW</sprite>
       <sprite>sprites\spr_SpawnLocation</sprite>
@@ -205,24 +222,22 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player">
-      <script>scripts\scr_Drop.gml</script>
-      <script>scripts\scr_face.gml</script>
-      <script>scripts\scr_GUI.gml</script>
-      <script>scripts\scr_InputKB.gml</script>
-      <script>scripts\scr_InputGP.gml</script>
-      <script>scripts\scr_Movement.gml</script>
-      <script>scripts\scr_PUpickup.gml</script>
-      <script>scripts\scr_PlayerCreate.gml</script>
-      <script>scripts\scr_ToolUpdate.gml</script>
+      <script>scripts\scr_Player_Drop.gml</script>
+      <script>scripts\scr_Player_Face.gml</script>
+      <script>scripts\scr_Player_GUI.gml</script>
+      <script>scripts\scr_Player_InputKB.gml</script>
+      <script>scripts\scr_Player_InputGP.gml</script>
+      <script>scripts\scr_Player_Move.gml</script>
+      <script>scripts\scr_Player_PUpickup.gml</script>
       <script>scripts\scr_PlayerUpdate_Second.gml</script>
       <scripts name="Tools">
         <scripts name="Weapon">
           <script>scripts\scr_Weapon0_0.gml</script>
-          <scripts name="1">
+          <scripts name="FIRE">
             <script>scripts\scr_Weapon1_0.gml</script>
             <script>scripts\scr_Weapon1_1.gml</script>
           </scripts>
-          <scripts name="2">
+          <scripts name="METAL">
             <script>scripts\scr_Weapon2_0.gml</script>
             <script>scripts\scr_Weapon2_1.gml</script>
             <script>scripts\scr_Weapon2_2.gml</script>
@@ -283,6 +298,7 @@
         </scripts>
       </scripts>
       <scripts name="Core Scripts">
+        <script>scripts\scr_ToolUpdate.gml</script>
         <script>scripts\scr_View.gml</script>
         <scripts name="PlayerJoin">
           <script>scripts\scr_CheckForPad.gml</script>
@@ -346,6 +362,7 @@
     <font>fonts\fnt_console_12</font>
     <font>fonts\font0</font>
     <font>fonts\fnt_console</font>
+    <font>fonts\fnt_Help</font>
   </fonts>
   <objects name="objects">
     <objects name="Game Logic">
@@ -415,7 +432,7 @@
         <object>objects\obj_testu</object>
         <object>objects\obj_Fireball</object>
         <object>objects\obj_EnemyAi</object>
-        <object>objects\obj_MurkBubble</object>
+        <object>objects\obj_TarBubble</object>
       </objects>
       <objects name="Lachlan">
         <object>objects\obj_SpawnLocation</object>

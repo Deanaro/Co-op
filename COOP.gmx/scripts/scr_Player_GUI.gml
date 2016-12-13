@@ -1,5 +1,6 @@
-// GUI navigation ************
-
+//changes the focus on the GUI using mouse wheel or D pad
+//NO ARGUMENTS
+//run from only Obj_Player
 if dright = 1
 {
     GUIslot += 1;

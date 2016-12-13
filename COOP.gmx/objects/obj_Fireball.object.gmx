@@ -78,9 +78,9 @@ alarm[0] = 4
           <argument>
             <kind>1</kind>
             <string>if x &lt; view_xview - 16
-or x &gt; view_xview + 16 + global.view_width
+or x &gt; view_xview + 16 + view_wview
 or y &lt; view_yview - 16
-or y &gt; view_yview + 16 + global.view_height
+or y &gt; view_yview + 16 + view_hview
 {instance_destroy();}
 
 if position_meeting(x,y,obj_solid)
