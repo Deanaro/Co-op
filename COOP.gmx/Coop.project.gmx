@@ -192,13 +192,19 @@
       </sprites>
     </sprites>
     <sprites name="Prototype">
-      <sprite>sprites\spr_TarBubble</sprite>
-      <sprite>sprites\spr_EnemyAI</sprite>
-      <sprite>sprites\spr_EnemyAIW</sprite>
-      <sprite>sprites\spr_SpawnLocation</sprite>
-      <sprite>sprites\spr_PlaceholderEnemy</sprite>
-      <sprite>sprites\spr_PlaceholderEnemyW</sprite>
-      <sprite>sprites\spr_PlaceholderEnemyA</sprite>
+      <sprites name="Dean">
+        <sprite>sprites\spr_TarBubble</sprite>
+        <sprite>sprites\spr_EnemyAI</sprite>
+        <sprite>sprites\spr_EnemyAIW</sprite>
+        <sprite>sprites\spr_SpawnLocation</sprite>
+        <sprite>sprites\spr_PlaceholderEnemy</sprite>
+        <sprite>sprites\spr_PlaceholderEnemyW</sprite>
+        <sprite>sprites\spr_PlaceholderEnemyA</sprite>
+      </sprites>
+      <sprites name="Lachlan">
+        <sprite>sprites\spr_MenuBase</sprite>
+        <sprite>sprites\spr_MenuFocus</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">

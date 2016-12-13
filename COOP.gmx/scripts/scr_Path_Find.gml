@@ -59,8 +59,8 @@ if up !=noone
     }
     if right !=noone
     {
-    if obj_Pathfinder.Path_Cell[up] = 1 and obj_Pathfinder.Path_Cell[left] = 1
-    {upright = noone;}
+        if obj_Pathfinder.Path_Cell[up] = 1 and obj_Pathfinder.Path_Cell[right] = 1
+        {upright = noone;}
     }
 }
 if down !=noone
