@@ -100,7 +100,11 @@ switch(console_text) {
         console_to_write = "Why... Hello.";
         console_to_write_col = "ai";
         break;
-    
+    case("enemy"): //spawns a group of enemies at cursor
+        scr_EnemySpawn(mouse_x,mouse_y,3,obj_EnemyAi);
+        console_to_write = "Spawned Enemies";
+        console_to_write_col = "command"
+        break;
 }
 
 

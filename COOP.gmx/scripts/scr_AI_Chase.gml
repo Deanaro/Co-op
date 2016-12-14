@@ -1,4 +1,8 @@
-spd = 3; //speed when chasing
+//AI action: Chase
+//Runs pathfinding scripts and creates a path in Node[] array
+//if a path was successfull, Walks that path
+
+
 if move = 0 //incase another action left move at 0
 {move = 1;}
 /////////// pathfind queing and runs every minimum of 10 and no more than 5 instances at once use pathfind
@@ -20,5 +24,5 @@ scr_Path_Begin(Targetx,Targety);
 /////////\\\\\\\\\\\
 if NodeCount!=0 // if a path exists
 {
-scr_Path_Walk();//walks through the path
+scr_AI_Walk();//walks through the path
 }

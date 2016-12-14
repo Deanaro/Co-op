@@ -1,3 +1,4 @@
+//spawns the a player in a non solid location
 var x1 = argument1;
 var y1 = argument2;
 var x2 = argument3;

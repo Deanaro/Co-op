@@ -1,4 +1,6 @@
-
+//similar to scr_Player_Move script but recieves the variable -dir- as input, dir being 0-360
+//converts dir to -movex- and -movey- and then goes through normal collision check
+//NO ARGUEMTNS
 // movement and collision handler
 if move !=0
 {

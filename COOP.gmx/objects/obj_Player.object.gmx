@@ -254,7 +254,7 @@ if (last_sec_update != current_second) {
 
 if draw = 1
 {
-draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*192, y + Aim[1]*192+48);
+draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*192, y + Aim[1]*192 + sprite_height/2);
 }
 </string>
           </argument>

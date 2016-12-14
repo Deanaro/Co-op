@@ -8,7 +8,7 @@
         global.y1 = argument1;
         global.x2 = argument2;
         global.y2 = argument3;
-        if room_get_name(room) != argument4
+        /*if room_get_name(room) != argument4
         {room_goto(asset_get_index(argument4))} //moves room
         else
         {
@@ -16,6 +16,6 @@
             {
                 scr_MovePlayer();
             }
-        }
-    
+        }*/
+        room_goto(asset_get_index(argument4))
 

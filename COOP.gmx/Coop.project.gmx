@@ -111,7 +111,13 @@
       <sprites name="Control">
         <sprite>sprites\cntrl</sprite>
         <sprite>sprites\spr_Wall2</sprite>
-        <sprite>sprites\spr_Wall</sprite>
+        <sprites name="WALLS">
+          <sprite>sprites\spr_Wall</sprite>
+          <sprite>sprites\spr_Wall_UL</sprite>
+          <sprite>sprites\spr_Wall_UR</sprite>
+          <sprite>sprites\spr_Wall_DL</sprite>
+          <sprite>sprites\spr_Wall_DR</sprite>
+        </sprites>
         <sprite>sprites\spr_DOOR</sprite>
       </sprites>
       <sprites name="Crosshair">
@@ -119,6 +125,7 @@
         <sprite>sprites\spr_Crosshair_1</sprite>
         <sprite>sprites\spr_Crosshair_2</sprite>
         <sprite>sprites\spr_Crosshair_3</sprite>
+        <sprite>sprites\spr_Crosshair_Defualt</sprite>
       </sprites>
     </sprites>
     <sprites name="Tools">
@@ -312,16 +319,16 @@
           <script>scripts\scr_SpawnPlayer.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Mechanics">
-        <scripts name="Save/load/respawn">
-          <script>scripts\scr_Load.gml</script>
-          <script>scripts\scr_Respawn.gml</script>
-          <script>scripts\scr_Save.gml</script>
-        </scripts>
+      <scripts name="Save/load/respawn">
         <scripts name="spawn teleporters">
           <script>scripts\scr_MovePlayer.gml</script>
           <script>scripts\scr_RoomChange.gml</script>
         </scripts>
+        <script>scripts\scr_Load.gml</script>
+        <script>scripts\scr_Respawn.gml</script>
+        <script>scripts\scr_Save.gml</script>
+      </scripts>
+      <scripts name="Mechanics">
         <script>scripts\scr_SpawnPU.gml</script>
       </scripts>
     </scripts>
@@ -330,6 +337,7 @@
         <script>scripts\scr_EnemyMove.gml</script>
         <script>scripts\scr_EnemyMove2.gml</script>
       </scripts>
+      <script>scripts\scr_EnemySpawn.gml</script>
     </scripts>
     <scripts name="Prototypes">
       <scripts name="Chatter">
@@ -350,6 +358,8 @@
         <script>scripts\scr_AI_Animation.gml</script>
         <script>scripts\scr_AI_Attack.gml</script>
         <script>scripts\scr_AI_CircleMove.gml</script>
+        <script>scripts\scr_AI_Walk.gml</script>
+        <script>scripts\scr_AI_Walk_NextNode.gml</script>
         <scripts name="Pathfinding">
           <script>scripts\scr_Path_Gridset.gml</script>
           <script>scripts\scr_Path_Begin.gml</script>
@@ -359,7 +369,7 @@
           <script>scripts\scr_Path_Shiftlist.gml</script>
           <script>scripts\scr_Path_AddWall.gml</script>
           <script>scripts\scr_Path_DropWall.gml</script>
-          <script>scripts\scr_Path_Walk.gml</script>
+          <script>scripts\scr_Path_Walkrandom.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -379,6 +389,7 @@
         <object>objects\obj_StartMenu</object>
         <object>objects\obj_PlayerSpawn</object>
         <object>objects\obj_GameStart</object>
+        <object>objects\obj_WallAdder</object>
         <object>objects\obj_GUI</object>
       </objects>
       <objects name="Systems">

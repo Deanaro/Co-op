@@ -11,7 +11,7 @@ if instance_exists(global.Player[i, 0])
     {
     dev += 1;
     view_x += global.Player[i,0].x;
-    view_y += global.Player[i,0].y + 48;
+    view_y += global.Player[i,0].y + obj_Player.sprite_height/2;
     }
 }
 // average locatioon of the players - half the view size (since the origin is at 0,0)
@@ -26,7 +26,7 @@ else
 if view_y - view_yview >= 0
 {view_yview[0] += ceil((-view_yview + viewy)/32);}
 else
-{view_yview[0] += floor((-view_yview + viewy)/48);}
+{view_yview[0] += floor((-view_yview + viewy)/32);}
 
 // if the view is outside the room, return it to the room
 if view_xview < 0 {view_xview = 0;}

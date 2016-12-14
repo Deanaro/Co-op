@@ -17,4 +17,6 @@ push-command------------ENTER
 restart-game------------f1
 go-to-last-save --------f2
 GOTO-next-room-(only-in-StartMenu-and-rm_Start)---f3
+Help--------------------f10
+Debug-Mode--------------f11
 

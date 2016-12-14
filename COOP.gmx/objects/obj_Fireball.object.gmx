@@ -96,6 +96,7 @@ if position_meeting(x,y,obj_Enemy)
     Target.h_move = x_move;
     with Target
     {
+    Hurt = 30;
     alarm[1] = 2;
     Life -=1;
     Knockback = 2;

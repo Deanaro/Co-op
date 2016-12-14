@@ -7,7 +7,7 @@
   <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.TMX_WIDTH=50;
@@ -22,7 +22,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1008</w>
+    <w>910</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -32,9 +32,9 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>85</xoffset>
-    <yoffset>3</yoffset>
+    <page>1</page>
+    <xoffset>-100</xoffset>
+    <yoffset>-51</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -58,130 +58,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
   </views>
   <instances>
     <instance objName="obj_Control" x="0" y="0" name="inst_00F3D908" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1408" y="1280" name="inst_B1C0708A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1408" y="1344" name="inst_142D6655" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1408" y="1408" name="inst_E629353C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1408" y="1472" name="inst_BCEAABAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1408" y="1536" name="inst_A056E843" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1472" y="1536" name="inst_D80D9525" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1472" y="1600" name="inst_416F98BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1536" y="1600" name="inst_AE034EE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1536" y="1664" name="inst_C6DC328F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1600" y="1664" name="inst_F1E268F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1600" y="1728" name="inst_04519267" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1664" y="1728" name="inst_3BE30D44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1728" y="1728" name="inst_21436AF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1792" y="1728" name="inst_AA5CB33B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1856" y="1728" name="inst_C5328F36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1920" y="1728" name="inst_197D9684" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1984" y="1728" name="inst_20D70965" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2048" y="1728" name="inst_33C68628" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2112" y="1728" name="inst_B9B9FBFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2112" y="1792" name="inst_AA7B8BF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2176" y="1792" name="inst_04998B09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2240" y="1792" name="inst_B6C5BE85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2304" y="1792" name="inst_09636D6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2368" y="1792" name="inst_79B0628F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2432" y="1792" name="inst_B9E65165" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2496" y="1792" name="inst_E5F00E2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1472" y="1280" name="inst_0F75B7AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1536" y="1280" name="inst_42329CFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1536" y="1152" name="inst_EA49BBD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1536" y="1216" name="inst_3149717A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1600" y="1152" name="inst_7886EBBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1664" y="1152" name="inst_60BAEE08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1664" y="1088" name="inst_A8DE8988" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1664" y="1024" name="inst_54AA08A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1728" y="1024" name="inst_4D33A1A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1792" y="1024" name="inst_6BE78E91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1856" y="1024" name="inst_7A9688A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1920" y="960" name="inst_787FCF6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1984" y="960" name="inst_9414BBA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2048" y="960" name="inst_408AEF60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2112" y="960" name="inst_E896A98F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2176" y="960" name="inst_B6EACC37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2304" y="960" name="inst_5A1A267D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2368" y="960" name="inst_76278B7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2368" y="1024" name="inst_F8D2BFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2432" y="1024" name="inst_82A71779" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2432" y="1088" name="inst_9A72426E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2496" y="1088" name="inst_739694F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2560" y="1088" name="inst_4F91E05E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2624" y="1088" name="inst_B3261256" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2688" y="1088" name="inst_61C82BF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2752" y="1088" name="inst_B6A67CC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="1920" y="1024" name="inst_9429E940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2816" y="1088" name="inst_3C26A5CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2880" y="1088" name="inst_EE893706" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3136" y="1088" name="inst_3D3EAB44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3072" y="1088" name="inst_C14991CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3008" y="1088" name="inst_E35E0DB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2944" y="1088" name="inst_0F04151C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3136" y="2176" name="inst_DB33F47C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3072" y="2176" name="inst_0457C7EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3008" y="2176" name="inst_AABB40F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="3008" y="2112" name="inst_C09402F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2944" y="2112" name="inst_033FDB3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2880" y="2112" name="inst_DC350C05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2880" y="2048" name="inst_F603D145" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2816" y="2048" name="inst_A56DDC5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2816" y="1984" name="inst_A85AA13C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2752" y="1984" name="inst_6D8DAADC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2752" y="1920" name="inst_54BE1342" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2752" y="1856" name="inst_337425F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2688" y="1856" name="inst_BE5D6318" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2624" y="1856" name="inst_421B57E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2560" y="1856" name="inst_E891FEC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2560" y="1792" name="inst_C12CBAF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="2240" y="960" name="inst_FCAA8EA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="384" y="128" name="inst_199D8964" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="384" y="192" name="inst_0CD584C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="384" y="256" name="inst_C0C409F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="384" y="320" name="inst_1ED415CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="704" y="256" name="inst_0775AF50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="640" y="256" name="inst_DB32298E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="128" name="inst_FEC7DD50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="256" name="inst_F7C243CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="704" y="384" name="inst_A330FAA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="640" y="448" name="inst_A6E50C30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="448" name="inst_6D129861" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="448" y="448" name="inst_FC7355CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="512" y="448" name="inst_DBA555EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="448" y="704" name="inst_1575091F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="448" y="768" name="inst_CE395FB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="512" y="768" name="inst_F45CBACC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="768" name="inst_238561D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="704" name="inst_C2696A78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="576" y="640" name="inst_0E8A3D41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="512" y="640" name="inst_DEBEDE3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="448" y="640" name="inst_2F2D1CC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="896" y="832" name="inst_E4E61DF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="896" y="960" name="inst_B5AA6443" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="832" y="1024" name="inst_71826044" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="768" y="960" name="inst_A9359F20" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="832" y="832" name="inst_0644330B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="832" y="896" name="inst_EF9DC0A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="832" y="960" name="inst_BA0A6EA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="896" y="896" name="inst_484E8CD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="832" name="inst_C8012766" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="768" name="inst_397E713A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="640" name="inst_D76DE83A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="576" name="inst_1A680C8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="704" name="inst_BEF6B890" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="448" name="inst_81C09381" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="960" y="512" name="inst_B4EECFF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="896" y="512" name="inst_F8984125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_InvisibleWall" x="832" y="512" name="inst_76C4D89F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_SpawnLocation" x="192" y="576" name="inst_1B2425DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1216" y="192" name="inst_3A4CB649" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1152" y="192" name="inst_79876744" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1216" y="128" name="inst_7511ADF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1280" y="128" name="inst_44A32268" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1216" y="128" name="inst_8CF29977" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1216" y="192" name="inst_D44EADF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1216" y="192" name="inst_DD4DBE37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1152" y="128" name="inst_2EE0D112" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_EnemyAi" x="1280" y="192" name="inst_A4EA5E5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TarBubble" x="1792" y="1344" name="inst_CC5AF77B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TarBubble" x="2368" y="1344" name="inst_FDDF2FF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TarBubble" x="2496" y="1536" name="inst_27329419" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -235,6 +112,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <instance objName="obj_TarBubble" x="2176" y="1280" name="inst_45EA123F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TarBubble" x="2112" y="1344" name="inst_CABF6BC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TarBubble" x="2368" y="1536" name="inst_5E281C6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_EnemyAi" x="128" y="704" name="inst_5D3CEC12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="til_FireLevelv2" x="0" y="0" w="64" h="64" xo="0" yo="64" id="10000000" name="tile10000000" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -303,10 +181,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="832" y="64" w="64" h="64" xo="64" yo="64" id="10000063" name="tile10000063" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="64" w="64" h="64" xo="0" yo="64" id="10000064" name="tile10000064" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="960" y="64" w="64" h="64" xo="0" yo="64" id="10000065" name="tile10000065" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="64" w="64" h="64" xo="0" yo="0" id="10000066" name="tile10000066" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="64" w="64" h="64" xo="0" yo="64" id="10000067" name="tile10000067" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="64" w="64" h="64" xo="64" yo="64" id="10000068" name="tile10000068" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="64" w="64" h="64" xo="0" yo="64" id="10000069" name="tile10000069" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1280" y="64" w="64" h="64" xo="0" yo="64" id="10000070" name="tile10000070" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1344" y="64" w="64" h="64" xo="64" yo="64" id="10000071" name="tile10000071" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="64" w="64" h="64" xo="64" yo="0" id="10000072" name="tile10000072" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -352,12 +226,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="768" y="128" w="64" h="64" xo="576" yo="192" id="10000112" name="tile10000112" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="832" y="128" w="64" h="64" xo="0" yo="64" id="10000113" name="tile10000113" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="128" w="64" h="64" xo="0" yo="64" id="10000114" name="tile10000114" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="960" y="128" w="64" h="64" xo="0" yo="128" id="10000115" name="tile10000115" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="128" w="64" h="64" xo="64" yo="128" id="10000116" name="tile10000116" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="128" w="64" h="64" xo="0" yo="64" id="10000117" name="tile10000117" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="128" w="64" h="64" xo="0" yo="64" id="10000118" name="tile10000118" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="128" w="64" h="64" xo="0" yo="64" id="10000119" name="tile10000119" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="128" w="64" h="64" xo="64" yo="64" id="10000120" name="tile10000120" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1344" y="128" w="64" h="64" xo="0" yo="64" id="10000121" name="tile10000121" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="128" w="64" h="64" xo="0" yo="64" id="10000122" name="tile10000122" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="128" w="64" h="64" xo="64" yo="64" id="10000123" name="tile10000123" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -402,13 +270,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="768" y="192" w="64" h="64" xo="448" yo="512" id="10000162" name="tile10000162" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="832" y="192" w="64" h="64" xo="576" yo="192" id="10000163" name="tile10000163" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="192" w="64" h="64" xo="64" yo="0" id="10000164" name="tile10000164" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="960" y="192" w="64" h="64" xo="64" yo="0" id="10000165" name="tile10000165" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="192" w="64" h="64" xo="64" yo="0" id="10000166" name="tile10000166" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="192" w="64" h="64" xo="0" yo="64" id="10000167" name="tile10000167" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="192" w="64" h="64" xo="64" yo="0" id="10000168" name="tile10000168" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="192" w="64" h="64" xo="64" yo="128" id="10000169" name="tile10000169" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="192" w="64" h="64" xo="64" yo="0" id="10000170" name="tile10000170" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="192" w="64" h="64" xo="64" yo="0" id="10000171" name="tile10000171" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="192" w="64" h="64" xo="64" yo="64" id="10000172" name="tile10000172" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="192" w="64" h="64" xo="64" yo="0" id="10000173" name="tile10000173" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="192" w="64" h="64" xo="0" yo="64" id="10000174" name="tile10000174" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -452,13 +313,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="768" y="256" w="64" h="64" xo="512" yo="256" id="10000212" name="tile10000212" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="832" y="256" w="64" h="64" xo="576" yo="256" id="10000213" name="tile10000213" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="256" w="64" h="64" xo="64" yo="64" id="10000214" name="tile10000214" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="960" y="256" w="64" h="64" xo="64" yo="0" id="10000215" name="tile10000215" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="256" w="64" h="64" xo="64" yo="64" id="10000216" name="tile10000216" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="256" w="64" h="64" xo="64" yo="0" id="10000217" name="tile10000217" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="256" w="64" h="64" xo="64" yo="64" id="10000218" name="tile10000218" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="256" w="64" h="64" xo="64" yo="64" id="10000219" name="tile10000219" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="256" w="64" h="64" xo="64" yo="0" id="10000220" name="tile10000220" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="256" w="64" h="64" xo="64" yo="0" id="10000221" name="tile10000221" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="256" w="64" h="64" xo="64" yo="64" id="10000222" name="tile10000222" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="256" w="64" h="64" xo="128" yo="0" id="10000223" name="tile10000223" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="256" w="64" h="64" xo="0" yo="64" id="10000224" name="tile10000224" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -496,19 +350,11 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="384" y="320" w="64" h="64" xo="576" yo="384" id="10000256" name="tile10000256" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="448" y="320" w="64" h="64" xo="512" yo="256" id="10000257" name="tile10000257" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="512" y="320" w="64" h="64" xo="512" yo="256" id="10000258" name="tile10000258" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="576" y="320" w="64" h="64" xo="512" yo="256" id="10000259" name="tile10000259" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="640" y="320" w="64" h="64" xo="512" yo="256" id="10000260" name="tile10000260" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="704" y="320" w="64" h="64" xo="512" yo="256" id="10000261" name="tile10000261" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="768" y="320" w="64" h="64" xo="512" yo="256" id="10000262" name="tile10000262" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="832" y="320" w="64" h="64" xo="576" yo="256" id="10000263" name="tile10000263" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="320" w="64" h="64" xo="64" yo="64" id="10000264" name="tile10000264" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="960" y="320" w="64" h="64" xo="64" yo="64" id="10000265" name="tile10000265" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="320" w="64" h="64" xo="128" yo="64" id="10000266" name="tile10000266" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="320" w="64" h="64" xo="0" yo="64" id="10000267" name="tile10000267" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="320" w="64" h="64" xo="64" yo="0" id="10000268" name="tile10000268" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="320" w="64" h="64" xo="448" yo="0" id="10000269" name="tile10000269" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="320" w="64" h="64" xo="512" yo="0" id="10000270" name="tile10000270" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="320" w="64" h="64" xo="320" yo="0" id="10000271" name="tile10000271" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="320" w="64" h="64" xo="512" yo="0" id="10000272" name="tile10000272" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="320" w="64" h="64" xo="576" yo="0" id="10000273" name="tile10000273" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="320" w="64" h="64" xo="64" yo="64" id="10000274" name="tile10000274" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -552,12 +398,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="768" y="384" w="64" h="64" xo="512" yo="256" id="10000312" name="tile10000312" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="832" y="384" w="64" h="64" xo="576" yo="256" id="10000313" name="tile10000313" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="384" w="64" h="64" xo="0" yo="64" id="10000314" name="tile10000314" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="960" y="384" w="64" h="64" xo="64" yo="64" id="10000315" name="tile10000315" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="384" w="64" h="64" xo="64" yo="64" id="10000316" name="tile10000316" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="384" w="64" h="64" xo="64" yo="128" id="10000317" name="tile10000317" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="384" w="64" h="64" xo="448" yo="0" id="10000318" name="tile10000318" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="384" w="64" h="64" xo="384" yo="128" id="10000319" name="tile10000319" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="384" w="64" h="64" xo="256" yo="640" id="10000320" name="tile10000320" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1344" y="384" w="64" h="64" xo="320" yo="64" id="10000321" name="tile10000321" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="384" w="64" h="64" xo="320" yo="64" id="10000322" name="tile10000322" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="384" w="64" h="64" xo="256" yo="128" id="10000323" name="tile10000323" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -603,11 +443,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="832" y="448" w="64" h="64" xo="576" yo="256" id="10000363" name="tile10000363" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="448" w="64" h="64" xo="0" yo="64" id="10000364" name="tile10000364" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="960" y="448" w="64" h="64" xo="64" yo="64" id="10000365" name="tile10000365" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="448" w="64" h="64" xo="64" yo="64" id="10000366" name="tile10000366" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="448" w="64" h="64" xo="64" yo="0" id="10000367" name="tile10000367" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="448" w="64" h="64" xo="256" yo="64" id="10000368" name="tile10000368" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="448" w="64" h="64" xo="256" yo="640" id="10000369" name="tile10000369" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="448" w="64" h="64" xo="320" yo="64" id="10000370" name="tile10000370" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1344" y="448" w="64" h="64" xo="256" yo="640" id="10000371" name="tile10000371" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="448" w="64" h="64" xo="256" yo="640" id="10000372" name="tile10000372" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="448" w="64" h="64" xo="320" yo="64" id="10000373" name="tile10000373" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -653,12 +488,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="832" y="512" w="64" h="64" xo="448" yo="512" id="10000413" name="tile10000413" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="896" y="512" w="64" h="64" xo="576" yo="192" id="10000414" name="tile10000414" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="960" y="512" w="64" h="64" xo="64" yo="0" id="10000415" name="tile10000415" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1024" y="512" w="64" h="64" xo="64" yo="64" id="10000416" name="tile10000416" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="512" w="64" h="64" xo="64" yo="64" id="10000417" name="tile10000417" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="512" w="64" h="64" xo="256" yo="64" id="10000418" name="tile10000418" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="512" w="64" h="64" xo="256" yo="640" id="10000419" name="tile10000419" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="512" w="64" h="64" xo="256" yo="640" id="10000420" name="tile10000420" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="512" w="64" h="64" xo="512" yo="64" id="10000421" name="tile10000421" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="512" w="64" h="64" xo="320" yo="64" id="10000422" name="tile10000422" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="512" w="64" h="64" xo="256" yo="640" id="10000423" name="tile10000423" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="512" w="64" h="64" xo="256" yo="640" id="10000424" name="tile10000424" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -704,11 +533,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="896" y="576" w="64" h="64" xo="576" yo="256" id="10000464" name="tile10000464" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="960" y="576" w="64" h="64" xo="0" yo="64" id="10000465" name="tile10000465" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1024" y="576" w="64" h="64" xo="64" yo="64" id="10000466" name="tile10000466" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="576" w="64" h="64" xo="64" yo="64" id="10000467" name="tile10000467" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="576" w="64" h="64" xo="448" yo="64" id="10000468" name="tile10000468" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="576" w="64" h="64" xo="192" yo="0" id="10000469" name="tile10000469" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="576" w="64" h="64" xo="320" yo="64" id="10000470" name="tile10000470" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="576" w="64" h="64" xo="512" yo="64" id="10000471" name="tile10000471" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="576" w="64" h="64" xo="256" yo="640" id="10000472" name="tile10000472" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="576" w="64" h="64" xo="320" yo="64" id="10000473" name="tile10000473" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="576" w="64" h="64" xo="256" yo="640" id="10000474" name="tile10000474" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -754,11 +578,6 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="896" y="640" w="64" h="64" xo="576" yo="256" id="10000514" name="tile10000514" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="960" y="640" w="64" h="64" xo="64" yo="0" id="10000515" name="tile10000515" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1024" y="640" w="64" h="64" xo="64" yo="0" id="10000516" name="tile10000516" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1088" y="640" w="64" h="64" xo="64" yo="0" id="10000517" name="tile10000517" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="640" w="64" h="64" xo="256" yo="64" id="10000518" name="tile10000518" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1216" y="640" w="64" h="64" xo="320" yo="64" id="10000519" name="tile10000519" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="640" w="64" h="64" xo="320" yo="64" id="10000520" name="tile10000520" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="640" w="64" h="64" xo="256" yo="640" id="10000521" name="tile10000521" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="640" w="64" h="64" xo="256" yo="640" id="10000522" name="tile10000522" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="640" w="64" h="64" xo="320" yo="64" id="10000523" name="tile10000523" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="640" w="64" h="64" xo="256" yo="640" id="10000524" name="tile10000524" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -805,10 +624,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="960" y="704" w="64" h="64" xo="0" yo="64" id="10000565" name="tile10000565" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1024" y="704" w="64" h="64" xo="64" yo="64" id="10000566" name="tile10000566" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1088" y="704" w="64" h="64" xo="64" yo="64" id="10000567" name="tile10000567" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1152" y="704" w="64" h="64" xo="448" yo="128" id="10000568" name="tile10000568" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1216" y="704" w="64" h="64" xo="320" yo="128" id="10000569" name="tile10000569" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1280" y="704" w="64" h="64" xo="320" yo="128" id="10000570" name="tile10000570" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="til_FireLevelv2" x="1344" y="704" w="64" h="64" xo="320" yo="128" id="10000571" name="tile10000571" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1408" y="704" w="64" h="64" xo="384" yo="0" id="10000572" name="tile10000572" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1472" y="704" w="64" h="64" xo="320" yo="64" id="10000573" name="tile10000573" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="1536" y="704" w="64" h="64" xo="320" yo="64" id="10000574" name="tile10000574" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2737,6 +2553,68 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <tile bgName="til_FireLevelv2" x="3008" y="3136" w="64" h="64" xo="64" yo="0" id="10002497" name="tile10002497" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="3072" y="3136" w="64" h="64" xo="64" yo="64" id="10002498" name="tile10002498" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="til_FireLevelv2" x="3136" y="3136" w="64" h="64" xo="0" yo="64" id="10002499" name="tile10002499" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="576" y="320" w="64" h="64" xo="512" yo="256" id="10006695" name="inst_7422DC51" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="320" w="64" h="64" xo="64" yo="640" id="10006697" name="inst_F9BB2192" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="576" w="64" h="64" xo="64" yo="640" id="10006698" name="inst_DCF75569" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="576" w="64" h="64" xo="64" yo="640" id="10006699" name="inst_D687EC9A" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="512" w="64" h="64" xo="64" yo="640" id="10006700" name="inst_9FBF9E14" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="448" w="64" h="64" xo="64" yo="640" id="10006701" name="inst_C20C5A04" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="448" w="64" h="64" xo="64" yo="640" id="10006702" name="inst_DB624D07" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="384" w="64" h="64" xo="64" yo="640" id="10006703" name="inst_2E0218C6" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="384" w="64" h="64" xo="64" yo="640" id="10006704" name="inst_5CD154B9" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="320" w="64" h="64" xo="64" yo="640" id="10006705" name="inst_0D6336B3" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="256" w="64" h="64" xo="64" yo="640" id="10006706" name="inst_7F0ADDA2" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="256" w="64" h="64" xo="64" yo="640" id="10006707" name="inst_CADA2D27" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="256" w="64" h="64" xo="64" yo="640" id="10006708" name="inst_47DA9355" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="320" w="64" h="64" xo="64" yo="640" id="10006709" name="inst_3B7905E4" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="192" w="64" h="64" xo="64" yo="640" id="10006710" name="inst_C5606F4D" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="192" w="64" h="64" xo="64" yo="640" id="10006711" name="inst_24DBF305" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="128" w="64" h="64" xo="64" yo="576" id="10006712" name="inst_7237B719" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="128" w="64" h="64" xo="64" yo="576" id="10006713" name="inst_D00D83D4" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="128" w="64" h="64" xo="128" yo="576" id="10006714" name="inst_4A788651" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="192" w="64" h="64" xo="128" yo="576" id="10006715" name="inst_C6F35E65" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="512" w="64" h="64" xo="128" yo="576" id="10006716" name="inst_62FDA494" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="640" w="64" h="64" xo="128" yo="704" id="10006717" name="inst_535844C8" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="640" w="64" h="64" xo="0" yo="704" id="10006718" name="inst_24E48D57" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="512" w="64" h="64" xo="0" yo="704" id="10006719" name="inst_35038A65" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="384" w="64" h="64" xo="0" yo="704" id="10006720" name="inst_E93F5670" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="128" w="64" h="64" xo="0" yo="576" id="10006721" name="inst_70770E55" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="256" w="64" h="64" xo="0" yo="640" id="10006722" name="inst_1E348631" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="192" w="64" h="64" xo="0" yo="640" id="10006723" name="inst_43FC2070" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="320" w="64" h="64" xo="0" yo="640" id="10006724" name="inst_606D7FCA" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="576" w="64" h="64" xo="0" yo="640" id="10006725" name="inst_AED77924" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="448" w="64" h="64" xo="0" yo="640" id="10006726" name="inst_D572539D" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="256" w="64" h="64" xo="128" yo="640" id="10006727" name="inst_F11E4C82" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="320" w="64" h="64" xo="128" yo="640" id="10006728" name="inst_EEA2BFD7" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="384" w="64" h="64" xo="128" yo="640" id="10006729" name="inst_1B316AAC" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="448" w="64" h="64" xo="128" yo="640" id="10006730" name="inst_BE8F7C2A" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="576" w="64" h="64" xo="128" yo="640" id="10006731" name="inst_C27F469B" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="640" w="64" h="64" xo="64" yo="704" id="10006733" name="inst_4BD5543E" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="640" w="64" h="64" xo="64" yo="704" id="10006734" name="inst_28A0F9DD" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="512" w="64" h="64" xo="192" yo="704" id="10006736" name="inst_85D1C033" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="192" w="64" h="64" xo="192" yo="704" id="10006737" name="inst_A77A5FAA" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="384" w="64" h="64" xo="320" yo="576" id="10006738" name="inst_CF5F6943" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="512" w="64" h="64" xo="320" yo="576" id="10006739" name="inst_04CB13D6" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="448" w="64" h="64" xo="384" yo="0" id="10006743" name="inst_F80003AD" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="640" w="64" h="64" xo="384" yo="0" id="10006744" name="inst_ED4A2933" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="576" w="64" h="64" xo="384" yo="0" id="10006745" name="inst_46AA1EE2" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="704" w="64" h="64" xo="256" yo="0" id="10006747" name="inst_5D2928B0" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="512" w="64" h="64" xo="256" yo="64" id="10006748" name="inst_18372B32" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="960" y="320" w="64" h="64" xo="256" yo="64" id="10006749" name="inst_94803590" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="960" y="384" w="64" h="64" xo="256" yo="64" id="10006750" name="inst_2B4B02DD" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="960" y="256" w="64" h="64" xo="256" yo="64" id="10006751" name="inst_2F98E753" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="960" y="192" w="64" h="64" xo="256" yo="64" id="10006752" name="inst_8422C0A3" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="960" y="128" w="64" h="64" xo="256" yo="64" id="10006753" name="inst_F1DF91A6" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1024" y="64" w="64" h="64" xo="320" yo="0" id="10006754" name="inst_1A72E252" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1088" y="64" w="64" h="64" xo="320" yo="0" id="10006755" name="inst_BCBDE5CD" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="64" w="64" h="64" xo="320" yo="0" id="10006756" name="inst_7D0A0831" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1216" y="64" w="64" h="64" xo="320" yo="0" id="10006757" name="inst_835E8103" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="128" w="64" h="64" xo="256" yo="128" id="10006758" name="inst_60FE4C78" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="192" w="64" h="64" xo="384" yo="64" id="10006759" name="inst_C9A72B3E" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="256" w="64" h="64" xo="384" yo="64" id="10006760" name="inst_2678D211" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1344" y="320" w="64" h="64" xo="256" yo="128" id="10006762" name="inst_087BBC5A" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1280" y="704" w="64" h="64" xo="384" yo="0" id="10006763" name="inst_1CE52A44" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="til_FireLevelv2" x="1152" y="704" w="64" h="64" xo="320" yo="128" id="10006764" name="inst_10924558" depth="1000099" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

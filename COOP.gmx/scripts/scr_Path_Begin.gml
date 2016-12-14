@@ -6,6 +6,13 @@
  Goalx = floor(argument0/obj_Pathfinder.Cellsize)
  Goaly = floor(argument1/obj_Pathfinder.Cellsize)
  GoalCell = Goalx + (obj_Pathfinder.Hcells*(Goaly))  // gets the goal cell's number
+if CurrentCell = GoalCell 
+{
+ActionChange = 60 + irandom(60); // EVERY 60-120 FRAMES (1-2 SECONDS)
+RandomAction = irandom(10); //Generates a new number form 0-10
+exit;
+}
+ 
 if obj_Pathfinder.Path_Cell[CurrentCell] = 0 and obj_Pathfinder.Path_Cell[GoalCell] = 0
 {
 var Cellnum = 0;

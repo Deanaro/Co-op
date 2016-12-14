@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>// draws GUI
-
+draw_set_alpha(1);
 for (var i=0; i &lt; 4; i++)
     {
         if (instance_exists(global.Player[i, 0]))
