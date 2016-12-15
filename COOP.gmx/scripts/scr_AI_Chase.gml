@@ -19,7 +19,7 @@ if CanUpdate = 1 and global.PathFindQ < 5
 {
 UpdatePath = 10;
 CanUpdate = 0;
-scr_Path_Begin(Targetx,Targety);
+scr_Path_Begin(Targetx,Targety,Centery);
 }
 /////////\\\\\\\\\\\
 if NodeCount!=0 // if a path exists

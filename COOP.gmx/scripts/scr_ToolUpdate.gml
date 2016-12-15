@@ -2,7 +2,10 @@
 // and update the weapon and utility scripts of the current player
 // agrument0 = player num
 
-
+with global.Player[argument0,0]
+{
+    Busy = 0;
+}
 var S1 = global.Slot[0 + (4*argument0)];  // gets he value of the power up in slots.
 var S2 = global.Slot[1 + (4*argument0)];
 var S3 = global.Slot[2 + (4*argument0)];

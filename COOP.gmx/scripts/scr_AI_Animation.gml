@@ -3,17 +3,34 @@
 //sets the correct sprite and direction.
 //sprite faces in direction of motion unless it is withing close range to player.
 //
-if instance_exists(obj_Player) and point_distance(x,bbox_bottom-16,Targetx,Targety) < 500 and  Alert = 1
-{face = point_direction(x,bbox_bottom-16,Targetx,Targety)
+if sprite_index != asset_get_index(string(argument0) + "A") or Busy = 0
+{
+if instance_exists(obj_Player) and point_distance(x,Centery,Targetx,Targety) < 500 and  Alert = 1
+{face = point_direction(x,Centery,Targetx,Targety)
 angle =  face;}
 else
-{angle = dir mod 361; }
-if angle > 90 and angle <= 270
+{angle = dir mod 360; }
+
+
+if angle < 90
 {
-image_xscale = -2;
+    facing = 0;
+    image_xscale = 2;
 }
-else
+else if angle >=90 and angle < 180
 {
-image_xscale = 2;
+    facing = 1;
+    image_xscale = -2;
+}
+else if angle >=180 and angle < 270
+{
+    facing = 2;
+    image_xscale = -2;
+}
+else if angle >=270
+{
+    facing = 3
+    image_xscale = 2;
 }
 sprite_index = asset_get_index(string(argument0) + string(anim));
+}

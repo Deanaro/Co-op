@@ -40,10 +40,11 @@
             Attack_Range = 48;
             Not_Alert_Range = 500;
             Alert_Range = 900;
-        
+            Centery = bbox_bottom - 20;
 /////////////////////////////////////////////////////////////////////////////////////////////
 //  DO NOT CHANGE VARIABLEs,  INITIALIZERS:!!!!!!!!!!!!!!!!!!!!!!!!!!
     //#ANIMATION//
+        facing = 0;
         image_speed = 0;
         anim ="";       
         image_xscale = 2; 
@@ -70,6 +71,29 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_Attack_90d(Attack_Range,spr_Hitbox90);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -88,6 +112,7 @@
           <argument>
             <kind>1</kind>
             <string>///Movement and Alerts
+Centery = bbox_bottom - 20;
 Target = scr_AI_Alert(); // checks if a player is in range and if so turns alert and returns nearest players ID
 if Cooldown!= 0
 {Cooldown --;}
@@ -175,21 +200,29 @@ draw_set_alpha(0.5);
 if Alert = 0
 {
     draw_set_color(c_green);
-    draw_circle(x,bbox_bottom-16,Not_Alert_Range,1);
+    draw_circle(x,Centery,Not_Alert_Range,1);
     draw_set_alpha(0.08);
-    draw_circle(x,bbox_bottom-16,Not_Alert_Range,0);
+    draw_circle(x,Centery,Not_Alert_Range,0);
     draw_set_color(c_red);
 }
 else
 {
+    
     draw_set_color(c_red);
-    draw_circle(x,bbox_bottom-16,Alert_Range,1);
-    draw_circle(x,bbox_bottom-16,Not_Alert_Range,1);
-    draw_circle(x,bbox_bottom-16,Attack_Range,1);
+    draw_circle(x,Centery,Alert_Range,1);
+    draw_circle(x,Centery,Not_Alert_Range,1);
+    draw_circle(x,Centery,Attack_Range,1);
+    draw_circle(x,Centery,Alert_Range-1,1);
+    draw_circle(x,Centery,Not_Alert_Range-1,1);
+    draw_circle(x,Centery,Attack_Range-1,1);
     draw_set_alpha(0.06);
-    draw_circle(x,bbox_bottom-16,Not_Alert_Range,0);
+    draw_circle(x,Centery,Not_Alert_Range,0);
     draw_set_alpha(0.04);
-    draw_circle(x,bbox_bottom-16,Alert_Range,0);
+    draw_circle(x,Centery,Alert_Range,0);
+    draw_set_alpha(1);
+    draw_set_color(c_black);
+    draw_text(x - 20,bbox_top-80,"facing =" + string(facing));
+    draw_line_width(x,Centery,Targetx,Targety,3);
 }
 if NodeCount !=0 and Alert = 1
 {

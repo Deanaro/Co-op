@@ -6,7 +6,11 @@ ButtonEnter = keyboard_check_pressed(vk_enter); // ENTER / Enter Key
 
 /* If console is focused checks for legal console input and updates accordingly */
 //Keys ONLY tracked when console focused for typing
-if (console_focused) {
+
+/* hey Harry, this makes the console always focused you can just comment it when you want */
+//if (console_focused) {
+console_focused = true;
+if (console_open){
     if (keyboard_lastkey != -1)
     {
     //Check input is a legal char 

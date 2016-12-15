@@ -1,7 +1,7 @@
  //(target.x,targer.y)
  
  Currentx = floor(x/obj_Pathfinder.Cellsize)
- Currenty = floor(bbox_bottom/obj_Pathfinder.Cellsize)
+ Currenty = floor(argument2/obj_Pathfinder.Cellsize)
  CurrentCell = Currentx + (obj_Pathfinder.Hcells*(Currenty)) // gets the current cell's number
  Goalx = floor(argument0/obj_Pathfinder.Cellsize)
  Goaly = floor(argument1/obj_Pathfinder.Cellsize)

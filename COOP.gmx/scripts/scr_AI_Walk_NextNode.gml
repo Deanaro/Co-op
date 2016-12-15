@@ -13,6 +13,6 @@ if NodeCount - NodesVisited >=0
     {gotoy = floor(Node[NodeCount-NodesVisited]/obj_Pathfinder.Hcells);}
     gotox = Node[NodeCount-NodesVisited] - (gotoy * obj_Pathfinder.Hcells);
     //gets direction towards the required point
-    dir = point_direction(x,bbox_bottom-16,gotox*obj_Pathfinder.Cellsize +obj_Pathfinder.Cellsize/2 ,gotoy*obj_Pathfinder.Cellsize + obj_Pathfinder.Cellsize/2);
+    dir = point_direction(x,Centery,gotox*obj_Pathfinder.Cellsize +obj_Pathfinder.Cellsize/2 ,gotoy*obj_Pathfinder.Cellsize + obj_Pathfinder.Cellsize/2);
     //instance_create(gotox*obj_Pathfinder.Cellsize ,gotoy*obj_Pathfinder.Cellsize ,obj_SpawnLocation)
 }

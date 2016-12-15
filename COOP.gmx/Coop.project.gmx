@@ -207,6 +207,7 @@
         <sprite>sprites\spr_PlaceholderEnemy</sprite>
         <sprite>sprites\spr_PlaceholderEnemyW</sprite>
         <sprite>sprites\spr_PlaceholderEnemyA</sprite>
+        <sprite>sprites\spr_Hitbox90</sprite>
       </sprites>
       <sprites name="Lachlan">
         <sprite>sprites\spr_MenuBase</sprite>
@@ -235,14 +236,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player">
-      <script>scripts\scr_Player_Drop.gml</script>
-      <script>scripts\scr_Player_Face.gml</script>
-      <script>scripts\scr_Player_GUI.gml</script>
-      <script>scripts\scr_Player_InputKB.gml</script>
-      <script>scripts\scr_Player_InputGP.gml</script>
-      <script>scripts\scr_Player_Move.gml</script>
-      <script>scripts\scr_Player_PUpickup.gml</script>
-      <script>scripts\scr_PlayerUpdate_Second.gml</script>
       <scripts name="Tools">
         <scripts name="Weapon">
           <script>scripts\scr_Weapon0_0.gml</script>
@@ -278,10 +271,21 @@
           </scripts>
         </scripts>
         <scripts name="Utility">
-          <script>scripts\scr_Utility2_0.gml</script>
-          <script>scripts\scr_Utility2_2.gml</script>
+          <scripts name="Metal">
+            <script>scripts\scr_Utility2_0.gml</script>
+            <script>scripts\scr_Utility2_2.gml</script>
+          </scripts>
         </scripts>
       </scripts>
+      <script>scripts\scr_Player_Drop.gml</script>
+      <script>scripts\scr_Player_Face.gml</script>
+      <script>scripts\scr_Player_GUI.gml</script>
+      <script>scripts\scr_Player_InputKB.gml</script>
+      <script>scripts\scr_Player_InputGP.gml</script>
+      <script>scripts\scr_Player_Move.gml</script>
+      <script>scripts\scr_Player_PUpickup.gml</script>
+      <script>scripts\scr_Player_Damage.gml</script>
+      <script>scripts\scr_PlayerUpdate_Second.gml</script>
     </scripts>
     <scripts name="Game Logic">
       <scripts name="Systems">
@@ -349,6 +353,9 @@
         <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
       </scripts>
       <scripts name="AI">
+        <scripts name="Attacks">
+          <script>scripts\scr_Attack_90d.gml</script>
+        </scripts>
         <script>scripts\scr_AI_Alert.gml</script>
         <script>scripts\scr_AI_Action.gml</script>
         <script>scripts\scr_AI_Action_Alert.gml</script>
@@ -381,6 +388,9 @@
     <font>fonts\fnt_Help</font>
   </fonts>
   <objects name="objects">
+    <objects name="Player">
+      <object>objects\obj_Player</object>
+    </objects>
     <objects name="Game Logic">
       <object>objects\obj_Control</object>
       <objects name="Control objects">
@@ -416,9 +426,6 @@
         <object>objects\obj_Enemy</object>
       </objects>
     </objects>
-    <objects name="Player">
-      <object>objects\obj_Player</object>
-    </objects>
     <objects name="Props">
       <objects name="Child Objects">
         <object>objects\obj_InvisibleWall</object>
@@ -450,6 +457,7 @@
         <object>objects\obj_Fireball</object>
         <object>objects\obj_EnemyAi</object>
         <object>objects\obj_TarBubble</object>
+        <object>objects\obj_Hitbox</object>
       </objects>
       <objects name="Lachlan">
         <object>objects\obj_SpawnLocation</object>

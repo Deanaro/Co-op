@@ -13,13 +13,13 @@ else {ActionChange --;}
 ///////////////////////////////////////
 
 
-TargetDistance = point_distance(x,bbox_bottom - 16,Targetx,Targety); // distance to targer
+TargetDistance = point_distance(x,Centery,Targetx,Targety); // distance to targer
 ///////////// ATTACK RANGE //////////////////////
 if TargetDistance < Attack_Range //attack range
 {
     if RandomAction <= 7 and Cooldown = 0 or TargetDistance < 30 and Cooldown = 0//70% chance
     {
-        scr_AI_Attack(); //Attack
+        scr_AI_Attack(6); //Attack
     }
     else if RandomAction <=10 
     {

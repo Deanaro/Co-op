@@ -52,8 +52,8 @@ drawn = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_Path_Begin(500,500);
-alarm[0] = 20
+            <string>//scr_Path_Begin(500,500);
+//alarm[0] = 20
 </string>
           </argument>
         </arguments>
@@ -112,7 +112,7 @@ if keyboard_check_pressed(vk_down)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_Path_Begin(mouse_x,mouse_y);
+            <string>scr_Path_Begin(mouse_x,mouse_y,y);
 drawn = 1;
 </string>
           </argument>
@@ -180,7 +180,7 @@ draw_circle(x2*64+32,y2*64+32,5,0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_Path_Begin(500,500);
+            <string>//scr_Path_Begin(500,500);
 </string>
           </argument>
         </arguments>
