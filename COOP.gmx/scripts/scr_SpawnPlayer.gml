@@ -22,11 +22,10 @@ var y2 = argument4;
             with global.Player[argument5, 0]    
             {
                 Player_num = argument5;
-                while place_meeting(x,y,obj_solid) or x > view_xview+view_wview or x < view_xview
-                or y > view_yview+view_hview - 3*(sprite_height/4) or y< view_yview - 16
+                while place_meeting(x,y,obj_solid)
                 {
                 x = x1 + random(x2 - x1);
-                y = y1 + random(y2 - y1)-48;
+                y = y1 + random(y2 - y1)-Centery;
                 }
                 scr_ToolUpdate(argument5);
                 //input type
