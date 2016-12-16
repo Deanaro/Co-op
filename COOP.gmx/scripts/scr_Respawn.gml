@@ -9,6 +9,7 @@ for (var i = 0; i<4; i++)
 }
 scr_RoomChange(SpawnX1,SpawnY1,SpawnX2,SpawnY2,SpawnRoom);
 
+
 /*
 //changes the current room to the one in the save file
 var temproom = asset_get_index(global.SpawnRoom);

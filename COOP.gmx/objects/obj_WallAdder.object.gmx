@@ -39,12 +39,12 @@ for (var i = 0; i &lt; num; i++;)
    or tile_get_left(tile) = 5*64 and tile_get_top(tile) = 10*64
    or tile_get_left(tile) = 4*64 and tile_get_top(tile) = 11*64
        {
-       instance_create(tile_get_x(tile),tile_get_y(tile),obj_InvisibleWall)
+       instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
        }
        
    else if tile_get_left(tile) = 0*64 and tile_get_top(tile) = 9*64
         {
-        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_InvisibleWall)
+        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
             {
             //sprite_index = spr_Wall_DR;
@@ -53,7 +53,7 @@ for (var i = 0; i &lt; num; i++;)
    
    else if tile_get_left(tile) = 2*64 and tile_get_top(tile) = 9*64
         {
-        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_InvisibleWall)
+        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
             {
             //sprite_index = spr_Wall_DL;
@@ -62,7 +62,7 @@ for (var i = 0; i &lt; num; i++;)
         
    else if tile_get_left(tile) = 0*64 and tile_get_top(tile) = 11*64
         {
-        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_InvisibleWall)
+        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
             {
             //sprite_index = spr_Wall_UR;
@@ -71,7 +71,7 @@ for (var i = 0; i &lt; num; i++;)
         
    else if tile_get_left(tile) = 2*64 and tile_get_top(tile) = 11*64
         {
-        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_InvisibleWall)
+        var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
             {
             //sprite_index = spr_Wall_UL;

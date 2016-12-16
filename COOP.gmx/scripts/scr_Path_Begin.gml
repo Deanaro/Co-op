@@ -47,12 +47,12 @@ Calculated_List[Cellnum,2] = 0;
     Open_List[0] = CurrentCell;
     OpenNum +=1;
     Loop = 0;
-    while Closed_List[GoalCell] = noone and Loop < 300
+    while Closed_List[GoalCell] = noone and Loop < 50
     {
     Loop ++;
     scr_Path_Find(); // adds a cell to the closed list and 
     }
-    if Loop !=300
+    if Loop !=50
     {
     scr_Path_Nodes();
     }

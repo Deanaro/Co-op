@@ -2,7 +2,7 @@
 <object>
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -29,6 +29,12 @@
 global.Debug = false;
 window_set_cursor(cr_none);
 cursor_sprite =spr_Crosshair_Defualt;
+str1 = "Press f3 to START";
+str2 = "Press f10 for help";
+draw_set_font(fnt_Temp);
+str1L = string_width(str1);
+draw_set_font(fnt_Help);
+str2L = string_width(str2);
 </string>
           </argument>
         </arguments>
@@ -57,6 +63,33 @@ if keyboard_check_pressed(vk_f3)
 room_goto(rm_Start); // moves room
 instance_destroy();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_Temp);
+draw_set_color(c_white);
+draw_text((room_width-str1L)/2,room_height/3,str1)
+draw_set_font(fnt_Help);
+draw_text((room_width-str2L)/2,room_height/3+96,str2)
 </string>
           </argument>
         </arguments>

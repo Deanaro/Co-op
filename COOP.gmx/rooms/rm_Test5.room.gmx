@@ -22,7 +22,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>1008</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -32,7 +32,7 @@ global.TMX_DEPTH_OFFSET[0]=1000049;</code>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
+    <page>4</page>
     <xoffset>-32</xoffset>
     <yoffset>-96</yoffset>
   </makerSettings>

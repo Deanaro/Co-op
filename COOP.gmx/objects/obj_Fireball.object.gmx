@@ -83,12 +83,13 @@ or y &lt; view_yview - 16
 or y &gt; view_yview + 16 + view_hview
 {instance_destroy();}
 
-if position_meeting(x,y,obj_solid)
+
+if position_meeting(x,y,obj_Solid_Low)
 {instance_destroy();}
-if position_meeting(x,y,obj_Enemy)
+if position_meeting(x,y,obj_AI_Hitbox)
 {
     
-    var Target = instance_place(x,y,obj_Enemy);
+    var Target = instance_place(x,y,obj_AI_Hitbox);
     if instance_exists(Target)
     {
     var angle = point_direction(x,y,Target.x,Target.y+66);
@@ -96,12 +97,11 @@ if position_meeting(x,y,obj_Enemy)
     Target.h_move = x_move;
     with Target
     {
-    Hurt = 30;
-    alarm[1] = 2;
-    Life -=1;
-    Knockback = 2;
-    if Life = 0
-    {instance_destroy();}
+    Parent.Life -=1;
+    if Parent.Life = 0
+    {
+    with Parent
+    {instance_destroy();}}
     }
     instance_destroy();
     }

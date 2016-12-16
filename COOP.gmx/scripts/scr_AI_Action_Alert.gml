@@ -17,7 +17,7 @@ TargetDistance = point_distance(x,Centery,Targetx,Targety); // distance to targe
 ///////////// ATTACK RANGE //////////////////////
 if TargetDistance < Attack_Range //attack range
 {
-    if RandomAction <= 7 and Cooldown = 0 or TargetDistance < 30 and Cooldown = 0//70% chance
+    if RandomAction <= 7 and Cooldown = 0 or TargetDistance < (3/4*Attack_Range) and Cooldown = 0//70% chance
     {
         scr_AI_Attack(6); //Attack
     }

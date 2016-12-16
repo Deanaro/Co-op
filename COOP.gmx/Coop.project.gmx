@@ -110,13 +110,13 @@
     <sprites name="Systems">
       <sprites name="Control">
         <sprite>sprites\cntrl</sprite>
-        <sprite>sprites\spr_Wall2</sprite>
         <sprites name="WALLS">
           <sprite>sprites\spr_Wall</sprite>
           <sprite>sprites\spr_Wall_UL</sprite>
           <sprite>sprites\spr_Wall_UR</sprite>
           <sprite>sprites\spr_Wall_DL</sprite>
           <sprite>sprites\spr_Wall_DR</sprite>
+          <sprite>sprites\spr_Wall2</sprite>
         </sprites>
         <sprite>sprites\spr_DOOR</sprite>
       </sprites>
@@ -207,6 +207,7 @@
         <sprite>sprites\spr_PlaceholderEnemy</sprite>
         <sprite>sprites\spr_PlaceholderEnemyW</sprite>
         <sprite>sprites\spr_PlaceholderEnemyA</sprite>
+        <sprite>sprites\spr_PlaceholderEnemyH</sprite>
         <sprite>sprites\spr_Hitbox90</sprite>
       </sprites>
       <sprites name="Lachlan">
@@ -275,6 +276,7 @@
             <script>scripts\scr_Utility2_0.gml</script>
             <script>scripts\scr_Utility2_2.gml</script>
           </scripts>
+          <script>scripts\scr_Utility0_0.gml</script>
         </scripts>
       </scripts>
       <script>scripts\scr_Player_Drop.gml</script>
@@ -315,13 +317,13 @@
         </scripts>
       </scripts>
       <scripts name="Core Scripts">
-        <script>scripts\scr_ToolUpdate.gml</script>
-        <script>scripts\scr_View.gml</script>
         <scripts name="PlayerJoin">
           <script>scripts\scr_CheckForPad.gml</script>
           <script>scripts\scr_PlayerJoin.gml</script>
           <script>scripts\scr_SpawnPlayer.gml</script>
         </scripts>
+        <script>scripts\scr_ToolUpdate.gml</script>
+        <script>scripts\scr_View.gml</script>
       </scripts>
       <scripts name="Save/load/respawn">
         <scripts name="spawn teleporters">
@@ -386,6 +388,7 @@
     <font>fonts\font0</font>
     <font>fonts\fnt_console</font>
     <font>fonts\fnt_Help</font>
+    <font>fonts\fnt_Temp</font>
   </fonts>
   <objects name="objects">
     <objects name="Player">
@@ -427,11 +430,14 @@
       </objects>
     </objects>
     <objects name="Props">
-      <objects name="Child Objects">
-        <object>objects\obj_InvisibleWall</object>
+      <objects name="Walls">
+        <object>objects\obj_Wall_Low</object>
+        <object>objects\obj_Wall_Ground</object>
       </objects>
       <objects name="Parent Objects Only">
         <object>objects\obj_solid</object>
+        <object>objects\obj_Solid_Ground</object>
+        <object>objects\obj_Solid_Low</object>
         <object>objects\obj_UnitSolid</object>
         <object>objects\obj_NonUnitSolid</object>
       </objects>
@@ -456,6 +462,7 @@
         <object>objects\obj_testu</object>
         <object>objects\obj_Fireball</object>
         <object>objects\obj_EnemyAi</object>
+        <object>objects\obj_AI_Hitbox</object>
         <object>objects\obj_TarBubble</object>
         <object>objects\obj_Hitbox</object>
       </objects>

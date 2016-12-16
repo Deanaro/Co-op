@@ -15,7 +15,7 @@ else if UpdatePath > 0
     UpdatePath --;
 }
 
-if CanUpdate = 1 and global.PathFindQ < 5 
+if CanUpdate = 1 and global.PathFindQ < 5
 {
 UpdatePath = 10;
 CanUpdate = 0;

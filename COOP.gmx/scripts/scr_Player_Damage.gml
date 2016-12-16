@@ -1,5 +1,4 @@
 //damages the player, removing a random powerup
-
 var life = 4;
 for (var i = 0; i <4; i++)
     {
@@ -12,13 +11,18 @@ if life = 0
 }
 else
     {
-    var rand = irandom(life-1);
-    for (var i = rand; i <4; i++)
+    var count = 0;
+    var rand = irandom(life-1)+1;
+    for (var i = 0; i <4; i++)
         {
         if global.Slot[4*Player_num + i] != 0 and global.Slot[4*Player_num + i] != 11
             {
-            global.Slot[4*Player_num + i] = 0;
-            break;
+            count ++;
+            if count = rand
+                {
+                global.Slot[4*Player_num + i] = 0;
+                break;
+                }
             }
         }
     }

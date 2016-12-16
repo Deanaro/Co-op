@@ -2,7 +2,7 @@
 <object>
   <spriteName>cntrl</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -58,6 +58,14 @@ Slot[i] = 11;
 global.Slot[i] = 11;
 }
 */
+
+
+//TEMP
+str1 = "Press E on keyboard or Start on gamepad to join";
+str2 = "Press f3 to start a new game or f2 to load game";
+draw_set_font(fnt_Help);
+str1L = string_width(str1);
+str2L = string_width(str2);
 </string>
           </argument>
         </arguments>
@@ -84,13 +92,47 @@ global.Slot[i] = 11;
 
 if keyboard_check_pressed(vk_f3)
 {
-
-global.x1 = 100;
-global.y1 = 100;
-global.x2 = 300;
-global.y2 = 300;
-room_goto(rm_Test5) //temp destination
+if instance_exists(obj_Player)
+    {
+    
+    global.x1 = 100;
+    global.y1 = 100;
+    global.x2 = 300;
+    global.y2 = 300;
+    room_goto(rm_Test5) //temp destination
+    }
+    else 
+    {
+    obj_Console.console_open = 1;
+    scr_Console_Log_Write("ERROR: No Players", "error");}
 }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_Help);
+draw_set_color(c_white);
+draw_text((room_width-str1L)/2,room_height/3,str1)
+draw_text((room_width-str2L)/2,room_height/3+96,str2)
 </string>
           </argument>
         </arguments>

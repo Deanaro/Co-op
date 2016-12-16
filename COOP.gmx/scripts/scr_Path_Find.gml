@@ -1,6 +1,6 @@
 if Open_List[0] = noone
 {
-Loop = 300;
+Loop = 50;
 exit
 }
 /* this script looks at the adjecent cells

@@ -38,7 +38,7 @@ Utility_index = 0;
 WCooldown = 0;
 UCooldown = 0;
 Busy = 0;
-Aim[0] = 1;
+Aim[0] = 1; //for all cariable initializing that need Player_num
 Aim[1] = 0;
 Hurt = 0;
 image_xscale = 2;
@@ -46,6 +46,8 @@ image_yscale = 2;
 alarm[1] = 1;
 draw = 0;
 last_sec_update = current_second;
+
+
 </string>
           </argument>
         </arguments>
@@ -97,6 +99,7 @@ gamepad_set_vibration(Player_num, 0, 0);
 else // if using gamepad
 {draw = 1;}
 scr_ToolUpdate(Player_num);
+gamepad_set_vibration(Player_num, 0, 0);
 </string>
           </argument>
         </arguments>

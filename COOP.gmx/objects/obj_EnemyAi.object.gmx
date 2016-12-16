@@ -28,6 +28,7 @@
             <string>//Initial variable definitnion
 
 //#STATS//
+    BaseSprite = "spr_PlaceholderEnemy";
     Life = 10;
     //dmg = COMING SOON!
     //armor = COMING SOON!
@@ -66,6 +67,14 @@
             CanUpdate = 0;  //!
             Target = noone; //!
             NodeCount = 0;  //!
+//Hitbox
+    var Temp = instance_create(x,y,obj_AI_Hitbox);
+    var me = id;
+    with Temp
+    {
+        sprite_index = asset_get_index(string(me.BaseSprite) + "H");
+        Parent = me;
+    }
 </string>
           </argument>
         </arguments>
