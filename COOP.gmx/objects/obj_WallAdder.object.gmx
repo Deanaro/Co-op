@@ -26,23 +26,29 @@
           <argument>
             <kind>1</kind>
             <string>var num = tile_get_count();
+var tile;
 for (var i = 0; i &lt; num; i++;)
    {
-   var tile = tile_get_id(i);
+   tile = tile_get_id(i);
    var debug = tile_get_left(tile);
-   if tile_get_left(tile) = 1*64 and tile_get_top(tile) = 9*64
-   or tile_get_left(tile) = 0*64 and tile_get_top(tile) = 10*64
-   or tile_get_left(tile) = 2*64 and tile_get_top(tile) = 10*64
-   or tile_get_left(tile) = 1*64 and tile_get_top(tile) = 11*64
-   or tile_get_left(tile) = 4*64 and tile_get_top(tile) = 9*64
-   or tile_get_left(tile) = 3*64 and tile_get_top(tile) = 10*64
-   or tile_get_left(tile) = 5*64 and tile_get_top(tile) = 10*64
-   or tile_get_left(tile) = 4*64 and tile_get_top(tile) = 11*64
+   if tile_get_left(tile) = 1*32 and tile_get_top(tile) = 9*32
+   or tile_get_left(tile) = 0*32 and tile_get_top(tile) = 10*32
+   or tile_get_left(tile) = 1*32 and tile_get_top(tile) = 10*32
+   or tile_get_left(tile) = 2*32 and tile_get_top(tile) = 10*32
+   or tile_get_left(tile) = 1*32 and tile_get_top(tile) = 11*32
+   or tile_get_left(tile) = 3*32 and tile_get_top(tile) = 9*32
+   or tile_get_left(tile) = 4*32 and tile_get_top(tile) = 9*32
+   or tile_get_left(tile) = 5*32 and tile_get_top(tile) = 9*32
+   or tile_get_left(tile) = 3*32 and tile_get_top(tile) = 10*32
+   or tile_get_left(tile) = 5*32 and tile_get_top(tile) = 10*32
+   or tile_get_left(tile) = 3*32 and tile_get_top(tile) = 11*32
+   or tile_get_left(tile) = 4*32 and tile_get_top(tile) = 11*32
+   or tile_get_left(tile) = 5*32 and tile_get_top(tile) = 11*32
        {
        instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
        }
        
-   else if tile_get_left(tile) = 0*64 and tile_get_top(tile) = 9*64
+   else if tile_get_left(tile) = 0*32 and tile_get_top(tile) = 9*32
         {
         var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
@@ -51,7 +57,7 @@ for (var i = 0; i &lt; num; i++;)
             }
         }
    
-   else if tile_get_left(tile) = 2*64 and tile_get_top(tile) = 9*64
+   else if tile_get_left(tile) = 2*32 and tile_get_top(tile) = 9*32
         {
         var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
@@ -60,7 +66,7 @@ for (var i = 0; i &lt; num; i++;)
             }
         }
         
-   else if tile_get_left(tile) = 0*64 and tile_get_top(tile) = 11*64
+   else if tile_get_left(tile) = 0*32 and tile_get_top(tile) = 11*32
         {
         var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp
@@ -69,7 +75,7 @@ for (var i = 0; i &lt; num; i++;)
             }
         }
         
-   else if tile_get_left(tile) = 2*64 and tile_get_top(tile) = 11*64
+   else if tile_get_left(tile) = 2*32 and tile_get_top(tile) = 11*32
         {
         var temp = instance_create(tile_get_x(tile),tile_get_y(tile),obj_Wall_Ground)
         with temp

@@ -5,7 +5,7 @@ if instance_exists(obj_Player)
 {
 var Target = instance_nearest(x,y,obj_Player); // gets nearest player
 Targetx = Target.x;
-Targety = Target.bbox_bottom -16;
+Targety = Target.Centery;
 if Alert = 0 // if not alert
 {
     if point_distance(x,Centery,Target.x,Target.y) < Not_Alert_Range //checks if player walks into range

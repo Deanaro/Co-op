@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.Debug = true
+            <string>image_xscale = global.Scale;
+image_yscale = global.Scale;
+if global.Debug = true
 {draw_self();}
 </string>
           </argument>

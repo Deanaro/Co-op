@@ -1,5 +1,5 @@
 //runs from obj_Control
-Cellsize = 64; //the size of the cells
+Cellsize = 32; //the size of the cells
 Hcells = room_width/Cellsize; // gets the number of horrizontal cells
 Vcells = room_height/Cellsize; // gets the number of vertical cells
 var Cellnum  = 0

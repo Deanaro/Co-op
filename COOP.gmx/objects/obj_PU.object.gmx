@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 2;
-image_yscale = 2;
+            <string>image_xscale = global.Scale;
+image_yscale = global.Scale;
 image_speed = 0.1;
 alarm[0] = 90 * room_speed; //set alarm to 90 seconds to destroy itselft
 moving = false;

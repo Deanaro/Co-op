@@ -5,9 +5,9 @@ var movey = round(v_move * spd);
 
 //SPRINT
 if Lshoulder = 1
-{spd = 5;}
+{spd = 3*global.Scale;}
 else
-{spd = 3;}
+{spd = 2*global.Scale;}
 
 
 if !place_meeting(x + movex, y, obj_solid) and x + movex < view_xview+view_wview and x+ movex > view_xview

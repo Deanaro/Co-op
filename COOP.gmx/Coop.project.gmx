@@ -109,7 +109,6 @@
     </sprites>
     <sprites name="Systems">
       <sprites name="Control">
-        <sprite>sprites\cntrl</sprite>
         <sprites name="WALLS">
           <sprite>sprites\spr_Wall</sprite>
           <sprite>sprites\spr_Wall_UL</sprite>
@@ -118,6 +117,7 @@
           <sprite>sprites\spr_Wall_DR</sprite>
           <sprite>sprites\spr_Wall2</sprite>
         </sprites>
+        <sprite>sprites\cntrl</sprite>
         <sprite>sprites\spr_DOOR</sprite>
       </sprites>
       <sprites name="Crosshair">
@@ -397,9 +397,9 @@
     <objects name="Game Logic">
       <object>objects\obj_Control</object>
       <objects name="Control objects">
+        <object>objects\obj_StartMenu</object>
         <object>objects\obj_ViewHandler</object>
         <object>objects\obj_Pathfinder</object>
-        <object>objects\obj_StartMenu</object>
         <object>objects\obj_PlayerSpawn</object>
         <object>objects\obj_GameStart</object>
         <object>objects\obj_WallAdder</object>
@@ -436,7 +436,7 @@
       </objects>
       <objects name="Parent Objects Only">
         <object>objects\obj_solid</object>
-        <object>objects\obj_Solid_Ground</object>
+        <object>objects\objj_Solid_Ground</object>
         <object>objects\obj_Solid_Low</object>
         <object>objects\obj_UnitSolid</object>
         <object>objects\obj_NonUnitSolid</object>
@@ -481,6 +481,7 @@
       <room>rooms\rm_Test3</room>
       <room>rooms\rm_Test4</room>
       <room>rooms\rm_Test5</room>
+      <room>rooms\rm_Test5_1</room>
     </rooms>
   </rooms>
   <help>

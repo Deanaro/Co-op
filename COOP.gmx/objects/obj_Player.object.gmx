@@ -27,11 +27,10 @@
             <kind>1</kind>
             <string>//initial variables:
 hold = 0; //the powerup that the player is holding (that he can place in a slot)
-spd = 6; //movespeed
+spd = 2*global.Scale; //movespeed
 image_speed = 0.1;
 dir = 0;
 Slot_num = 1;   // the starting highlighted slot number
-Collision_Center = 4/3*sprite_height;
 GUIslot = 0;
 Wep_index = 0;
 Utility_index = 0;
@@ -41,8 +40,9 @@ Busy = 0;
 Aim[0] = 1; //for all cariable initializing that need Player_num
 Aim[1] = 0;
 Hurt = 0;
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = global.Scale;
+image_yscale = global.Scale;
+Centery = bbox_bottom-8;
 alarm[1] = 1;
 draw = 0;
 last_sec_update = current_second;
@@ -94,9 +94,7 @@ gamepad_set_vibration(Player_num, 0, 0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.Player[Player_num,1] = 4 // if input is keyboard
-{cursor_sprite = asset_get_index("spr_Crosshair_" + string(Player_num));}//sets cursor
-else // if using gamepad
+            <string>if global.Player[Player_num,1] != 4 // if input is keyboard
 {draw = 1;}
 scr_ToolUpdate(Player_num);
 gamepad_set_vibration(Player_num, 0, 0);
@@ -146,7 +144,8 @@ image_blend = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute (asset_get_index(InputType));
+            <string>Centery = bbox_bottom-8;
+script_execute (asset_get_index(InputType));
 scr_Player_Move();
 scr_Player_PUpickup();
 scr_Player_GUI();
@@ -278,11 +277,34 @@ if (last_sec_update != current_second) {
           <argument>
             <kind>1</kind>
             <string>//draws crosshair
-
 if draw = 1
 {
-draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*192, y + Aim[1]*192 + sprite_height/2);
+draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*96, y + Aim[1]*96 + sprite_height/2);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_alpha(1);
+draw_self();
 </string>
           </argument>
         </arguments>

@@ -32,24 +32,23 @@
     Life = 10;
     //dmg = COMING SOON!
     //armor = COMING SOON!
-    AlertSPD = 3;
-    NonAlertSPD = 2;
-    spd = 2;
+    AlertSPD = 2;
+    NonAlertSPD = 1;
+    spd = 1*global.Scale;
     AttackSPD = 0.35; //animation speed
     AttackCD = 60;  //atk cd
     //#Ranges//
-            Attack_Range = 48;
-            Not_Alert_Range = 500;
-            Alert_Range = 900;
-            Centery = bbox_bottom - 20;
+            Attack_Range = 24;
+            Not_Alert_Range = 250;
+            Alert_Range = 450;
+            Centery = bbox_bottom - 6;
 /////////////////////////////////////////////////////////////////////////////////////////////
 //  DO NOT CHANGE VARIABLEs,  INITIALIZERS:!!!!!!!!!!!!!!!!!!!!!!!!!!
     //#ANIMATION//
         facing = 0;
-        image_speed = 0;
         anim ="";       
-        image_xscale = 2; 
-        image_yscale = 2; 
+        image_xscale =global.Scale;
+        image_yscale = global.Scale;
     
     //#MOVEMENT//
         Hurt = 0;   
@@ -121,7 +120,7 @@
           <argument>
             <kind>1</kind>
             <string>///Movement and Alerts
-Centery = bbox_bottom - 20;
+Centery = bbox_bottom - 6;
 Target = scr_AI_Alert(); // checks if a player is in range and if so turns alert and returns nearest players ID
 if Cooldown!= 0
 {Cooldown --;}
@@ -202,10 +201,11 @@ Life = 10;
             <kind>1</kind>
             <string>// this will draw the path and vision range of the enemy, works better with fiew enemies
 
+
+
 if global.Debug = true
 {
 draw_set_alpha(0.5);
-
 if Alert = 0
 {
     draw_set_color(c_green);
@@ -216,14 +216,11 @@ if Alert = 0
 }
 else
 {
-    
+    draw_set_circle_precision(64);
     draw_set_color(c_red);
     draw_circle(x,Centery,Alert_Range,1);
     draw_circle(x,Centery,Not_Alert_Range,1);
     draw_circle(x,Centery,Attack_Range,1);
-    draw_circle(x,Centery,Alert_Range-1,1);
-    draw_circle(x,Centery,Not_Alert_Range-1,1);
-    draw_circle(x,Centery,Attack_Range-1,1);
     draw_set_alpha(0.06);
     draw_circle(x,Centery,Not_Alert_Range,0);
     draw_set_alpha(0.04);
@@ -231,7 +228,7 @@ else
     draw_set_alpha(1);
     draw_set_color(c_black);
     draw_text(x - 20,bbox_top-80,"facing =" + string(facing));
-    draw_line_width(x,Centery,Targetx,Targety,3);
+    draw_line_width(x,Centery,Targetx,Targety,1);
 }
 if NodeCount !=0 and Alert = 1
 {
@@ -257,6 +254,9 @@ draw_circle(x2*64+32,y2*64+32,5,0);
 }
 }
 draw_self();
+draw_set_alpha(1);
+draw_set_color(c_green);
+draw_point(x,Centery);
 </string>
           </argument>
         </arguments>

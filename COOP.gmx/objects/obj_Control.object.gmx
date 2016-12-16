@@ -46,6 +46,7 @@ instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
 ShowHelp = 0;
 depth = -room_height;
 
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +93,29 @@ if keyboard_check_pressed(vk_f11)
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="116">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -115,7 +139,34 @@ if keyboard_check_pressed(vk_f11)
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="77">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///if window_get_fullscreen()
+//{
+draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
+//}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -140,7 +191,7 @@ draw_set_font(fnt_Help);
 draw_set_alpha(1);
 if ShowHelp = 0
 {
-draw_text(view_xview+20,view_yview+20,'Press F10 for keybinding');
+draw_text(10,13,'Press F10 for keybinding');
 }
 else if ShowHelp = 1
 {
@@ -150,7 +201,7 @@ var i = 0;
 while !file_text_eof(HelpFile)
 {
 i ++
-    draw_text(view_xview+20,view_yview+20*i,file_text_readln(HelpFile));
+    draw_text(10,i*13,file_text_readln(HelpFile));
 }
 file_text_close(HelpFile);
 }
@@ -158,9 +209,32 @@ file_text_close(HelpFile);
 //Debug mode
 if global.Debug = 1
 {
- draw_text(view_xview + view_wview - 128, view_yview+20, "FPS = " + string(fps_real));
+ draw_text(window_get_width() - 128, 10, "FPS = " + string(fps_real));
 }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(spr_Crosshair_Defualt,0,mouse_x,mouse_y,global.Scale,global.Scale,0,c_white,1);
 </string>
           </argument>
         </arguments>
@@ -183,21 +257,34 @@ if global.Debug = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if window_get_fullscreen()
-{window_set_fullscreen(false);}
-else
+            <string>//fullscreen
+if !window_get_fullscreen()
 {
 window_set_fullscreen(true);
-for (var i = 1; i &lt;4; i++)
+global.MonitorW=display_get_width();
+global.MonitorH=display_get_height();
+global.Xoffset=(global.MonitorW-640)/2;
+global.Yoffset=(global.MonitorH-360)/2;
+for (i=4; i&gt;1; i--)
 {
-if(global.MonitorW&gt;=i*view_xview &amp;&amp; global.MonitorH&gt;=i*view_yview)
+if(global.MonitorW&gt;=640*i &amp;&amp; global.MonitorH&gt;=360*i)
+then
 {
-surface_resize(application_surface,i*view_xview,i*view_yview)
-global.Xoffset=(global.MonitorW-i*view_xview)/i;
-global.Yoffset=(global.MonitorH-i*view_yview)/i;
+surface_resize(application_surface,640*i,360*i)
+global.Xoffset=(global.MonitorW-640*i)/2;
+global.Yoffset=(global.MonitorH-360*i)/2;
+global.Zoom = i;
 exit;
 }
 }
+}
+else
+{
+window_set_fullscreen(false);
+surface_resize(application_surface,640*2,360*2)
+global.Xoffset = 2;
+global.Yoffset = 2;
+global.Zoom = 2;
 }
 </string>
           </argument>

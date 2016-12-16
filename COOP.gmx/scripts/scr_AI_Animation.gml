@@ -15,22 +15,22 @@ else
 if angle < 90
 {
     facing = 0;
-    image_xscale = 2;
+    image_xscale = global.Scale;
 }
 else if angle >=90 and angle < 180
 {
     facing = 1;
-    image_xscale = -2;
+    image_xscale = -global.Scale;
 }
 else if angle >=180 and angle < 270
 {
     facing = 2;
-    image_xscale = -2;
+    image_xscale = -global.Scale;
 }
 else if angle >=270
 {
     facing = 3
-    image_xscale = 2;
+    image_xscale = global.Scale;
 }
 sprite_index = asset_get_index(string(argument0) + string(anim));
 }

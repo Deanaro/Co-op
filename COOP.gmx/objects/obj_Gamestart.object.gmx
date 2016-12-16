@@ -66,6 +66,8 @@ str2 = "Press f3 to start a new game or f2 to load game";
 draw_set_font(fnt_Help);
 str1L = string_width(str1);
 str2L = string_width(str2);
+
+
 </string>
           </argument>
         </arguments>

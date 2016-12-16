@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 2;
-image_yscale = 2;
+            <string>image_xscale =global.Scale;
+image_yscale = global.Scale;
 alarm[0] = 2;
 depth = -(y + sprite_height +10)
 </string>
@@ -51,8 +51,8 @@ depth = -(y + sprite_height +10)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var randx = - 8 + random(16);
-var randy = - 8 + random(16);
+            <string>var randx = - 4 + random(8);
+var randy = - 4 + random(8);
 instance_create(x + randx, y + randy, obj_Smoke);
 alarm[0] = 4
 </string>
@@ -107,8 +107,8 @@ if position_meeting(x,y,obj_AI_Hitbox)
     }
 }
 
-x += (x_move*10);
-y += (y_move*10);
+x += (x_move*5);
+y += (y_move*5);
 
 depth = -(y + sprite_height +10)
 </string>

@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>Hitpoints = 10;
-image_xscale = 2;
-image_yscale = 2;
+image_xscale =global.Scale;
+image_yscale = global.Scale;
 depth = -(y+sprite_height);
 alarm[0] = 30*room_speed; //timeout alarm
 </string>
