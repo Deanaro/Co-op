@@ -1,3 +1,9 @@
+/* Parses the text entered into the console
+Catches/Additional Info: 
+If you do not wish to output to the console after the command, DONT give a console_to_write value and DO set command_success to 1.
+To output to the console after a command set console_to_write to a string you would like to output and set console_to_write_col to the message type you want to display.
+*/
+
 var console_text = "";
 var console_num = 0;
 var console_to_write = "";
@@ -44,6 +50,18 @@ if (string_pos("chatter", console_text) != 0) {
         case("nextline"): // Displays and iterates next stored chatter line
             with (obj_Chatter) {scr_Chatter_Passage_Get();}
             command_success = 1;
+            break;
+    }
+}
+
+/* Parse and process 'spawn' commands*/
+if (string_pos("spawn", console_text) != 0) {
+    console_text = string_replace(console_text, "spawn", "");
+    switch(console_text) {        
+        case("enemy"): //spawns a group of enemies at cursor position
+            scr_EnemySpawn(mouse_x,mouse_y,3,obj_EnemyAi);
+            console_to_write = "Spawned Enemies";
+            console_to_write_col = "command"
             break;
     }
 }
@@ -100,18 +118,17 @@ switch(console_text) {
         console_to_write = "Why... Hello.";
         console_to_write_col = "ai";
         break;
-    case("enemy"): //spawns a group of enemies at cursor
-        scr_EnemySpawn(mouse_x,mouse_y,3,obj_EnemyAi);
-        console_to_write = "Spawned Enemies";
-        console_to_write_col = "command"
-        break;
 }
 
 
-            
-if (console_to_write == "" && command_success == 0){
+if (console_to_write !="") {
+    scr_Console_Log_Write(console_to_write, console_to_write_col);
+} else if (console_to_write == "" && command_success == 0){
     console_to_write = "Could not parse: " + console_inlog;
     console_to_write_col = "error";
+    scr_Console_Log_Write(console_to_write, console_to_write_col);
+} else if (console_to_write == "" && command_success == 1) {
+    //no console output required. 
 }
         
-scr_Console_Log_Write(console_to_write, console_to_write_col);
+

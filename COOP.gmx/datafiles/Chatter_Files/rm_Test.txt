@@ -5,3 +5,13 @@ obj_item2:itworks:hoorah!thiserror:
 %Dial%:DialogueNum2
 obj_testDial2:helloDial2:worldDial2:ding dongDial2:
 obj_item2Dial2:itworksDial2:hoorah!thiserrorDial2:
+
+%Dial%:ClickTest
+obj_Player:I am a Player:Mwuahaha, watch me dance:Dancing in the raiinnnn...:
+obj_Salamander:I am a Salamander!:Bork, bork, gork, gork:Hellloooo, is it meee you're looking for!?:
+obj_AI_Hitbox:I am an EnemyAi:Nice to meet you.:EAT FINGERNAILS:
+obj_testu:Test me? No! Test you!:What am I?:What is my purpose?:
+obj_PU:PICK ME!:PLEASE! PICK MEEE!: HELP! I'm STUCK!:
+
+%Dial%:HeightTest
+obj_testDial2:helloDial2:worldDial2:ding dongDial2:

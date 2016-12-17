@@ -1,5 +1,5 @@
 chatter_dialogue_set_name = argument[0]
-scr_Console_Log_Write("!Chatter: RUNNING scr_Chatter_Dialogue_Set","error"); //DEBUG
+//scr_Console_Log_Write("!Chatter: RUNNING scr_Chatter_Dialogue_Set","error"); //DEBUG
 
 if (chatter_dialogue_set_name != "") {
     var last_dialogue_num = array_height_2d(chatter_dialogue_array)-1; //get number of dialogue's tracked
@@ -8,7 +8,7 @@ if (chatter_dialogue_set_name != "") {
     /* Check if dialogue already exists in the chatter array */
     for (i = 0; i <= last_dialogue_num; i++) {
         count++;
-        scr_Console_Log_Write("!Chatter: Checked dialogue rows: " + string(count),"ai");
+        //scr_Console_Log_Write("!Chatter: Checked dialogue rows: " + string(count),"ai"); //DEBUG
         if (chatter_dialogue_array[i,0] != chatter_dialogue_set_name) {
             dialogue_num = i;
         }
@@ -24,7 +24,7 @@ if (chatter_dialogue_set_name != "") {
         }
         chatter_dialogue_array[last_dialogue_num+1,0] = chatter_dialogue_set_name;
         chatter_focused_dialogue_num = last_dialogue_num+1;
-        scr_Console_Log_Write("!Chatter: Dialogue Init: " + chatter_dialogue_set_name,"reg")
+        //scr_Console_Log_Write("!Chatter: Dialogue Init: " + chatter_dialogue_set_name,"reg") //DEBUG
     }
 } else {
     chatter_focused_dialogue_num = -1;

@@ -73,23 +73,6 @@
         </ConfigOptions>
         <filename>rm_Test.txt</filename>
       </datafile>
-      <datafile>
-        <name>rm_Start.txt</name>
-        <exists>-1</exists>
-        <size>0</size>
-        <exportAction>2</exportAction>
-        <exportDir></exportDir>
-        <overwrite>0</overwrite>
-        <freeData>-1</freeData>
-        <removeEnd>0</removeEnd>
-        <store>0</store>
-        <ConfigOptions>
-          <Config name="Default">
-            <CopyToMask>9223372036854775807</CopyToMask>
-          </Config>
-        </ConfigOptions>
-        <filename>rm_Start.txt</filename>
-      </datafile>
     </datafiles>
   </datafiles>
   <NewExtensions/>
@@ -298,7 +281,7 @@
           <script>scripts\scr_Console_Parse.gml</script>
           <script>scripts\scr_Console_Pref_Update.gml</script>
           <script>scripts\scr_Console_Tick.gml</script>
-          <script>scripts\scr_ConsoleUpdate_Second.gml</script>
+          <script>scripts\scr_Console_Tick_Focus.gml</script>
         </scripts>
         <scripts name="Tiles">
           <script>scripts\animated_tile_add.gml</script>
@@ -347,12 +330,13 @@
     </scripts>
     <scripts name="Prototypes">
       <scripts name="Chatter">
-        <script>scripts\scr_Clear_Temp_Arrays.gml</script>
+        <script>scripts\scr_Chatter_Clear_Temp_Arrays.gml</script>
         <script>scripts\scr_Chatter_Dialogue_Set.gml</script>
         <script>scripts\scr_Chatter_Passage_Item_Set.gml</script>
         <script>scripts\scr_Chatter_Passage_Commit.gml</script>
         <script>scripts\scr_Chatter_Passage_Get.gml</script>
         <script>scripts\scr_Chatter_RoomFile_Open.gml</script>
+        <script>scripts\scr_Temp_Chatter_Input.gml</script>
       </scripts>
       <scripts name="AI">
         <scripts name="Attacks">

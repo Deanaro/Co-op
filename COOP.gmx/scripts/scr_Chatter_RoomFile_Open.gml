@@ -30,7 +30,7 @@ if (chatter_room_file != "") {
         //indicator_pos = string_pos(chatter_dialogue_indicator,chatter_working_line);
         //if (indicator_pos != 0) { //if current line is a dialogue line
         line_ind = string_copy(chatter_working_line,1,string_length(chatter_dialogue_indicator));
-        show_debug_message("!Chatter: Chatter Line_ind - " + string(line_ind)); //DEBUG
+        //show_debug_message("!Chatter: Chatter Line_ind - " + string(line_ind)); //DEBUG
         if (line_ind == chatter_dialogue_indicator) {
             dialogue_found++;
             scr_Chatter_Passage_Commit(); //Commit any existing dialogue passage array
@@ -44,13 +44,13 @@ if (chatter_room_file != "") {
             while(column_num != chatter_file_columns) { //whilst columns parsed not at limit
                 delimiter_pos = string_pos(chatter_file_delimiter, chatter_working_line); //gets the position of the next delimiter
                 if (delimiter_pos != 0) { //skip column if no delimiter found
-                    scr_Console_Log_Write("!Chatter: Chatter Item Delimiter Pos - " + string(delimiter_pos), "ai"); //DEBUG
+                    //scr_Console_Log_Write("!Chatter: Chatter Item Delimiter Pos - " + string(delimiter_pos), "ai"); //DEBUG
                     line_item = string_copy(chatter_working_line, 1, delimiter_pos-1); //gets the current column item
-                    scr_Console_Log_Write("!Chatter: Chatter line item - " + string(line_item), "ai"); //DEBUG
+                    //scr_Console_Log_Write("!Chatter: Chatter line item - " + string(line_item), "ai"); //DEBUG
                     chatter_working_line = string_delete(chatter_working_line, 1, delimiter_pos); //delete the read column from the working line
                     scr_Chatter_Passage_Item_Set(dialogue_line_num, column_num, line_item);
                     //chatter_array[dialogue_line_num,column_num] = line_item; //append line_item to appropriate array index
-                    scr_Console_Log_Write("!Chatter: column passed", "reg");
+                    //scr_Console_Log_Write("!Chatter: column passed", "reg"); //DEBUG
                 } else {
                     //scr_Chatter_Passage_Item_Set(dialogue_line_num, column_num, "Chatter column error @ line:" + string(dialogue_line_num+1) + " of File: " + temp_room + ".txt"); //DEBUG extra line data
                     scr_Chatter_Passage_Item_Set(dialogue_line_num, column_num, chatter_null_entry);
@@ -60,18 +60,18 @@ if (chatter_room_file != "") {
                 column_num++; //iterate column number
                 
             }
-            scr_Console_Log_Write("!Chatter: line completed", "reg");
+            //scr_Console_Log_Write("!Chatter: line completed", "reg"); //DEBUG
             column_num = 0; // reset column number
             dialogue_line_num++; //iterate dialogue line number
         }
     }
     scr_Chatter_Passage_Commit();
     file_text_close(chatter_room_file);    
-    scr_Console_Log_Write("!Chatter: loaded and file closed", "reg");
+    //scr_Console_Log_Write("!Chatter: loaded and file closed", "reg"); //DEBUG
 } else {
     scr_Console_Log_Write("!Chatter: Could not find - " + chatter_room_name, "reg");
     chatter_file_opened = false;
 }
 
-scr_Console_Log_Write("!Chatter: Dialogues loaded - " + string(dialogue_found), "reg");
+//scr_Console_Log_Write("!Chatter: Dialogues loaded - " + string(dialogue_found), "reg"); //DEBUG
 
