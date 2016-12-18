@@ -26,7 +26,7 @@ else
     movex = 0;
 }}
 // y movepent
-if !place_meeting(x, y + movey, obj_solid)  and y + movey < view_yview+view_hview - 3*(sprite_height/4) and y+ movey > view_yview - 16
+if !place_meeting(x, y + movey, obj_solid)  and y + movey < view_yview+view_hview - sprite_height and y+ movey > view_yview - 16
 {
     y += movey;
 }

@@ -10,8 +10,8 @@ var y2 = argument4;
             /* spawnx = global.view_width/3 + random(global.view_width/3);
              spawny = global.view_width/3 + random(global.view_height/3) - 78; */
              
-             spawnx = x1 + random(x2 - x1);
-             spawny = y1 + random(y2 - y1)-(48);
+             spawnx = x1 + irandom(x2 - x1-1);
+             spawny = y1 + irandom(y2 - y1-1)-(24);
       // Create a player object and assign it a argument0 number
         if instance_exists(global.Player[argument5, 0])
         with global.Player[argument5, 0]
@@ -23,9 +23,13 @@ var y2 = argument4;
             {
                 Player_num = argument5;
                 while place_meeting(x,y,obj_solid)
+                or x < 0
+                or x > room_width
+                or bbox_bottom - 16 < 0
+                or bbox_bottom > room_height
                 {
-                x = x1 + random(x2 - x1);
-                y = y1 + random(y2 - y1)-Centery;
+                x = x1 + irandom(x2 - x1-1);
+                y = y1 + irandom(y2 - y1-1)-24;
                 }
                 scr_ToolUpdate(argument5);
                 //input type

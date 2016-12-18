@@ -308,13 +308,7 @@ global.Zoom = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room_get_name(room) != room_get_name(rm_StartMenu)
-{
-scr_Respawn();
-}
-else
-{obj_Console.console_open = 1;
-scr_Console_Log_Write("ERROR: cannot load from StartMenu", "error");}
+            <string>scr_Respawn();
 </string>
           </argument>
         </arguments>

@@ -25,8 +25,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global.debug
+            <string>// initialize global variables
+for (var i = 0; i &lt; 4; i++;)
+{
+global.Player[i, 0] = noone;  // array for player objects index
+global.Player[i, 1] = -1; // pad_index number (-1 = noone)
+global.Player[i, 2] = 10; // sets health to 10!!
+}
+
+
+for (var i = 0; i &lt; 16; i++;)
+{global.Slot[i] = 0;}        // array for slots index values
+global.x1 = 0;
+global.x2 = 100;
+global.y1 = 0;
+global.y2 = 100;
+
+/* sets initial slot locks
+/* initial locks
+for (var i = 1; i &amp;lt; 16; i +=2;)
+{
+Slot[i] = 11;
+global.Slot[i] = 11;
+}
+*/
+//global.debug
 global.Debug = false;
+
+//gamepad settings
+randomize() // without this gamemaker uses a defualt seed which grants the same results every time
+for (var pad=0; pad &lt;4; pad++)
+{ 
+    gamepad_set_axis_deadzone(pad, 0.3);       // Set the "deadzone" for the axis
+    gamepad_set_button_threshold(pad, 0.1);    // Set the "threshold" for the triggers
+}
 //window_set_cursor(cr_none);
 str1 = "Press f3 to START";
 str2 = "Press f10 for help";

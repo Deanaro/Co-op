@@ -5,16 +5,15 @@
 //get the current room and calculate a spawn location 
 
 var roomname = room_get_name(room);
-//Note: id returns the instance id of the object that ran the code therefore any player can initiate a save.
-var xpos = id.x; //there is no need to use id.
-var ypos = id.y;
 
-var x1 = xpos - 100;
-var x2 = xpos + 100;
-var y1 = ypos + 100;
-var y2 = ypos - 100;
-
-
+var x1 = x - 100;
+var x2 = x + 100;
+var y1 = Centery - 100;
+var y2 = Centery + 100;
+if x1 <0 {x1 =0;}
+if x2 > room_width {x2 =0;}
+if y1 <0 {y1 =0;}
+if y2 > room_width {y2 =0;}
 
 //check if a save file exists, delete it if there is
 

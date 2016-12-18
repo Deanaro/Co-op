@@ -1,9 +1,8 @@
 //scr_RoomChange(x1,y1,x2,y2,room)
 /* Moves the players to a specified room and sets the spawn box
-usage: scr_RoomChange(0,0,96,96,rm_Test4)
+usage: scr_RoomChange(0,0,96,96,"rm_Test4")
 result: set spawn coordinates to top left corner of the room and moves to rm_Test4
 note: works if the spawn location is in the same room (if wanting to spawn in a different location in the same room*/
-
 if ( argument_count >=4 ) { //if enough arguments are passed, then use that spawn location
     global.x1 = argument0;
     global.y1 = argument1;

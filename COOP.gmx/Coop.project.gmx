@@ -460,12 +460,7 @@
     <rooms name="Testing Rooms">
       <room>rooms\rm_pathfindingtest</room>
       <room>rooms\rm_Start</room>
-      <room>rooms\rm_Test</room>
-      <room>rooms\rm_Test2</room>
-      <room>rooms\rm_Test3</room>
-      <room>rooms\rm_Test4</room>
       <room>rooms\rm_Test5</room>
-      <room>rooms\rm_Test5_1</room>
     </rooms>
   </rooms>
   <help>
