@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>///Initialize Game Controller
 /* this object is placed in every room */
+if room = rm_Menu
+{
+instance_create(x,y,obj_Menu_Control);
+}
 if room = rm_Start
 {instance_create(x,y,obj_GameStart);}
 if room = rm_StartMenu
@@ -43,10 +47,37 @@ instance_create(x,y,obj_Console); //initializes the game console manager
 instance_create(x,y,obj_Chatter);    //initializes the game dialogue manager
 
 //DEBUG
+last_sec_update = current_second;
 ShowHelp = 0;
 depth = -room_height;
+FPS = "ERROR";
+//Tiles
+animated_tile_init()
+animated_tile_add(til_Fire_Level,0.05,til_Fire_Level_1,til_Fire_Level_2,til_Fire_Level_3,til_Fire_Level_4);
 
-
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.Pause = 0;
 </string>
           </argument>
         </arguments>
@@ -88,6 +119,8 @@ if keyboard_check_pressed(vk_f11)
     global.Debug++
     global.Debug = global.Debug mod 2;
 }
+//TILES
+animated_tile_update();
 </string>
           </argument>
         </arguments>
@@ -133,7 +166,20 @@ if keyboard_check_pressed(vk_f11)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_Pathfinder);
+            <string>if !global.Pause
+{
+instance_create(x,y,obj_Pathfinder);
+}
+if room != rm_Menu
+{
+alarm[0] = 1;
+}
+
+//ALWAYS DOES
+for(var i =0; i&lt;4;i++)
+{
+    gamepad_set_vibration(i, 0, 0);
+}
 </string>
           </argument>
         </arguments>
@@ -156,11 +202,7 @@ if keyboard_check_pressed(vk_f11)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///if window_get_fullscreen()
-//{
-draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
-//}
-
+            <string>draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
 </string>
           </argument>
         </arguments>
@@ -209,7 +251,12 @@ file_text_close(HelpFile);
 //Debug mode
 if global.Debug = 1
 {
- draw_text(window_get_width() - 128, 10, "FPS = " + string(fps_real));
+    ///Execute every second
+if (last_sec_update != current_second) {
+    last_sec_update = current_second;
+    FPS = fps_real;
+    }
+    draw_text(window_get_width()-120,20,"fps: " + string(FPS));
 }
 }
 </string>

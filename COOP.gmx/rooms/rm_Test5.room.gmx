@@ -7,22 +7,25 @@
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.TMX_WIDTH=64;
-global.TMX_HEIGHT=64;
-global.TMX_START_X=0;
-global.TMX_START_Y=0;
-global.TMX_TILE_WIDTH=32;
-global.TMX_TILE_HEIGHT=32;
-global.TMX_DEPTH_OFFSET[0]=1000063;</code>
+  <code>with instance_create(0,320,obj_Door)
+{
+x1 = 320;
+x2 = 384;
+y1 = 320;
+y2 = 384;
+Height = 3;
+Width = 0;
+Target = "rm_Test6";
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>992</w>
+    <w>984</w>
     <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -33,8 +36,8 @@ global.TMX_DEPTH_OFFSET[0]=1000063;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-16</xoffset>
-    <yoffset>-29</yoffset>
+    <xoffset>-24</xoffset>
+    <yoffset>-111</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -66,6 +69,10 @@ global.TMX_DEPTH_OFFSET[0]=1000063;</code>
     <instance objName="obj_EnemyAi" x="128" y="640" name="inst_6A691C32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_EnemyAi" x="352" y="32" name="inst_8BB7BECC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_SpawnLocation" x="96" y="64" name="inst_DE9DA348" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Campfire" x="128" y="160" name="inst_D049043E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Campfire" x="64" y="256" name="inst_72531723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Campfire" x="224" y="96" name="inst_A62A597E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Campfire" x="544" y="96" name="inst_B05F34C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="til_FireLevelv2" x="0" y="0" w="32" h="32" xo="160" yo="32" id="10000000" name="tile10000000" depth="1000127" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

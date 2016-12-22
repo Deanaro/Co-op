@@ -5,6 +5,7 @@ Use-Utility-------------Space-----------A
 Cancel------------------F---------------B
 Move--------------------WASD------------Left Analog
 Aim-------------Rmouse/Lmouse-pressed---Right Trigger
+Menu/Pause--------------Escape----------"Start"
 GUI:
 --------navigation-------scroller-------Left-and-Right-D-pad
 --------Place-Item-------R--------------Y
@@ -18,4 +19,5 @@ Fullscreen--------------f4
 Quit--------------------f5
 Help--------------------f10
 Debug-Mode--------------f11
+
 

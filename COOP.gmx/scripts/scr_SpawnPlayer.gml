@@ -34,8 +34,8 @@ var y2 = argument4;
                 scr_ToolUpdate(argument5);
                 //input type
                 if global.Player[argument5,1] = 4
-                {InputType = "scr_Player_InputKB";}
+                {InputType = asset_get_index("scr_Player_InputKB");}
                 else
-                { InputType = "scr_Player_InputGP";}
+                {InputType = asset_get_index("scr_Player_InputGP");}
 
             }

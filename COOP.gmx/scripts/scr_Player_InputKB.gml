@@ -1,5 +1,6 @@
 //input for keyboard
 //NO ARGUMENTS
+ESQ = keyboard_check_pressed(vk_escape);
 ButtonA = keyboard_check_pressed(vk_space);                         //Use Utility
 ButtonB = keyboard_check_pressed(ord('F'));                         //Cancel
 ButtonX = keyboard_check_pressed(ord('E'));                         //Interact/ pickup

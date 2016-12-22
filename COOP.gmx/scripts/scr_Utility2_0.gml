@@ -28,33 +28,11 @@ if ButtonA = 1
     {
         if (Placer).Placeable = 1 // if the placer is in a legal location create a wall instance in that location
         {
-            var centerx = floor(x/64);
-            var centery = floor(y/64);
-            switch dir
-                {
-                case 0:
-                    x1 = (centerx )*64;
-                    y1 = (centery + 2)*64;
-                    break;
-                case 1:
-                    x1 = (centerx )*64;
-                    y1 = (centery - 2)*64;
-                    break;
-                case 2:
-                    x1 = (centerx + 2)*64;
-                    y1 = (centery )*64;
-                    break;
-                case 3:
-                    x1 = (centerx - 2)*64;
-                    y1 = (centery )*64;
-                    
-                    break;
-                }
-           var wall = instance_create (x1,y1,obj_MetalWall);
+           var wall = instance_create ((Placer).x,(Placer).y,obj_MetalWall);
            with wall
            {
             //add illigal terain to the pathfinding grid;
-            scr_Path_AddWall(x,y+64);
+            scr_Path_AddWall(x,y+obj_Pathfinder.Cellsize);
           }
            with Placer
            {instance_destroy();} //destroys the placer instance

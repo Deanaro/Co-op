@@ -1,6 +1,6 @@
 // input for gamepads
 // NO ARGUMENTS
-
+ESQ = gamepad_button_check_pressed(global.Player[Player_num,1], gp_start);
 ButtonA = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face1); // A / Cross             //Use Utility
 ButtonB = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face2); // B / Circle            //Cancel
 ButtonX = gamepad_button_check_pressed(global.Player[Player_num,1], gp_face3); // X / square            //Interact/ pickup

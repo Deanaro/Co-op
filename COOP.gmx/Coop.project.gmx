@@ -184,6 +184,7 @@
     <sprites name="Prototype">
       <sprites name="Dean">
         <sprite>sprites\spr_TarBubble</sprite>
+        <sprite>sprites\spr_LavaBubble</sprite>
         <sprite>sprites\spr_EnemyAI</sprite>
         <sprite>sprites\spr_EnemyAIW</sprite>
         <sprite>sprites\spr_SpawnLocation</sprite>
@@ -192,6 +193,7 @@
         <sprite>sprites\spr_PlaceholderEnemyA</sprite>
         <sprite>sprites\spr_PlaceholderEnemyH</sprite>
         <sprite>sprites\spr_Hitbox90</sprite>
+        <sprite>sprites\spr_Campfire</sprite>
       </sprites>
       <sprites name="Lachlan">
         <sprite>sprites\spr_MenuBase</sprite>
@@ -216,6 +218,11 @@
       <background>background\temptext</background>
     </backgrounds>
     <background>background\til_FireLevelv2</background>
+    <background>background\til_Fire_Level</background>
+    <background>background\til_Fire_Level_4</background>
+    <background>background\til_Fire_Level_1</background>
+    <background>background\til_Fire_Level_2</background>
+    <background>background\til_Fire_Level_3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -255,11 +262,11 @@
           </scripts>
         </scripts>
         <scripts name="Utility">
+          <script>scripts\scr_Utility0_0.gml</script>
           <scripts name="Metal">
             <script>scripts\scr_Utility2_0.gml</script>
             <script>scripts\scr_Utility2_2.gml</script>
           </scripts>
-          <script>scripts\scr_Utility0_0.gml</script>
         </scripts>
       </scripts>
       <script>scripts\scr_Player_Drop.gml</script>
@@ -270,7 +277,9 @@
       <script>scripts\scr_Player_Move.gml</script>
       <script>scripts\scr_Player_PUpickup.gml</script>
       <script>scripts\scr_Player_Damage.gml</script>
-      <script>scripts\scr_PlayerUpdate_Second.gml</script>
+      <script>scripts\scr_Player_MAIN.gml</script>
+      <script>scripts\scr_Player_GOTOMENU.gml</script>
+      <script>scripts\scr_Menu_Input.gml</script>
     </scripts>
     <scripts name="Game Logic">
       <scripts name="Systems">
@@ -381,13 +390,23 @@
     <objects name="Game Logic">
       <object>objects\obj_Control</object>
       <objects name="Control objects">
-        <object>objects\obj_StartMenu</object>
-        <object>objects\obj_ViewHandler</object>
-        <object>objects\obj_Pathfinder</object>
-        <object>objects\obj_PlayerSpawn</object>
-        <object>objects\obj_GameStart</object>
-        <object>objects\obj_WallAdder</object>
-        <object>objects\obj_GUI</object>
+        <objects name="Room specific">
+          <objects name="Menu">
+            <object>objects\obj_Menu_Control</object>
+          </objects>
+          <object>objects\obj_GameStart</object>
+          <object>objects\obj_StartMenu</object>
+        </objects>
+        <objects name="Debug">
+          <object>objects\obj_EnemyDebug</object>
+        </objects>
+        <objects name="General">
+          <object>objects\obj_ViewHandler</object>
+          <object>objects\obj_WallAdder</object>
+          <object>objects\obj_Pathfinder</object>
+          <object>objects\obj_PlayerSpawn</object>
+          <object>objects\obj_GUI</object>
+        </objects>
       </objects>
       <objects name="Systems">
         <objects name="Console">
@@ -420,7 +439,7 @@
       </objects>
       <objects name="Parent Objects Only">
         <object>objects\obj_solid</object>
-        <object>objects\objj_Solid_Ground</object>
+        <object>objects\obj_Solid_Ground</object>
         <object>objects\obj_Solid_Low</object>
         <object>objects\obj_UnitSolid</object>
         <object>objects\obj_NonUnitSolid</object>
@@ -448,6 +467,8 @@
         <object>objects\obj_EnemyAi</object>
         <object>objects\obj_AI_Hitbox</object>
         <object>objects\obj_TarBubble</object>
+        <object>objects\obj_Campfire</object>
+        <object>objects\obj_LavaBubble</object>
         <object>objects\obj_Hitbox</object>
       </objects>
       <objects name="Lachlan">
@@ -457,10 +478,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_StartMenu</room>
+    <room>rooms\rm_Menu</room>
+    <room>rooms\rm_Start</room>
     <rooms name="Testing Rooms">
       <room>rooms\rm_pathfindingtest</room>
-      <room>rooms\rm_Start</room>
       <room>rooms\rm_Test5</room>
+      <room>rooms\rm_Test6</room>
     </rooms>
   </rooms>
   <help>

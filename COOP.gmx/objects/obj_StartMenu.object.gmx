@@ -36,10 +36,11 @@ global.Player[i, 2] = 10; // sets health to 10!!
 
 for (var i = 0; i &lt; 16; i++;)
 {global.Slot[i] = 0;}        // array for slots index values
-global.x1 = 0;
-global.x2 = 100;
-global.y1 = 0;
-global.y2 = 100;
+    //defualt spawn point
+global.x1 = 32;
+global.x2 = 96;
+global.y1 = 32;
+global.y2 = 96;
 
 /* sets initial slot locks
 /* initial locks
@@ -49,6 +50,8 @@ Slot[i] = 11;
 global.Slot[i] = 11;
 }
 */
+
+//global.
 //global.debug
 global.Debug = false;
 
@@ -59,15 +62,19 @@ for (var pad=0; pad &lt;4; pad++)
     gamepad_set_axis_deadzone(pad, 0.3);       // Set the "deadzone" for the axis
     gamepad_set_button_threshold(pad, 0.1);    // Set the "threshold" for the triggers
 }
-//window_set_cursor(cr_none);
+//Cursor
+window_set_cursor(cr_none); 
+//TEMP TEXT INIT
 str1 = "Press f3 to START";
 str2 = "Press f10 for help";
 draw_set_font(fnt_Temp);
 str1L = string_width(str1);
 draw_set_font(fnt_Help);
 str2L = string_width(str2);
-global.Zoom = 1;
-//
+
+//SCREEN ZOOM
+if !window_get_fullscreen()
+{
 window_set_position(200, 200);
 application_surface_draw_enable(false);
 surface_resize(application_surface,640*2,360*2)
@@ -75,6 +82,10 @@ window_set_size(640*2,360*2);
 global.Xoffset= 2//(global.MonitorW-640*2)/2;
 global.Yoffset= 2//(global.MonitorH-360*2)/2;
 global.Zoom = 2;
+}
+
+//GLOBAL.Pause (if menu is about to be open, this allows to leave a room without reseting anything
+global.Pause = 0;
 </string>
           </argument>
         </arguments>
@@ -108,7 +119,7 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -127,9 +138,32 @@ instance_destroy();
             <kind>1</kind>
             <string>draw_set_font(fnt_Temp);
 draw_set_color(c_white);
-draw_text((room_width-str1L)/2,room_height/3,str1)
+draw_text((window_get_width()-str1L)/2,window_get_height()/3,str1)
 draw_set_font(fnt_Help);
-draw_text((room_width-str2L)/2,room_height/3+96,str2)
+draw_text((window_get_width()-str2L)/2,window_get_height()/3+96,str2)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// dont delete
 </string>
           </argument>
         </arguments>

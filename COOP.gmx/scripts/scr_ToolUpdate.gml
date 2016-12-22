@@ -17,11 +17,12 @@ if S4 = 11
 
 // builds the script name, the larger number being on the left (scr_Weapon5_3).
 if S1 > S2
-{global.Player[argument0,0].Weapon = "scr_Weapon" + string(S1) + "_" + string(S2);}
+{
+global.Player[argument0,0].Weapon = asset_get_index("scr_Weapon" + string(S1) + "_" + string(S2));}
 else
-{global.Player[argument0,0].Weapon = "scr_Weapon" + string(S2) + "_" + string(S1);}
+{global.Player[argument0,0].Weapon = asset_get_index("scr_Weapon" + string(S2) + "_" + string(S1));}
 
 if S3 > S4
-{global.Player[argument0,0].Utility = "scr_Utility" + string(S3) + "_" + string(S4);}
+{global.Player[argument0,0].Utility = asset_get_index("scr_Utility" + string(S3) + "_" + string(S4));}
 else
-{global.Player[argument0,0].Utility = "scr_Utility" + string(S4) + "_" + string(S3);}
+{global.Player[argument0,0].Utility = asset_get_index("scr_Utility" + string(S4) + "_" + string(S3));}

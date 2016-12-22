@@ -133,7 +133,10 @@ depth = -(y + sprite_height +10)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>if !global.Pause
+{
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>

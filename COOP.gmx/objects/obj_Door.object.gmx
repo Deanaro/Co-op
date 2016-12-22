@@ -60,15 +60,15 @@ alarm[0] = 1;
             <string>// streches the door with variables Width and Height
 
 if Width !=0
-{image_xscale =((Width) * 96);}
+{image_xscale =((Width) * 32);}
 if Height !=0
-{image_yscale =((Height) * 96);}
+{image_yscale =((Height) * 32);}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>

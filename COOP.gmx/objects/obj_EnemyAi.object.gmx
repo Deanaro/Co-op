@@ -173,16 +173,18 @@ depth = -bbox_bottom; //depth
           <argument>
             <kind>1</kind>
             <string>//restart location and life on room start
-
+if !global.Pause
+{
 x = xstart;
 y = ystart;
 Life = 10;
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="9" enumb="122">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -199,61 +201,11 @@ Life = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// this will draw the path and vision range of the enemy, works better with fiew enemies
-
-
-
-if global.Debug = true
+            <string>//DEBUG
+with instance_create(x,y,obj_EnemyDebug)
 {
-draw_set_alpha(0.5);
-if Alert = 0
-{
-    draw_set_color(c_green);
-    draw_circle(x,Centery,Not_Alert_Range,1);
-    draw_set_alpha(0.08);
-    draw_circle(x,Centery,Not_Alert_Range,0);
-    draw_set_color(c_red);
+Parent = other.id;
 }
-else
-{
-    draw_set_circle_precision(64);
-    draw_set_color(c_red);
-    draw_circle(x,Centery,Alert_Range,1);
-    draw_circle(x,Centery,Not_Alert_Range,1);
-    draw_circle(x,Centery,Attack_Range,1);
-    draw_set_alpha(0.06);
-    draw_circle(x,Centery,Not_Alert_Range,0);
-    draw_set_alpha(0.04);
-    draw_circle(x,Centery,Alert_Range,0);
-    draw_set_alpha(1);
-    draw_set_color(c_black);
-    draw_text(x - 20,bbox_top-80,"facing =" + string(facing));
-    draw_line_width(x,Centery,Targetx,Targety,1);
-}
-if NodeCount !=0 and Alert = 1
-{
-draw_set_alpha(0.85);
-for(i = NodeCount; i &gt; 0; i--)
-{
-if Node[i] &lt; obj_Pathfinder.Hcells
-{var y1 = 0;}
-else
-{ var y1 = floor(Node[i]/obj_Pathfinder.Hcells);}// the row number of the cell
-var x1 = Node[i] - (y1 * obj_Pathfinder.Hcells);
-if Node[i-1] &lt; obj_Pathfinder.Hcells
-{var y2 = 0;}
-else
-{ var y2 = floor(Node[i-1]/obj_Pathfinder.Hcells);}// the row number of the cell
-var x2 = Node[i-1] - (y2 * obj_Pathfinder.Hcells);
-draw_set_color(make_color_hsv(i*30 mod 255,255,255));
-draw_line_width(x1*32+16,y1*32+16,x2*32+16,y2*32+16,1);
-draw_set_color(make_color_hsv((i+2)*30 mod 255,200,200));
-draw_rectangle(x1*32+16-2,y1*32+16-2,x1*32+16+2,y1*32+16+2,0);
-}
-draw_circle(x2*32+16,y2*32+16,3,0);
-}
-}
-draw_self();
 </string>
           </argument>
         </arguments>
