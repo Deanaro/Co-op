@@ -26,3 +26,17 @@ if S3 > S4
 {global.Player[argument0,0].Utility = asset_get_index("scr_Utility" + string(S3) + "_" + string(S4));}
 else
 {global.Player[argument0,0].Utility = asset_get_index("scr_Utility" + string(S4) + "_" + string(S3));}
+Busy = 0;
+/*if instance_exists(obj_Parent_Placer)
+{
+var TEMP = instance_number(obj_Parent_Placer), ID;
+    for (var i=0;i<TEMP;i++)
+    {
+        ID = instance_find(obj_Player,i);
+        if ID.Target = id
+        {
+            with ID
+            {instance_destroy();}
+        }
+    }
+}*/

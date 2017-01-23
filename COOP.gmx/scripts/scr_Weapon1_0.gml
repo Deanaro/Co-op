@@ -12,5 +12,6 @@ else if Rtrigger = 1 and Busy = 0
     {
     x_move = xmove ;
     y_move = ymove ;
+    image_angle = point_direction(0,0,x_move,y_move);
     }
 }

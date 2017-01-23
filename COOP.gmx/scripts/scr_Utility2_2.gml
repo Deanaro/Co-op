@@ -1,7 +1,7 @@
 // Small metal wall
 //press space / A (xbox) to spawn a wall, press again to place
 // cancel with B
-
+UCD = 90;
 
 Utility_index = 4;
 if UCooldown !=0
@@ -48,7 +48,7 @@ if ButtonA = 1
            }
            with Placer
            {instance_destroy();}  // destroy the placer instance
-           UCooldown = 60; //set cooldown (in frames)
+           UCooldown = UCD; //set cooldown (in frames)
            Busy = 0;
         }
     }

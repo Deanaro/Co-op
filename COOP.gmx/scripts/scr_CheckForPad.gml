@@ -8,7 +8,7 @@ for (var i = 0; i < array_height_2d(global.Player); i++)
 {
      if (global.Player[i,1] = pad) 
      {
-     return -1 - i;
+     return -i-1;
      }   
 }
 for (var i = 0; i < array_height_2d(global.Player); i++)

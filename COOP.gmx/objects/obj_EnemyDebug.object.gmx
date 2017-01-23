@@ -53,6 +53,8 @@ if global.Debug = true
 {
 if Parent !=-1
 {
+if instance_exists(Parent)
+{
 draw_set_alpha(0.5);
 if Parent.Alert = 0
 {
@@ -102,6 +104,9 @@ draw_circle(x2*32+16,y2*32+16,3,0);
 }
 }
 draw_set_alpha(1);
+}
+else 
+instance_destroy();
 }
 else {instance_destroy();}
 </string>

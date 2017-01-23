@@ -274,11 +274,13 @@
       <script>scripts\scr_Player_GUI.gml</script>
       <script>scripts\scr_Player_InputKB.gml</script>
       <script>scripts\scr_Player_InputGP.gml</script>
+      <script>scripts\scr_Player_Leave.gml</script>
       <script>scripts\scr_Player_Move.gml</script>
       <script>scripts\scr_Player_PUpickup.gml</script>
       <script>scripts\scr_Player_Damage.gml</script>
       <script>scripts\scr_Player_MAIN.gml</script>
       <script>scripts\scr_Player_GOTOMENU.gml</script>
+      <script>scripts\scr_Player_Interact.gml</script>
       <script>scripts\scr_Menu_Input.gml</script>
     </scripts>
     <scripts name="Game Logic">
@@ -443,6 +445,8 @@
         <object>objects\obj_Solid_Low</object>
         <object>objects\obj_UnitSolid</object>
         <object>objects\obj_NonUnitSolid</object>
+        <object>objects\obj_Parent_Interact</object>
+        <object>objects\obj_Parent_Placer</object>
       </objects>
     </objects>
     <objects name="Tools">

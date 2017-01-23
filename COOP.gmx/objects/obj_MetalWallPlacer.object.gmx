@@ -78,9 +78,11 @@ Placeable = 0; // if the placer is in a legal position
             <kind>1</kind>
             <string>// sets the coordinates to match the cells of the grid ,
 //2 cells from the player in the direction he is facing
+
 if instance_exists(Target)
 {
-
+if Target.Busy = 0
+{instance_destroy();}
 var dir = (Target).dir
 
 switch Target.dir

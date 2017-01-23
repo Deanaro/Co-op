@@ -43,9 +43,15 @@ for (var i=0; i &lt; 4; i++)
             {
                 draw_sprite_stretched(spr_PU,global.Slot[i2+ i*4], xpos + 16*i2*global.Zoom,bottom - 16*global.Zoom,sprite_get_width(spr_PU)*global.Zoom,sprite_get_height(spr_PU)*global.Zoom);
             }
+            if global.Player[i, 0].UCD !=-1 and global.Player[i, 0].UCooldown !=0
+                {
+                draw_set_color(c_blue);
+                draw_set_alpha(0.35);
+                draw_rectangle(xpos+32*global.Zoom  ,  bottom - 32*global.Zoom  , xpos+32*global.Zoom + global.Player[i, 0].UCooldown/global.Player[i, 0].UCD*32*global.Zoom , bottom - 32*global.Zoom + 16*global.Zoom  ,  0);
+                draw_set_alpha(1);
+                }
         }
     }
-
 </string>
           </argument>
         </arguments>

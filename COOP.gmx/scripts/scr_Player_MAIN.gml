@@ -2,7 +2,8 @@ Centery = bbox_bottom-8;
 script_execute(InputType);
 scr_Player_GOTOMENU();
 scr_Player_Move();
-scr_Player_PUpickup();
+//scr_Player_PUpickup();
+scr_Player_Interact();
 scr_Player_GUI();
 
 if Weapon != -1

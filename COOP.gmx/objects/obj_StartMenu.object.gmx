@@ -51,7 +51,7 @@ global.Slot[i] = 11;
 }
 */
 
-//global.
+global.Leave = false;
 //global.debug
 global.Debug = false;
 

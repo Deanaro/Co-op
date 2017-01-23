@@ -78,6 +78,7 @@ animated_tile_add(til_Fire_Level,0.05,til_Fire_Level_1,til_Fire_Level_2,til_Fire
           <argument>
             <kind>1</kind>
             <string>global.Pause = 0;
+file_delete(working_directory + "\TEMP\TEMP_SURFACE.png");
 </string>
           </argument>
         </arguments>

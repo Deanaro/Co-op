@@ -55,32 +55,26 @@
 /* at the moment this script does nothing. when its finished this code will pause the game when a controller disconnects*/
 
 
-show_debug_message("Event = " + async_load[? "event_type"]);        // Debug cocde so you can see which event has been
+show_debug_message("Event = " + async_load[? "event_type"]);        // Debug code so you can see which event has been
 show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
 
 switch(async_load[? "event_type"])             // Parse the async_load map to see which event has been triggered
 {
 case "gamepad discovered":                     // A game pad has been discovered
-    var pad = async_load[? "pad_index"];       // Get the pad index value from the async_load map
+    /*var pad = async_load[? "pad_index"];       // Get the pad index value from the async_load map
     if pad &lt; 4
     {
     var padSlot = scr_CheckForPad(pad); //check if pad exists, or next available player slot
     }
-   
-        
-        
-           
-        
-        
+    */  
     break;
 case "gamepad lost":                           // Gamepad has been removed or  disabled
     var pad = async_load[? "pad_index"];     // Get the pad index
     if pad &lt; 4     
     {       
-    var PlayerSlot = scr_CheckForPad(pad)
-    if PlayerSlot &lt;= 0 and PlayerSlot &gt;= -5
+    if scr_CheckForPad(pad) &lt;0
     {
-    PlayerSlot = abs(PlayerSlot + 1)
+    var PlayerSlot = abs(scr_CheckForPad(pad) + 1)
     //destroy all assets of that player
     with global.Player[PlayerSlot,0]
     {instance_destroy();}
@@ -88,25 +82,6 @@ case "gamepad lost":                           // Gamepad has been removed or  d
     global.Player[PlayerSlot,1] = -1;
     }
     }
-    /* Old destructor!
-    if (instance_exists(global.Player[pad]))          // Check for a player instance and other instanses associated with the pad and remove it
-        {
-        with (global.Player[pad])
-            {
-            instance_destroy();
-            }
-        with (GUI[pad])
-            {
-            instance_destroy();
-            }
-        with (Wicon[pad])
-            {
-            instance_destroy();
-            }
-        global.Player[pad] = noone;                   // Set the controller array to "noone" so it detects a new pad being connected
-        }
-    break;
-    */
 }
 </string>
           </argument>
@@ -159,6 +134,11 @@ if global.Pause = 0
     view_xview = view_x/dev - view_wview/2; 
     view_yview = view_y/dev - view_hview/2;
     }
+}
+if global.Leave = true
+{
+    global.Leave = false;
+    scr_Player_Leave();
 }
 </string>
           </argument>

@@ -45,6 +45,7 @@ image_yscale = global.Scale;
 Centery = bbox_bottom-8;
 alarm[1] = 1;
 draw = 0;
+UCD = -1;
 
 
 
@@ -144,50 +145,11 @@ image_blend = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_Player_MAIN();
+            <string>if global.Leave !=1
+{
+scr_Player_MAIN();
+}
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_SpawnLocation">
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_Save</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -264,6 +226,7 @@ draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*
             <kind>1</kind>
             <string>draw_set_alpha(1);
 draw_self();
+
 </string>
           </argument>
         </arguments>

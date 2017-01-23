@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_Parent_Interact</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,35 @@
             <kind>1</kind>
             <string>image_xscale =global.Scale;
 image_yscale = global.Scale;
+var temp = instance_create(bbox_left,bbox_bottom-14,obj_Wall_Low)
+with temp
+{
+image_xscale = 14/32;
+image_yscale = 14/32;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -50,6 +79,7 @@ image_yscale = global.Scale;
           <argument>
             <kind>1</kind>
             <string>depth = -bbox_bottom;
+
 </string>
           </argument>
         </arguments>
