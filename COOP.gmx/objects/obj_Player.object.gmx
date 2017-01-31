@@ -47,7 +47,8 @@ alarm[1] = 1;
 draw = 0;
 UCD = -1;
 
-
+//init shadow casting
+//caster_init_rectangle(0,0,16,32);
 
 </string>
           </argument>
