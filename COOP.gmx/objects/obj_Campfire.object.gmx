@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Solid_Ground</parentName>
+  <parentName>obj_light_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.2;
+            <string>//create the light source
+
+light_init_point(256,c_white);
+light_set_radius(150);
+light_set_color(make_color_rgb (194, 104 , 14 ));
+
+r = 0;
+image_speed = 0.2;
 depth = -y;
 </string>
           </argument>

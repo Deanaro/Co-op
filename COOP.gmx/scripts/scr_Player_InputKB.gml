@@ -9,7 +9,7 @@ h_move = keyboard_check(ord('D')) - keyboard_check(ord('A'));       //Move
 v_move = keyboard_check(ord('S')) - keyboard_check(ord('W'));       //Move
 h_face = 0;
 v_face = 0;
-var angle = point_direction(x,y+sprite_height/2,mouse_x,mouse_y)    //Aim
+angle = point_direction(x,y+sprite_height/2,mouse_x,mouse_y)    //Aim
  // when pressing right or left mouse button,
  // the player aims and faces towards the cursor
  // 
@@ -39,5 +39,5 @@ v_move *= 1/1.3;
 
 
 // the aim vector , these should equal 1 together
-Aim[0] = cos(angle*(pi/180));   // horizontal
-Aim[1] = -sin(angle*(pi/180)); // vertical
+xaim = cos(angle*(pi/180));   // horizontal
+yaim = -sin(angle*(pi/180)); // vertical

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//initial variables:
 hold = 0; //the powerup that the player is holding (that he can place in a slot)
-spd = 2*global.Scale; //movespeed
+spd = 1*global.Scale; //movespeed
 image_speed = 0.1;
 dir = 0;
 Slot_num = 1;   // the starting highlighted slot number
@@ -37,8 +37,8 @@ Utility_index = 0;
 WCooldown = 0;
 UCooldown = 0;
 Busy = 0;
-Aim[0] = 1; //for all cariable initializing that need Player_num
-Aim[1] = 0;
+yaim = 1;
+xaim = 0;
 Hurt = 0;
 image_xscale = global.Scale;
 image_yscale = global.Scale;
@@ -46,9 +46,17 @@ Centery = bbox_bottom-8;
 alarm[1] = 1;
 draw = 0;
 UCD = -1;
+angle = 0;
+anim ="";
+step_timer = 5;
 
 //init shadow casting
 //caster_init_rectangle(0,0,16,32);
+
+//status effects
+status_speed = 0;
+status_slow = 0;
+status_stun = 0;
 
 </string>
           </argument>
@@ -201,7 +209,7 @@ instance_destroy();
             <string>//draws crosshair
 if draw = 1
 {
-draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + Aim[0]*96, y + Aim[1]*96 + sprite_height/2);
+draw_sprite(asset_get_index("spr_Crosshair_" + string(Player_num)),0,x + xaim*96, y + yaim*96 + sprite_height/2);
 }
 </string>
           </argument>

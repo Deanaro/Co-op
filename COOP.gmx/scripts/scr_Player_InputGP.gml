@@ -28,10 +28,10 @@ if h_face !=0 or v_face !=0
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0); 
     var aimh = gamepad_axis_value(global.Player[Player_num,1] , gp_axisrh);  
     var aimv =  gamepad_axis_value(global.Player[Player_num,1] , gp_axisrv);
-    var angle = point_direction(0,0,aimh,aimv);
+    angle = point_direction(0,0,aimh,aimv);
     // the aim vector , these should equal 1 together
-    Aim[0] = cos(angle*(pi/180));   // horizontal
-    Aim[1] = -sin(angle*(pi/180)); // vertical
+    xaim = cos(angle*(pi/180));   // horizontal
+    yaim = -sin(angle*(pi/180)); // vertical
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0.3); 
 }
 else if h_move !=0 or v_move !=0 
@@ -39,9 +39,9 @@ else if h_move !=0 or v_move !=0
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0); 
     var aimh = gamepad_axis_value(global.Player[Player_num,1] , gp_axislh);  
     var aimv =  gamepad_axis_value(global.Player[Player_num,1] , gp_axislv);
-    var angle = point_direction(0,0,aimh,aimv);
+    angle = point_direction(0,0,aimh,aimv);
     // the aim vector , these should equal 1 together
-    Aim[0] = cos(angle*(pi/180));   // horizontal
-    Aim[1] = -sin(angle*(pi/180)); // vertical
+    xaim = cos(angle*(pi/180));   // horizontal
+    yaim = -sin(angle*(pi/180)); // vertical
     gamepad_set_axis_deadzone(global.Player[Player_num,1], 0.3); 
 }

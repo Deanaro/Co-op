@@ -49,12 +49,12 @@ else
 {scr_Player_Face(v_face,h_face);}
 if h_move !=0 or v_move != 0    // while moving
 {
-     var anim = 'W';
-     image_speed = 0.3;     // sets animation to W (walk)
+     anim = 'W';
+     image_speed = 0.25;     // sets animation to W (walk)
 }
 else
 {
-    var anim = '';
+    anim = '';
     image_speed = 0.1;  // sets animation to '' (stationary)
 }
 
@@ -63,5 +63,4 @@ else
 // structure:
 // "spr_P" + player number + "_" + direction facing (0-3) + animation
 sprite_index = asset_get_index("spr_P" + string(Player_num + 1) + "_" + string(dir) + string(anim)); // choses correct sprite
-
 depth = -(y+sprite_height); // depths changes depending on y value

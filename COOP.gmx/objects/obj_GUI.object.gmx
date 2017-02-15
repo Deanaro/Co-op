@@ -31,19 +31,20 @@ for (var i=0; i &lt; 4; i++)
     {
         if (instance_exists(global.Player[i, 0]))
         {
-            var xpos = +(window_get_width()/5)*(i+1) - 40*global.Zoom;
+            var xpos = +(window_get_width()/5)*(i+1) - sprite_get_width(spr_GUI)*global.Zoom/2;
             var bottom = window_get_height();
-            draw_sprite_stretched(spr_GUI,0, xpos, bottom - 32*global.Zoom,sprite_get_width(spr_GUI)*global.Zoom,sprite_get_height(spr_GUI)*global.Zoom);
-            draw_sprite_stretched(spr_Life,global.Player[i,2], xpos + 64*global.Zoom, bottom - 32*global.Zoom,sprite_get_width(spr_Life)*global.Zoom,sprite_get_height(spr_Life)*global.Zoom);
-            draw_sprite_stretched(spr_PU,global.Player[i,0].hold, xpos + 64*global.Zoom, bottom - 16*global.Zoom,sprite_get_width(spr_PU)*global.Zoom,sprite_get_height(spr_PU)*global.Zoom);
-            draw_sprite_stretched(spr_Wicon, global.Player[i,0].Wep_index, xpos, bottom - 32*global.Zoom,sprite_get_width(spr_Wicon)*global.Zoom,sprite_get_height(spr_Wicon)*global.Zoom)
-            draw_sprite_stretched(spr_Uicon, global.Player[i,0].Utility_index, xpos+32*global.Zoom, bottom - 32*global.Zoom,sprite_get_width(spr_Uicon)*global.Zoom,sprite_get_height(spr_Uicon)*global.Zoom)
-            draw_sprite_stretched(spr_GUIFocus,0,xpos + global.Player[i, 0].GUIslot*16*global.Zoom, bottom-16*global.Zoom,sprite_get_width(spr_GUIFocus)*global.Zoom,sprite_get_height(spr_GUIFocus)*global.Zoom);
+            draw_sprite_stretched(spr_GUI,0, xpos, bottom - 32*global.Zoom,sprite_get_width(spr_GUI)*global.Zoom,sprite_get_height(spr_GUI)*global.Zoom);                                                  //GUI base
+            draw_sprite_stretched(spr_GUI_color,i,xpos+30*global.Zoom,bottom - 18*global.Zoom,sprite_get_width(spr_GUI_color)*global.Zoom,sprite_get_width(spr_GUI_color)*global.Zoom);                                                                                            //GUI gem
+            //draw_sprite_stretched(spr_Life,global.Player[i,2], xpos + 64*global.Zoom, bottom - 32*global.Zoom,sprite_get_width(spr_Life)*global.Zoom,sprite_get_height(spr_Life)*global.Zoom);           //Life
+            if global.Player[i,0].hold !=0 {draw_sprite_stretched(spr_PU,global.Player[i,0].hold, xpos + 64*global.Zoom, bottom - 16*global.Zoom,sprite_get_width(spr_PU)*global.Zoom,sprite_get_height(spr_PU)*global.Zoom);}//holding
+            draw_sprite_stretched(spr_Wicon, global.Player[i,0].Wep_index, xpos, bottom - 32*global.Zoom,sprite_get_width(spr_Wicon)*global.Zoom,sprite_get_height(spr_Wicon)*global.Zoom)                  //Weapon Icon
+            draw_sprite_stretched(spr_Uicon, global.Player[i,0].Utility_index, xpos+32*global.Zoom, bottom - 32*global.Zoom,sprite_get_width(spr_Uicon)*global.Zoom,sprite_get_height(spr_Uicon)*global.Zoom)//Uitility Icon
+            draw_sprite_stretched(spr_GUIFocus,0,xpos + global.Player[i, 0].GUIslot*16*global.Zoom, bottom-16*global.Zoom,sprite_get_width(spr_GUIFocus)*global.Zoom,sprite_get_height(spr_GUIFocus)*global.Zoom); //focus
             for (var i2= 0; i2 &lt; 4; i2++)
             {
-                draw_sprite_stretched(spr_PU,global.Slot[i2+ i*4], xpos + 16*i2*global.Zoom,bottom - 16*global.Zoom,sprite_get_width(spr_PU)*global.Zoom,sprite_get_height(spr_PU)*global.Zoom);
-            }
-            if global.Player[i, 0].UCD !=-1 and global.Player[i, 0].UCooldown !=0
+                draw_sprite_stretched(spr_PU,global.Slot[i2+ i*4], xpos + 16*i2*global.Zoom,bottom - 16*global.Zoom,sprite_get_width(spr_PU)*global.Zoom,sprite_get_height(spr_PU)*global.Zoom);        //Slots
+            }   
+            if global.Player[i, 0].UCD !=-1 and global.Player[i, 0].UCooldown !=0   //COOLDOWN
                 {
                 draw_set_color(c_blue);
                 draw_set_alpha(0.35);
@@ -74,7 +75,8 @@ for (var i=0; i &lt; 4; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///leave empty
+</string>
           </argument>
         </arguments>
       </action>

@@ -4,14 +4,10 @@ if WCooldown !=0
     {WCooldown -= 1;}
 else if Rtrigger = 1 and Busy = 0
     {
-    WCooldown = 8
-    var xmove = Aim[0];
-    var ymove= Aim[1];
-    var Fireball = instance_create(x + xmove*24,y + ymove*24 + sprite_height/2, obj_Fireball);
-    with Fireball
+    WCooldown = 16;
     {
-    x_move = xmove ;
-    y_move = ymove ;
-    image_angle = point_direction(0,0,x_move,y_move);
+    scr_Weapon_Projectile(obj_Fireball,0,20);
+    audio_sound_pitch(snd_fireball,0.5+random(0.7));
+    audio_play_sound(snd_fireball,1,0);
     }
-}
+    }

@@ -76,19 +76,19 @@
     </datafiles>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_step</sound>
+    <sound>sound\snd_fireball</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="GUI">
       <sprite>sprites\spr_GUI</sprite>
-      <sprite>sprites\spr_GUI_1</sprite>
-      <sprite>sprites\spr_GUI_2</sprite>
-      <sprite>sprites\spr_GUI_3</sprite>
-      <sprite>sprites\spr_GUI_4</sprite>
       <sprite>sprites\spr_PU</sprite>
       <sprite>sprites\spr_GUIFocus</sprite>
       <sprite>sprites\spr_Life</sprite>
       <sprite>sprites\spr_Uicon</sprite>
       <sprite>sprites\spr_Wicon</sprite>
+      <sprite>sprites\spr_GUI_color</sprite>
     </sprites>
     <sprites name="Systems">
       <sprites name="Control">
@@ -114,8 +114,8 @@
     <sprites name="Tools">
       <sprites name="Utility">
         <sprites name="metal">
-          <sprite>sprites\spr_MetalWall_0</sprite>
           <sprite>sprites\spr_MetalWall_1</sprite>
+          <sprite>sprites\spr_MetalWall_0</sprite>
           <sprite>sprites\spr_MetalWall_2</sprite>
           <sprite>sprites\spr_MetalWall_3</sprite>
           <sprite>sprites\spr_MetalWall_S</sprite>
@@ -230,6 +230,9 @@
     <scripts name="Player">
       <scripts name="Tools">
         <scripts name="Weapon">
+          <scripts name="Shared">
+            <script>scripts\scr_Weapon_Projectile.gml</script>
+          </scripts>
           <script>scripts\scr_Weapon0_0.gml</script>
           <scripts name="FIRE">
             <script>scripts\scr_Weapon1_0.gml</script>
@@ -263,7 +266,13 @@
           </scripts>
         </scripts>
         <scripts name="Utility">
+          <scripts name="Shared">
+            <script>scripts\scr_Utility_Placer.gml</script>
+          </scripts>
           <script>scripts\scr_Utility0_0.gml</script>
+          <scripts name="Fire">
+            <script>scripts\scr_Utility1_0.gml</script>
+          </scripts>
           <scripts name="Metal">
             <script>scripts\scr_Utility2_0.gml</script>
             <script>scripts\scr_Utility2_2.gml</script>
@@ -283,6 +292,7 @@
       <script>scripts\scr_Player_GOTOMENU.gml</script>
       <script>scripts\scr_Player_Interact.gml</script>
       <script>scripts\scr_Menu_Input.gml</script>
+      <script>scripts\scr_Player_Sounds.gml</script>
     </scripts>
     <scripts name="Game Logic">
       <scripts name="Systems">
@@ -488,8 +498,11 @@
     <objects name="Tools">
       <objects name="Utility">
         <objects name="Metal">
-          <object>objects\obj_MetalWallPlacer</object>
           <object>objects\obj_MetalWall</object>
+        </objects>
+        <objects name="shared">
+          <object>objects\obj_Placer</object>
+          <object>objects\object44</object>
         </objects>
       </objects>
     </objects>
@@ -501,8 +514,6 @@
       </objects>
       <objects name="Dean">
         <object>objects\obj_Smoke</object>
-        <object>objects\obj_test</object>
-        <object>objects\obj_testu</object>
         <object>objects\obj_Fireball</object>
         <object>objects\obj_EnemyAi</object>
         <object>objects\obj_AI_Hitbox</object>
@@ -526,7 +537,6 @@
     <room>rooms\rm_Menu</room>
     <room>rooms\rm_Start</room>
     <rooms name="Testing Rooms">
-      <room>rooms\rm_pathfindingtest</room>
       <room>rooms\rm_Test5</room>
       <room>rooms\rm_Test6</room>
     </rooms>

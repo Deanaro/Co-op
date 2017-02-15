@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_light_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -30,6 +30,14 @@ image_yscale = global.Scale;
 alarm[0] = 2;
 depth = -(y + sprite_height +10)
 image_speed = 0.6
+
+//create the light source
+
+light_init_point(256,c_white);
+light_set_radius(32);
+light_set_color(make_color_rgb (194, 104 , 14 ));
+
+r = 0;
 </string>
           </argument>
         </arguments>
@@ -78,10 +86,10 @@ alarm[0] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x &lt; view_xview - 16
-or x &gt; view_xview + 16 + view_wview
-or y &lt; view_yview - 16
-or y &gt; view_yview + 16 + view_hview
+            <string>if x &lt; view_xview - 64
+or x &gt; view_xview + 64 + view_wview
+or y &lt; view_yview - 64
+or y &gt; view_yview + 64 + view_hview
 {instance_destroy();}
 
 
@@ -91,21 +99,22 @@ if position_meeting(x,y,obj_AI_Hitbox)
 {
     
     var Target = instance_place(x,y,obj_AI_Hitbox);
-    if instance_exists(Target)
+    if instance_exists(Target) and instance_exists(Target.Parent)
     {
     var angle = point_direction(x,y,Target.x,Target.y+66);
     Target.v_move = y_move;
     Target.h_move = x_move;
     with Target
     {
-    Parent.Life -=1;
-    if Parent.Life = 0
-    {
-    with Parent
-    {instance_destroy();}}
+        Parent.Life -=1;
+        if Parent.Life = 0
+            {
+            with Parent
+            {instance_destroy();}
+            }
     }
     instance_destroy();
-    }
+}
 }
 
 x += (x_move*7);
