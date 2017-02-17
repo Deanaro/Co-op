@@ -33,8 +33,8 @@ dright  = mouse_wheel_up();                                         //Change foc
 
 if abs(h_move) + abs(v_move) = 2
 {
-h_move *= 1/1.3;
-v_move *= 1/1.3;
+h_move *= 0.8;
+v_move *= 0.8;
 }
 
 

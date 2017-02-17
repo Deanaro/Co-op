@@ -54,7 +54,6 @@ FPS = "ERROR";
 //Tiles
 animated_tile_init()
 animated_tile_add(til_Fire_Level,0.05,til_Fire_Level_1,til_Fire_Level_2,til_Fire_Level_3,til_Fire_Level_4);
-
 </string>
           </argument>
         </arguments>

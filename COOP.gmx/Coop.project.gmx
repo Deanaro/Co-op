@@ -238,6 +238,7 @@
         <sprite>sprites\spr_solid_light</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_status</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Fire">
@@ -309,6 +310,7 @@
           <script>scripts\scr_Utility0_0.gml</script>
           <scripts name="Fire">
             <script>scripts\scr_Utility1_0.gml</script>
+            <script>scripts\scr_Utility1_1.gml</script>
           </scripts>
           <scripts name="Metal">
             <script>scripts\scr_Utility2_0.gml</script>
@@ -466,6 +468,8 @@
         <script>scripts\caster_obj.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_status_list_update.gml</script>
+    <script>scripts\scr_status_give.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_console_12</font>
@@ -562,6 +566,7 @@
         <object>objects\obj_AI_Hitbox</object>
         <object>objects\obj_TarBubble</object>
         <object>objects\obj_Campfire</object>
+        <object>objects\obj_temp_campfire</object>
         <object>objects\obj_LavaBubble</object>
         <object>objects\obj_Hitbox</object>
       </objects>

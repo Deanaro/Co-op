@@ -54,10 +54,14 @@ step_timer = 5;
 //caster_init_rectangle(0,0,16,32);
 
 //status effects
-status_speed = 0;
-status_slow = 0;
-status_stun = 0;
-
+status_speed = 0; //1 index
+status_slow = 0; //2
+status_stun = 0; //3
+for(var i=0;i&lt;5/*max status effects*/;i++)
+{
+status_list[i,0] = 0;
+status_list[i,1] = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -157,6 +161,7 @@ image_blend = -1;
             <string>if global.Leave !=1
 {
 scr_Player_MAIN();
+scr_status_list_update();
 }
 </string>
           </argument>

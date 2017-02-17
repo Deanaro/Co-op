@@ -51,6 +51,13 @@ for (var i=0; i &lt; 4; i++)
                 draw_rectangle(xpos+32*global.Zoom  ,  bottom - 32*global.Zoom  , xpos+32*global.Zoom + global.Player[i, 0].UCooldown/global.Player[i, 0].UCD*32*global.Zoom , bottom - 32*global.Zoom + 16*global.Zoom  ,  0);
                 draw_set_alpha(1);
                 }
+            for(var i2=0; i2&lt;5;i2++)
+            {
+                if global.Player[i,0].status_list[i2,0] != 0
+                {
+                    draw_sprite_stretched(spr_status,global.Player[i,0].status_list[i2,0]+1,xpos+9*i2*global.Zoom,bottom-40*global.Zoom,8*global.Zoom,8*global.Zoom);
+                }
+            }
         }
     }
 </string>
