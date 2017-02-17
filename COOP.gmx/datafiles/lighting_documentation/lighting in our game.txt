@@ -1,0 +1,60 @@
+------------------------------------------------------------------------------------------------------------------------
+hierarchy
+
+obj_light_parent
+       to
+    obj_solid
+       to
+   all children (e.g obj_UnitSolid)    *NOTE* obj_caster_parent also slots in here
+
+------------------------------------------------------------------------------------------------------------------------
+
+This seems to be the best way to implament the light system, it allows for solid and non solid light sources.
+Although it does not allow for non solid caster objects.
+
+*NOTE*: there are scripts in scripts -> prototypes -> lighting    for the most basic setup of a light or caster 
+        object. these can be placed in the create event of your object to give basic lighting capability.
+
+------------------------------------------------------------------------------------------------------------------------
+
+*to make a non solid light source*
+
+1. make obj_light_parent the parent
+
+2. in the new object make a create event with this code
+
+//create the light source
+
+light_init_point(256,c_white);
+
+------------------------------------------------------------------------------------------------------------------------
+
+*to make a solid light source*
+
+1. make obj_solid the parent
+
+2. in the new object make a create event with this code
+
+//create the light source
+
+light_init_point(256,c_white);
+
+------------------------------------------------------------------------------------------------------------------------
+
+*to make a caster (shadow) object*
+
+1. make obj_caster_parent the parent
+
+2.in the new object make a create event with this code
+
+//make caster object
+caster_init_sprite();
+
+//set light source
+light_init_point(256,c_white);
+
+//bring light radius to 0
+
+light_set_radius(0);
+
+------------------------------------------------------------------------------------------------------------------------

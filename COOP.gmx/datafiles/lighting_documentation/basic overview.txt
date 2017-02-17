@@ -1,0 +1,99 @@
+origenal scripts from: http://gmc.yoyogames.com/index.php?showtopic=686700
+
+basic tutorial: https://www.dropbox.com/s/boscr5e581os8qo/JustF%20Lighting%20Engine%20Tutorial%20final.pdf?dl=1
+
+Implementation
+The implementation is made purely in game maker scripts. I will provide the download link
+somewhere on the game maker forums.
+The scripts are provided with a lot of comments if you want to understand how the code
+works. If you want to use this engine in your game, you are completely free to do so. I would
+love to get some credits somewhere, but you have absolutely no obligations to. I do love to
+hear reactions and see what people make using this engine!
+Furthermore, the scripts are organized in three categories:
+- Lightmap
+- Lights
+- Casters
+The lights speak for themselves, the light scripts are the scripts made for light objects. Caster
+scripts are for shadow casters, the objects that cast shadows. The lightmap scripts are for the
+lightmap itself, and all the settings surrounding it.
+Basics
+For the basic implementation you will need at least three objects (the names don’t matter
+though!):
+- A lightmap object (usually something like obj_lightmap)
+- A parent light object (usually something like obj_light_parent)
+- A parent caster object (usually something like obj_caster_parent)
+For each different type of light you need you make a new light object and make the parent
+the light parent object.
+This is the same for each caster object.
+In most cases (haven’t ever seen one at least) you won’t need more than one lightmap
+object.
+NOTE: To get multiple lightmaps to work properly you probably need to
+change some of the code yourself as I’ve never used of tested it.
+
+Lightmap
+
+In the lightmap object you need to at least initialize the lightmap (with a size) and tell the
+scripts where to find the caster parents and light parents. Furthermore in the create event you
+probably should add some more settings you want. A typical create event looks a little like
+this:
+lightmap_init(room_width, room_height);
+lightmap_set_light_parent_object(obj_light_parent);
+lightmap_set_caster_parent_object(obj_caster_parent);
+However, in bigger scenes your lightmap would get insanely big. This would be a bad idea in
+many cases. The easiest fix for this problem is:
+lightmap_init(view_wview,view_hview);
+lightmap_set_light_parent_object(obj_light_parent);
+lightmap_set_caster_parent_object(obj_caster_parent);
+lightmap_move_with_view(true);
+Note that we added the move with view to the code. This tells the lightmap to draw to the
+view location, instead of the room location. (Try experimenting with this, it will start to make
+more sense then)
+Great! Our lightmap setup is done. There is just one thing left. In the draw event we need to
+update and draw the lightmap.
+lightmap_update();
+lightmap_draw();
+Updating the lightmap will go through all of the lights and casters and start redrawing them
+onto the lightmap. The lightmap draw function actually draws the lightmap to the screen.
+NOTE: You cannot update the lightmap in the step event because game
+maker forbids you to do drawing operations in the step event.
+Thing to keep in mind, the shadow buffer is only so big (by default 256). If you want to resize
+the shadow map you call:
+lightmap_set_shadow_size(new_size);
+That’s it! The lightmap is done.
+
+Lights
+
+Lights are pretty straight forward. Any light object must have the light parent (as setup in the
+create event for the lightmap) as their parent. In the create event for each light you must
+decide what type of light it is.
+You can either make this light a point light (a circular light in a particular color) by calling light
+init point, with the arguments radius and color.
+light_init_point(256,c_white);
+Or you can make it a sprite light. The sprite used for the light is also drawn with add blend
+mode (see the basic structure), so everything that is black won’t be drawn. To init a sprite light
+you call light init sprite with arguments sprite_index and sprite_subimage
+light_init_sprite(spr_light,0);
+And that’s all for lights, your light is done and will be draw to the lightmap by the lightmap
+object.
+
+Casters
+
+Finally there are casters. Casters, as said before, are the objects that cast the shadows.
+Casters can be initialized in a few different ways. From simple to most advanced:
+caster_init_sprite();
+This code initializes a caster as a square around the sprite. It is really straight forward and for
+most cases this will be sufficient.
+NOTE: since casters are polygons and made out of just a few points, there is no
+such thing as caster rotations!
+Furthermore there is the caster init rectangle. This inializes a caster given the 4 values in this
+order: left, top, right, bottom.
+caster_init_rectangle(left, top, right, bottom);
+Then there is the circle, given a radius and the amount of subdivisions (since it will be made
+out of triangles, most of the times around 10-20 is sufficient)
+caster_init_circle(radius, subdivisions)
+And finally there is one last way to create your own, custom shaped caster
+caster_init_polygon();
+This gives you a blank caster with no points. You can add points (in counter clockwise order)
+to the caster by calling
+caster_add_point(x, y);
+NOTE: both x and y are relative to the caster objects x and y position

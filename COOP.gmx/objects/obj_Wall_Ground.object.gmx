@@ -28,6 +28,9 @@
             <string>image_xscale = global.Scale;
 image_yscale = global.Scale;
 image_blend = c_purple;
+
+//create light source
+light_init_sprite(sprite_index,0);
 </string>
           </argument>
         </arguments>

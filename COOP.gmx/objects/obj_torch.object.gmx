@@ -28,10 +28,11 @@
             <string>//create the light source
 
 light_init_point(256,c_white);
-
-light_set_color(make_color_rgb (255, 0 , 0 ));
+light_set_color(make_color_rgb (194, 104 , 14 ));
 
 r = 0;
+image_speed = 0.2;
+depth = -y;
 </string>
           </argument>
         </arguments>

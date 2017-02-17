@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="15" name="datafiles">
+  <datafiles number="17" name="datafiles">
     <datafile>
       <name>Globalvars.txt</name>
       <exists>-1</exists>
@@ -55,7 +55,7 @@
       </ConfigOptions>
       <filename>KEYBINDING.txt</filename>
     </datafile>
-    <datafiles number="15" name="Chatter_Files">
+    <datafiles number="17" name="Chatter_Files">
       <datafile>
         <name>rm_Test.txt</name>
         <exists>-1</exists>
@@ -72,6 +72,42 @@
           </Config>
         </ConfigOptions>
         <filename>rm_Test.txt</filename>
+      </datafile>
+    </datafiles>
+    <datafiles number="17" name="lighting_documentation">
+      <datafile>
+        <name>basic overview.txt</name>
+        <exists>-1</exists>
+        <size>5370</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>basic overview.txt</filename>
+      </datafile>
+      <datafile>
+        <name>lighting in our game.txt</name>
+        <exists>-1</exists>
+        <size>1015</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>lighting in our game.txt</filename>
       </datafile>
     </datafiles>
   </datafiles>
@@ -199,6 +235,7 @@
         <sprite>sprites\spr_MenuBase</sprite>
         <sprite>sprites\spr_MenuFocus</sprite>
         <sprite>sprites\spr_torch</sprite>
+        <sprite>sprites\spr_solid_light</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -421,6 +458,12 @@
           <script>scripts\caster_init_circle.gml</script>
           <script>scripts\caster_init_polygon.gml</script>
         </scripts>
+        <script>scripts\solid_obj_no_lighting.gml</script>
+        <script>scripts\solid_obj_lighting.gml</script>
+        <script>scripts\solid_obj_self_lighting.gml</script>
+        <script>scripts\nonSolid_obj_self_lighting.gml</script>
+        <script>scripts\nonSolid_obj_lighting.gml</script>
+        <script>scripts\caster_obj.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -529,6 +572,7 @@
         <object>objects\obj_light_parent</object>
         <object>objects\obj_torch</object>
         <object>objects\obj_shadow_caster</object>
+        <object>objects\test_solid_light</object>
       </objects>
     </objects>
   </objects>
